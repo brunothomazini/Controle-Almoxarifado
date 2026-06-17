@@ -1,0 +1,10 @@
+- generic [ref=e3]:
+  - heading "Controle de Almoxarifado" [level=1] [ref=e4]
+  - paragraph [ref=e5]: Painel Administrativo — USP
+  - generic [ref=e6]:
+    - generic [ref=e7]: Usuário
+    - textbox "admin" [ref=e8]
+  - generic [ref=e9]:
+    - generic [ref=e10]: Senha
+    - textbox "••••••" [ref=e11]
+  - button "Entrar" [ref=e12] [cursor=pointer]

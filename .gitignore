@@ -1,0 +1,20 @@
+node_modules/
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+dist/
+build/
+*.db
+*.sqlite3
+.DS_Store
+*.log
+cloudflared.exe
+*.bat
+tunnel_url.txt
+.openchrome/
+.playwright-mpc/
+relatorio.csv
+resultado (1).csv
+~$*.xlsx

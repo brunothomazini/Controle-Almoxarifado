@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Almoxarifado - USP</title>
+    <style>
+        :root {
+            --usp-cinza: #f5f5f5;
+            --usp-azul: #00509e;
+            --usp-azul-escuro: #003366;
+            --usp-dourado: #f5a623;
+            --texto: #333;
+            --borda: #ddd;
+            --sombra: 0 2px 12px rgba(0,0,0,0.08);
+            --arredondar: 8px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--usp-cinza);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--usp-azul-escuro), var(--usp-azul));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 { font-size: 1.5rem; font-weight: 600; }
+        .header .sub { font-size: 0.85rem; opacity: 0.85; margin-top: 2px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        .card {
+            background: white;
+            border-radius: var(--arredondar);
+            box-shadow: var(--sombra);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            font-size: 1.15rem;
+            color: var(--usp-azul);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--usp-cinza);
+        }
+        .search-box {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .search-box input, .search-box select {
+            padding: 10px 14px;
+            border: 1px solid var(--borda);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            flex: 1;
+            min-width: 180px;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .search-box input:focus, .search-box select:focus {
+            border-color: var(--usp-azul);
+            box-shadow: 0 0 0 3px rgba(0,80,158,0.1);
+        }
+        .btn {
+            padding: 10px 24px;
+            background: var(--usp-azul);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        .btn:hover { background: var(--usp-azul-escuro); }
+        .btn-outline {
+            background: transparent;
+            color: var(--usp-azul);
+            border: 1px solid var(--usp-azul);
+        }
+        .btn-outline:hover { background: var(--usp-cinza); }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: var(--arredondar);
+            box-shadow: var(--sombra);
+            padding: 18px;
+            text-align: center;
+        }
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--usp-azul);
+        }
+        .stat-card .label {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        th {
+            background: var(--usp-cinza);
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--usp-azul-escuro);
+            border-bottom: 2px solid var(--borda);
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--usp-cinza);
+        }
+        tr:hover td { background: #fafafa; }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .badge-ok { background: #e8f5e9; color: #2e7d32; }
+        .badge-warn { background: #fff3e0; color: #e65100; }
+        .badge-danger { background: #ffebee; color: #c62828; }
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot-ok { background: #4caf50; }
+        .dot-warn { background: #ff9800; }
+        .dot-danger { background: #f44336; }
+        .aviso {
+            background: #e3f2fd;
+            border-left: 4px solid var(--usp-azul);
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #1565c0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 24px; height: 24px;
+            border: 3px solid var(--usp-cinza);
+            border-top-color: var(--usp-azul);
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .empty { text-align: center; padding: 40px; color: #999; }
+        .tag {
+            display: inline-block;
+            background: var(--usp-cinza);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; text-align: center; gap: 8px; }
+            .search-box { flex-direction: column; }
+            .search-box input { min-width: auto; }
+            .stats { grid-template-columns: 1fr 1fr; }
+            table { font-size: 0.8rem; }
+            th, td { padding: 6px 8px; }
+        }
+        .btn-admin {
+            background: var(--usp-azul);
+            color: white; border: none; padding: 8px 16px;
+            border-radius: 6px; cursor: pointer; font-size: 0.85rem;
+            font-weight: 500; transition: background 0.2s;
+            white-space: nowrap;
+        }
+        .btn-admin:hover { background: var(--usp-azul-escuro); }
+        .modal-overlay {
+            display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+            background:rgba(0,0,0,0.5); z-index:200; align-items:center; justify-content:center;
+        }
+        .modal-overlay.open { display:flex; }
+        .modal {
+            background:white; border-radius:12px; padding:28px; width:380px; max-width:92vw;
+            box-shadow:0 20px 60px rgba(0,0,0,0.3);
+        }
+        .modal h2 { font-size:1.15rem; color:var(--usp-azul); margin-bottom:16px; }
+        .modal .field { margin-bottom:14px; }
+        .modal label { display:block; font-size:0.82rem; font-weight:600; margin-bottom:4px; color:#555; }
+        .modal input {
+            width:100%; padding:9px 12px; border:1px solid var(--borda); border-radius:6px;
+            font-size:0.92rem; outline:none;
+        }
+        .modal input:focus { border-color:var(--usp-azul); }
+        .modal .actions { display:flex; gap:8px; justify-content:flex-end; margin-top:16px; }
+        .modal .btn { padding:9px 18px; border-radius:6px; border:none; font-size:0.88rem; cursor:pointer; font-weight:500; }
+        .modal .btn-primary { background:var(--usp-azul); color:white; }
+        .modal .btn-primary:hover { background:var(--usp-azul-escuro); }
+        .modal .btn-outline { background:transparent; color:#666; border:1px solid var(--borda); }
+        .modal .btn-outline:hover { background:var(--usp-cinza); }
+        .modal .erro { color:#dc3545; font-size:0.85rem; margin-top:8px; display:none; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div>
+                <h1>Sistema de Controle de Almoxarifado</h1>
+                <div class="sub">Universidade de Sao Paulo - Consulta Publica</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <span style="font-size:0.85rem;opacity:0.85;">Dados atualizados do estoque</span>
+                <button class="btn btn-admin" onclick="abrirLoginAdmin()">🔐 Administrativo</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="aviso">
+            Esta e uma interface de consulta publica. Para acessar o sistema completo (cadastro, movimentacao, relatorios), 
+            utilize a API ou o painel administrativo.
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat-card">
+                <div class="number" id="totalItens">-</div>
+                <div class="label">Itens no Estoque</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="totalCategorias">-</div>
+                <div class="label">Categorias</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="totalDisponiveis" style="color:#4caf50;">-</div>
+                <div class="label">Disponiveis</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="totalIndisponiveis" style="color:#f44336;">-</div>
+                <div class="label">Indisponiveis / Baixados</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Consultar Itens</h2>
+            <div class="search-box">
+                <input type="text" id="searchCodigo" placeholder="Codigo do item..." />
+                <input type="text" id="searchNome" placeholder="Nome do item..." />
+                <select id="searchCategoria">
+                    <option value="">Todas as categorias</option>
+                </select>
+                <button class="btn" onclick="buscar()">Buscar</button>
+                <button class="btn btn-outline" onclick="limpar()">Limpar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Resultados</h2>
+            <div id="resultados" class="loading">Carregando dados</div>
+        </div>
+    </div>
+
+<div class="modal-overlay" id="modalAdmin">
+    <div class="modal">
+        <h2>Acesso Administrativo</h2>
+        <div class="field"><label>Usuário</label><input type="text" id="admUser" placeholder="admin" onkeydown="if(event.key==='Enter')loginAdmin()"></div>
+        <div class="field"><label>Senha</label><input type="password" id="admPass" placeholder="senha" onkeydown="if(event.key==='Enter')loginAdmin()"></div>
+        <div class="erro" id="admErro">Usuário ou senha inválidos</div>
+        <div class="actions">
+            <button class="btn btn-outline" onclick="fecharLoginAdmin()">Cancelar</button>
+            <button class="btn btn-primary" onclick="loginAdmin()">Entrar</button>
+        </div>
+    </div>
+</div>
+
+    <div class="footer">
+        Sistema de Controle de Almoxarifado &mdash; USP &mdash; 
+        <a href="#" style="color:#999;" onclick="event.preventDefault();carregarCategorias()">Atualizar dados</a>
+    </div>
+
+    <script>
+        const API = '/api';
+        let paginaAtual = 1;
+
+        async function apiGet(path) {
+            const res = await fetch(`${API}${path}`);
+            if (!res.ok) throw new Error(`Erro ${res.status}`);
+            return res.json();
+        }
+
+        function statusBadge(item) {
+            const s = item.status || 'disponivel';
+            const map = {
+                'disponivel': ['Disponivel', 'badge-ok', 'dot-ok'],
+                'emprestado': ['Emprestado', 'badge-warn', 'dot-warn'],
+                'manutencao': ['Manutencao', 'badge-warn', 'dot-warn'],
+                'baixado': ['Baixado', 'badge-danger', 'dot-danger'],
+                'reservado': ['Reservado', 'badge-warn', 'dot-warn'],
+            };
+            const [label, cls, dot] = map[s] || ['Desconhecido', 'badge-warn', 'dot-warn'];
+            return `<span class="status-indicator"><span class="dot ${dot}"></span><span class="badge ${cls}">${label}</span></span>`;
+        }
+
+        function renderTabela(itens) {
+            if (!itens || itens.length === 0) {
+                return '<div class="empty">Nenhum item encontrado</div>';
+            }
+            let html = `<table>
+                <thead><tr>
+                    <th>Codigo</th><th>Nome</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th>
+                    <th>Pedidos por:</th><th>Status</th>
+                </tr></thead><tbody>`;
+            for (const item of itens) {
+                html += `<tr>
+                    <td><strong>${item.codigo || '-'}</strong></td>
+                    <td>${item.nome || '-'}</td>
+                                                            <td>${item.nome_comercial || '-'}</td>                    <td>${item.fabricante || '-'}</td>                    <td><span class="tag">${item.categoria || 'N/A'}</span></td>
+                    <td>${item.pedidos_info || 'Almox'}</td>
+                    <td>${statusBadge(item)}</td>
+                </tr>`;
+            }
+            html += '</tbody></table>';
+            return html;
+        }
+
+        function renderPaginacao(data) {
+            if (!data || data.total_paginas <= 1) return '';
+            const p = data.pagina;
+            const tp = data.total_paginas;
+            let botoes = '';
+            if (p > 1) botoes += `<button class="btn btn-outline" onclick="irPagina(${p - 1})" style="padding:6px 14px;">&laquo; Anterior</button> `;
+            botoes += `<span style="font-size:0.9rem;color:#555;padding:0 10px;">Pagina ${p} de ${tp}</span> `;
+            if (p < tp) botoes += `<button class="btn btn-outline" onclick="irPagina(${p + 1})" style="padding:6px 14px;">Proxima &raquo;</button>`;
+            return `<div style="margin-top:12px;text-align:center;">${botoes}</div>`;
+        }
+
+        async function carregarCategorias() {
+            try {
+                const data = await apiGet('/externo/categorias');
+                const sel = document.getElementById('searchCategoria');
+                sel.innerHTML = '<option value="">Todas as categorias</option>';
+                for (const cat of data.categorias || []) {
+                    sel.innerHTML += `<option value="${cat}">${cat}</option>`;
+                }
+            } catch (e) {
+                console.warn('Erro ao carregar categorias:', e);
+            }
+        }
+
+        async function carregarStats() {
+            try {
+                const data = await apiGet('/externo/consulta?por_pagina=1');
+                const total = data.total || 0;
+                document.getElementById('totalItens').textContent = total;
+
+                const data2 = await apiGet('/externo/categorias');
+                document.getElementById('totalCategorias').textContent = (data2.categorias || []).length;
+            } catch (e) {
+                console.warn('Erro stats:', e);
+            }
+        }
+
+        async function carregarPagina(pagina) {
+            paginaAtual = pagina;
+            const codigo = document.getElementById('searchCodigo').value.trim();
+            const nome = document.getElementById('searchNome').value.trim();
+            const categoria = document.getElementById('searchCategoria').value;
+            const div = document.getElementById('resultados');
+            div.className = 'loading';
+
+            let params = new URLSearchParams();
+            params.set('pagina', pagina);
+            params.set('por_pagina', '50');
+            if (codigo) params.set('codigo', codigo);
+            if (nome) params.set('nome', nome);
+            if (categoria) params.set('categoria', categoria);
+
+            try {
+                const data = await apiGet(`/externo/consulta?${params.toString()}`);
+                div.className = '';
+                const inicio = ((data.pagina - 1) * data.por_pagina) + 1;
+                const fim = Math.min(data.pagina * data.por_pagina, data.total);
+                div.innerHTML = `
+                    <div style="margin-bottom:12px;color:#666;font-size:0.85rem;">
+                        Mostrando ${inicio}-${fim} de ${data.total} item(ns)
+                    </div>
+                    ${renderTabela(data.itens || [])}
+                    ${renderPaginacao(data)}
+                `;
+
+                let disp = 0, indisp = 0;
+                for (const i of data.itens || []) {
+                    if (i.status === 'disponivel') disp++;
+                    else indisp++;
+                }
+                document.getElementById('totalDisponiveis').textContent = disp;
+                document.getElementById('totalIndisponiveis').textContent = indisp;
+            } catch (e) {
+                div.className = '';
+                div.innerHTML = `<div class="empty">Erro ao carregar dados: ${e.message}</div>`;
+            }
+        }
+
+        function irPagina(p) {
+            if (p < 1) return;
+            carregarPagina(p);
+        }
+
+        function carregarTodos() {
+            carregarPagina(1);
+        }
+
+        function buscar() {
+            carregarPagina(1);
+        }
+
+        function limpar() {
+            document.getElementById('searchCodigo').value = '';
+            document.getElementById('searchNome').value = '';
+            document.getElementById('searchCategoria').value = '';
+            carregarPagina(1);
+        }
+
+        carregarCategorias();
+        carregarStats();
+        carregarPagina(1);
+
+        // Admin login
+        function abrirLoginAdmin() {
+            document.getElementById('modalAdmin').classList.add('open');
+            document.getElementById('admUser').focus();
+            document.getElementById('admErro').style.display = 'none';
+        }
+        function fecharLoginAdmin() {
+            document.getElementById('modalAdmin').classList.remove('open');
+        }
+        document.getElementById('modalAdmin').addEventListener('click', function(e) {
+            if (e.target === this) fecharLoginAdmin();
+        });
+
+        async function loginAdmin() {
+            const u = document.getElementById('admUser').value;
+            const p = document.getElementById('admPass').value;
+            const errEl = document.getElementById('admErro');
+            if (!u || !p) { errEl.textContent = 'Preencha usuario e senha'; errEl.style.display='block'; return; }
+            try {
+                const r = await fetch(API+'/auth/login', {
+                    method:'POST', headers:{'Content-Type':'application/json'},
+                    body: JSON.stringify({username:u, password:p})
+                });
+                if (!r.ok) throw new Error('invalido');
+                const data = await r.json();
+                localStorage.setItem('token', data.access_token);
+                window.location.href = '/admin.html';
+            } catch(e) {
+                errEl.textContent = 'Usuario ou senha invalidos';
+                errEl.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

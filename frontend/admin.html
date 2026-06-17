@@ -1,0 +1,1303 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Almoxarifado USP</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --usp-azul: #00509e;
+            --usp-azul-escuro: #003366;
+            --usp-dourado: #f5a623;
+            --usp-cinza: #f0f2f5;
+            --sidebar-w: 240px;
+            --texto: #333;
+            --borda: #d0d5dd;
+            --sombra: 0 1px 3px rgba(0,0,0,0.08);
+            --arredondar: 8px;
+            --danger: #dc3545;
+            --success: #28a745;
+            --warning: #ffc107;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--usp-cinza);
+            color: var(--texto);
+            min-height: 100vh;
+        }
+
+        /* Login */
+        #loginScreen {
+            display:flex; align-items:center; justify-content:center;
+            min-height:100vh; background:linear-gradient(135deg, #003366, #00509e);
+        }
+        #loginScreen .card {
+            background:white; border-radius:12px; padding:40px;
+            width:400px; max-width:90vw; box-shadow:0 20px 60px rgba(0,0,0,0.3);
+        }
+        #loginScreen h1 { font-size:1.5rem; color:var(--usp-azul); margin-bottom:4px; }
+        #loginScreen p { color:#666; font-size:0.9rem; margin-bottom:24px; }
+        #loginScreen .field { margin-bottom:16px; }
+        #loginScreen label { display:block; font-size:0.85rem; font-weight:600; margin-bottom:4px; color:#555; }
+        #loginScreen input {
+            width:100%; padding:10px 14px; border:1px solid var(--borda); border-radius:6px;
+            font-size:0.95rem; outline:none; transition:border 0.2s;
+        }
+        #loginScreen input:focus { border-color:var(--usp-azul); box-shadow:0 0 0 3px rgba(0,80,158,0.1); }
+        #loginScreen .btn {
+            width:100%; padding:12px; background:var(--usp-azul); color:white;
+            border:none; border-radius:6px; font-size:1rem; cursor:pointer; font-weight:600;
+            transition:background 0.2s;
+        }
+        #loginScreen .btn:hover { background:var(--usp-azul-escuro); }
+        #loginError { color:var(--danger); font-size:0.85rem; margin-top:8px; display:none; }
+
+        /* App layout */
+        #app { display:none; }
+        .sidebar {
+            position:fixed; top:0; left:0; bottom:0; width:var(--sidebar-w);
+            background:var(--usp-azul-escuro); color:white; overflow-y:auto; z-index:100;
+            display:flex; flex-direction:column;
+        }
+        .sidebar-brand {
+            padding:20px; border-bottom:1px solid rgba(255,255,255,0.1);
+            font-size:1.1rem; font-weight:700; line-height:1.3;
+        }
+        .sidebar-brand small { display:block; font-weight:400; font-size:0.75rem; opacity:0.7; margin-top:2px; }
+        .sidebar-nav { flex:1; padding:8px 0; }
+        .sidebar-nav a {
+            display:flex; align-items:center; gap:10px; padding:10px 20px;
+            color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.9rem;
+            transition:all 0.15s; cursor:pointer;
+        }
+        .sidebar-nav a:hover, .sidebar-nav a.active { background:rgba(255,255,255,0.1); color:white; }
+        .sidebar-nav a .icon { width:20px; text-align:center; font-size:1.1rem; }
+        .sidebar-footer {
+            padding:12px 20px; border-top:1px solid rgba(255,255,255,0.1);
+            font-size:0.8rem; display:flex; justify-content:space-between;
+        }
+        .sidebar-footer a { color:rgba(255,255,255,0.6); text-decoration:none; cursor:pointer; }
+        .sidebar-footer a:hover { color:white; }
+
+        .main { margin-left:var(--sidebar-w); min-height:100vh; }
+        .topbar {
+            background:white; padding:12px 24px; display:flex; justify-content:space-between;
+            align-items:center; box-shadow:var(--sombra); position:sticky; top:0; z-index:50;
+        }
+        .topbar h2 { font-size:1.2rem; color:var(--usp-azul); }
+        .topbar .user { font-size:0.85rem; color:#666; display:flex; align-items:center; gap:8px; }
+
+        .content { padding:24px; }
+
+        /* Cards */
+        .card {
+            background:white; border-radius:var(--arredondar); box-shadow:var(--sombra);
+            padding:20px; margin-bottom:20px;
+        }
+        .card h3 {
+            font-size:1rem; color:var(--usp-azul); margin-bottom:12px;
+            padding-bottom:8px; border-bottom:2px solid var(--usp-cinza);
+        }
+
+        .stats-grid {
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+            gap:16px; margin-bottom:20px;
+        }
+        .stat-card {
+            background:white; border-radius:var(--arredondar); box-shadow:var(--sombra);
+            padding:16px; text-align:center;
+        }
+        .stat-card .num { font-size:1.8rem; font-weight:700; color:var(--usp-azul); }
+        .stat-card .lbl { font-size:0.8rem; color:#888; margin-top:2px; }
+        .stat-card.danger .num { color:var(--danger); }
+        .stat-card.success .num { color:var(--success); }
+
+        .chart-container { position:relative; height:250px; }
+
+        /* Tables */
+        .table-wrap { overflow-x:auto; }
+        table { width:100%; border-collapse:collapse; font-size:0.88rem; }
+        th {
+            background:var(--usp-cinza); padding:8px 10px; text-align:left;
+            font-weight:600; color:var(--usp-azul-escuro); border-bottom:2px solid var(--borda);
+            white-space:nowrap;
+        }
+        td { padding:8px 10px; border-bottom:1px solid var(--usp-cinza); vertical-align:middle; }
+        tr:hover td { background:#fafafa; }
+
+        /* Badges */
+        .badge {
+            display:inline-block; padding:2px 8px; border-radius:12px;
+            font-size:0.78rem; font-weight:500;
+        }
+        .badge-ok { background:#e8f5e9; color:#2e7d32; }
+        .badge-warn { background:#fff3e0; color:#e65100; }
+        .badge-danger { background:#ffebee; color:#c62828; }
+        .badge-info { background:#e3f2fd; color:#1565c0; }
+
+        /* Buttons */
+        .btn {
+            padding:8px 16px; border-radius:6px; border:none; font-size:0.85rem;
+            cursor:pointer; font-weight:500; transition:all 0.15s; display:inline-flex;
+            align-items:center; gap:6px;
+        }
+        .btn-primary { background:var(--usp-azul); color:white; }
+        .btn-primary:hover { background:var(--usp-azul-escuro); }
+        .btn-success { background:var(--success); color:white; }
+        .btn-success:hover { background:#218838; }
+        .btn-danger { background:var(--danger); color:white; }
+        .btn-danger:hover { background:#c82333; }
+        .btn-outline {
+            background:transparent; color:#666; border:1px solid var(--borda);
+        }
+        .btn-outline:hover { background:var(--usp-cinza); }
+        .btn-sm { padding:4px 10px; font-size:0.8rem; }
+
+        .toolbar { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+        .toolbar input, .toolbar select {
+            padding:7px 10px; border:1px solid var(--borda); border-radius:6px;
+            font-size:0.85rem; outline:none;
+        }
+        .toolbar input:focus, .toolbar select:focus { border-color:var(--usp-azul); }
+
+        /* Modal */
+        .modal-overlay {
+            display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+            background:rgba(0,0,0,0.5); z-index:200; align-items:center; justify-content:center;
+        }
+        .modal-overlay.open { display:flex; }
+        .modal {
+            background:white; border-radius:12px; padding:24px; width:600px; max-width:92vw;
+            max-height:85vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,0.3);
+        }
+        .modal h3 { font-size:1.1rem; margin-bottom:16px; color:var(--usp-azul); }
+        .modal .field { margin-bottom:12px; }
+        .modal label { display:block; font-size:0.82rem; font-weight:600; margin-bottom:3px; color:#555; }
+        .modal input, .modal select, .modal textarea {
+            width:100%; padding:8px 10px; border:1px solid var(--borda); border-radius:6px;
+            font-size:0.9rem; outline:none; font-family:inherit;
+        }
+        .modal input:focus, .modal select:focus, .modal textarea:focus { border-color:var(--usp-azul); }
+        .modal textarea { resize:vertical; min-height:60px; }
+        .modal .row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        .modal .actions { display:flex; gap:8px; justify-content:flex-end; margin-top:16px; }
+
+        /* Misc */
+        .tag {
+            display:inline-block; background:var(--usp-cinza); padding:2px 8px;
+            border-radius:4px; font-size:0.78rem; color:#666;
+        }
+        .loading { text-align:center; padding:20px; color:#999; }
+        .loading::after {
+            content:''; display:inline-block; width:20px; height:20px;
+            border:2px solid var(--usp-cinza); border-top-color:var(--usp-azul);
+            border-radius:50%; animation:spin 0.6s linear infinite; margin-left:8px; vertical-align:middle;
+        }
+        @keyframes spin { to { transform:rotate(360deg); } }
+        .empty { text-align:center; padding:30px; color:#999; font-size:0.9rem; }
+        .toast {
+            position:fixed; top:16px; right:16px; padding:12px 20px; border-radius:8px;
+            color:white; font-size:0.9rem; z-index:300; box-shadow:0 4px 12px rgba(0,0,0,0.15);
+            animation: slideIn 0.3s ease; max-width:400px;
+        }
+        .toast-success { background:var(--success); }
+        .toast-error { background:var(--danger); }
+        .toast-info { background:var(--usp-azul); }
+        @keyframes slideIn { from { transform:translateX(100%); opacity:0; } to { transform:translateX(0); opacity:1; } }
+
+        .status-dot { width:8px; height:8px; border-radius:50%; display:inline-block; margin-right:6px; }
+        .dot-green { background:#4caf50; }
+        .dot-yellow { background:#ff9800; }
+        .dot-red { background:#f44336; }
+        .dot-blue { background:#2196f3; }
+
+        @media (max-width:768px) {
+            .sidebar { width:56px; }
+            .sidebar-brand span, .sidebar-nav a span, .sidebar-footer span { display:none; }
+            .sidebar-nav a { justify-content:center; padding:12px; }
+            .sidebar-footer { justify-content:center; }
+            .main { margin-left:56px; }
+            .stats-grid { grid-template-columns:1fr 1fr; }
+            .modal .row { grid-template-columns:1fr; }
+            .topbar h2 { font-size:1rem; }
+        }
+    </style>
+</head>
+<body>
+<div id="loginScreen">
+    <div class="card">
+        <h1>Controle de Almoxarifado</h1>
+        <p>Painel Administrativo &mdash; USP</p>
+        <div class="field">
+            <label>Usuário</label>
+            <input type="text" id="loginUser" placeholder="admin" autocomplete="username">
+        </div>
+        <div class="field">
+            <label>Senha</label>
+            <input type="password" id="loginPass" placeholder="••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')login()">
+        </div>
+        <button class="btn" onclick="login()">Entrar</button>
+        <div id="loginError"></div>
+    </div>
+</div>
+
+<div id="app">
+    <nav class="sidebar">
+        <div class="sidebar-brand">
+            <span>Almoxarifado</span>
+            <small>Painel Administrativo</small>
+        </div>
+        <div class="sidebar-nav">
+            <a class="active" onclick="navigate('dashboard')"><span class="icon">📊</span><span>Dashboard</span></a>
+            <a onclick="navigate('itens')"><span class="icon">📦</span><span>Itens</span></a>
+            <a onclick="navigate('movimentacoes')"><span class="icon">🔄</span><span>Movimentações</span></a>
+            <a onclick="navigate('consumo')"><span class="icon">📊</span><span>Consumo</span></a>
+            <a onclick="navigate('categorias')"><span class="icon">🏷️</span><span>Categorias</span></a>
+            <a onclick="navigate('sincronia')"><span class="icon">📡</span><span>Sincronia</span></a>
+            <a onclick="navigate('relatorios')"><span class="icon">📄</span><span>Relatórios</span></a>
+            <a onclick="navigate('usuarios')"><span class="icon">👤</span><span>Usuários</span></a>
+        </div>
+        <div class="sidebar-footer">
+            <span id="navUser">admin</span>
+            <a onclick="abrirModalSenha()">Senha</a> | <a onclick="logout()">Sair</a>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="topbar">
+            <h2 id="pageTitle">Dashboard</h2>
+            <div class="user">
+                <span id="topUser">admin</span>
+                <span style="color:#ccc">|</span>
+                <a onclick="logout()" style="color:#999;text-decoration:none;cursor:pointer;font-size:0.8rem;">sair</a>
+            </div>
+        </div>
+        <div class="content" id="pageContent"></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalContent"></div>
+</div>
+
+<script>
+const API = '/api';
+let token = localStorage.getItem('token') || null;
+let userData = null;
+
+// ====== AUTH ======
+async function login() {
+    const u = document.getElementById('loginUser').value;
+    const p = document.getElementById('loginPass').value;
+    const errEl = document.getElementById('loginError');
+    if (!u || !p) { errEl.textContent = 'Preencha usuário e senha'; errEl.style.display='block'; return; }
+    try {
+        const r = await fetch(API+'/auth/login', {
+            method:'POST', headers:{'Content-Type':'application/json'},
+            body: JSON.stringify({username:u, password:p})
+        });
+        if (!r.ok) { const e = await r.json(); throw new Error(e.detail||'Falha no login'); }
+        const d = await r.json();
+        token = d.access_token;
+        localStorage.setItem('token', token);
+        await loadUser();
+        document.getElementById('loginScreen').style.display='none';
+        document.getElementById('app').style.display='block';
+        navigate('dashboard');
+    } catch(e) { errEl.textContent = e.message; errEl.style.display='block'; }
+}
+
+async function loadUser() {
+    try {
+        const r = await fetch(API+'/auth/me', {headers:{Authorization:'Bearer '+token}});
+        if (!r.ok) throw new Error('auth fail');
+        userData = await r.json();
+        document.getElementById('navUser').textContent = userData.nome_completo || userData.username;
+        document.getElementById('topUser').textContent = userData.nome_completo || userData.username;
+    } catch(e) { logout(); }
+}
+
+function logout() {
+    token = null; localStorage.removeItem('token');
+    document.getElementById('app').style.display='none';
+    document.getElementById('loginScreen').style.display='flex';
+}
+
+function checkAuth() {
+    if (token) { loadUser(); document.getElementById('loginScreen').style.display='none'; document.getElementById('app').style.display='block'; navigate('dashboard'); }
+}
+
+// ====== API HELPER ======
+async function api(path, opts={}) {
+    const headers = {Authorization:'Bearer '+token, ...opts.headers};
+    if (opts.body && typeof opts.body === 'object' && !(opts.body instanceof FormData)) {
+        headers['Content-Type'] = 'application/json';
+        opts.body = JSON.stringify(opts.body);
+    }
+    const r = await fetch(API+path, {...opts, headers});
+    if (r.status === 204) return null;
+    if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail||`Erro ${r.status}`); }
+    if (opts.raw) return r;
+    return r.json();
+}
+
+function toast(msg, type='success') {
+    const el = document.createElement('div'); el.className='toast toast-'+type; el.textContent=msg;
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(), 3500);
+}
+
+// ====== ROUTER ======
+let currentPage = null;
+let chartInstance = null;
+
+function navigate(page) {
+    document.querySelectorAll('.sidebar-nav a').forEach(a=>a.classList.remove('active'));
+    document.querySelectorAll('.sidebar-nav a').forEach(a=>{
+        if (a.getAttribute('onclick') && a.getAttribute('onclick').includes(page)) a.classList.add('active');
+    });
+    currentPage = page;
+    const titles = {dashboard:'Dashboard', itens:'Itens', movimentacoes:'Movimentações', consumo:'Consumo por Centro/Item', categorias:'Categorias', sincronia:'Sincronia', relatorios:'Relatórios', usuarios:'Usuários'};
+    document.getElementById('pageTitle').textContent = titles[page]||page;
+    const c = document.getElementById('pageContent');
+    if (page==='dashboard') renderDashboard(c);
+    else if (page==='itens') renderItens(c);
+    else if (page==='movimentacoes') renderMovimentacoes(c);
+    else if (page==='consumo') renderConsumo(c);
+    else if (page==='categorias') renderCategorias(c);
+    else if (page==='sincronia') renderSincronia(c);
+    else if (page==='relatorios') renderRelatorios(c);
+    else if (page==='usuarios') renderUsuarios(c);
+}
+
+// ====== DASHBOARD ======
+async function renderDashboard(el) {
+    el.innerHTML = '<div class="loading">Carregando dashboard</div>';
+    try {
+        const d = await api('/itens/dashboard/resumo');
+        el.innerHTML = `
+            <div class="stats-grid">
+                <div class="stat-card"><div class="num">${d.total_itens}</div><div class="lbl">Total de Itens</div></div>
+                <div class="stat-card"><div class="num">${d.total_categorias}</div><div class="lbl">Categorias</div></div>
+                <div class="stat-card success"><div class="num">${(d.total_itens||0)-(d.itens_zerados||0)}</div><div class="lbl">Disponíveis</div></div>
+                <div class="stat-card danger"><div class="num">${d.itens_zerados||0}</div><div class="lbl">Zerados / Indisponíveis</div></div>
+                <div class="stat-card"><div class="num">R$ ${(d.valor_total_estoque||0).toLocaleString('pt-BR',{minimumFractionDigits:2})}</div><div class="lbl">Valor Total</div></div>
+                <div class="stat-card ${(d.itens_estoque_baixo||[]).length?'danger':''}"><div class="num">${(d.itens_estoque_baixo||[]).length}</div><div class="lbl">Estoque Baixo</div></div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                <div class="card"><h3>Itens por Categoria</h3><div class="chart-container"><canvas id="catChart"></canvas></div></div>
+                <div class="card"><h3>Estoque Baixo (${(d.itens_estoque_baixo||[]).length})</h3>
+                    ${d.itens_estoque_baixo && d.itens_estoque_baixo.length ? `<div class="table-wrap"><table><tr><th>Código</th><th>Nome</th><th>Atual</th><th>Mínimo</th></tr>
+                        ${d.itens_estoque_baixo.slice(0,8).map(i=>`<tr><td>${i.codigo}</td><td>${i.nome}</td><td><span class="badge badge-danger">${i.quantidade_atual}</span></td><td>${i.quantidade_minima}</td></tr>`).join('')}
+                    </table></div>` : '<div class="empty">Nenhum item com estoque baixo</div>'}
+                </div>
+            </div>
+            <div class="card"><h3>Movimentações Recentes</h3>
+                ${d.movimentacoes_recentes && d.movimentacoes_recentes.length ? `<div class="table-wrap"><table><tr><th>Item</th><th>Tipo</th><th>Qtd</th><th>Data</th></tr>
+                    ${d.movimentacoes_recentes.slice(0,10).map(m=>`<tr><td>${m.item_nome||m.item_codigo}</td><td><span class="badge ${m.tipo==='entrada'?'badge-ok':'badge-warn'}">${m.tipo}</span></td><td>${m.quantidade}</td><td>${new Date(m.data_movimentacao).toLocaleString('pt-BR')}</td></tr>`).join('')}
+                </table></div>` : '<div class="empty">Nenhuma movimentação recente</div>'}
+            </div>
+        `;
+        if (d.itens_por_categoria && d.itens_por_categoria.length) {
+            const ctx = document.getElementById('catChart').getContext('2d');
+            if (chartInstance) chartInstance.destroy();
+            chartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: d.itens_por_categoria.map(x=>x.nome||x.categoria_nome||'Sem categoria'),
+                    datasets: [{
+                        data: d.itens_por_categoria.map(x=>x.total||x.quantidade||0),
+                        backgroundColor: ['#00509e','#f5a623','#28a745','#dc3545','#17a2b8','#6f42c1','#fd7e14','#20c997','#e83e8c','#007bff'],
+                    }]
+                },
+                options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom',labels:{font:{size:11}}}} }
+            });
+        }
+    } catch(e) { el.innerHTML = `<div class="empty">Erro ao carregar dashboard: ${e.message}</div>`; }
+}
+
+// ====== ITENS ======
+async function renderItens(el) {
+    el.innerHTML = `
+        <div class="toolbar">
+            <input type="text" id="itSearch" placeholder="Buscar código ou nome..." style="flex:1;min-width:200px;" oninput="itensBuscar()">
+            <select id="itCatFiltro" onchange="itensBuscar()"><option value="">Todas categorias</option></select>
+            <select id="itStatusFiltro" onchange="itensBuscar()"><option value="">Todos status</option><option value="disponivel">Disponível</option><option value="baixado">Baixado</option><option value="manutencao">Manutenção</option><option value="emprestado">Emprestado</option></select>
+            <button class="btn btn-primary" onclick="itensAbrirModal()">+ Novo Item</button>
+        </div>
+        <div class="card"><div id="itTabela"><div class="loading">Carregando itens</div></div></div>
+    `;
+    try {
+        const cats = await api('/categorias');
+        const sel = document.getElementById('itCatFiltro');
+        sel.innerHTML = '<option value="">Todas categorias</option>'+cats.map(c=>`<option value="${c.id}">${c.nome}</option>`).join('');
+    } catch(e) {}
+    itensBuscar();
+}
+
+let itensTimeout;
+function itensBuscar() {
+    clearTimeout(itensTimeout);
+    itensTimeout = setTimeout(async ()=>{
+        const search = document.getElementById('itSearch')?.value||'';
+        const cat = document.getElementById('itCatFiltro')?.value||'';
+        const status = document.getElementById('itStatusFiltro')?.value||'';
+        const el = document.getElementById('itTabela');
+        if (!el) return;
+        el.innerHTML = '<div class="loading">Buscando</div>';
+        try {
+            let params = `?limit=200&search=${encodeURIComponent(search)}`;
+            if (cat) params += `&categoria_id=${cat}`;
+            if (status) params += `&status=${status}`;
+            const itens = await api('/itens'+params);
+            if (!itens||!itens.length) { el.innerHTML='<div class="empty">Nenhum item encontrado</div>'; return; }
+            el.innerHTML = `<div style="margin-bottom:8px;color:#888;font-size:0.82rem;">${itens.length} item(ns)</div><div class="table-wrap"><table>
+                <tr><th>Código</th><th>Nome</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Qtd</th><th>Min</th><th>Un</th><th>Pedidos por:</th><th>Status</th><th>Ações</th></tr>
+                ${itens.map(i=>`<tr>
+                    <td><strong>${i.codigo}</strong></td>
+                    <td>${i.nome}</td>
+                                                            <td>${i.nome_comercial||'-'}</td>
+                    <td>${i.fabricante||'-'}</td>
+                    <td><span class="tag">${i.categoria_nome||'-'}</span></td>
+                    <td><span class="badge ${(i.quantidade_atual||0)<=0?'badge-danger':(i.quantidade_atual||0)<=5?'badge-warn':'badge-ok'}">${i.quantidade_atual||0}</span></td>
+                    <td>${i.quantidade_minima||0}</td>
+                    <td>${i.unidade_medida}</td>
+                    <td>${i.categoria_nome==='Informática'?'solicitar para o setor de Informática':i.tipo_controle==='almoxarifado'?'Almox':i.solicitar_por_email?'e-mail padronizados@fob.usp.br':'Almox'}</td>
+                    <td><span class="badge ${i.status==='disponivel'?'badge-ok':i.status==='baixado'?'badge-danger':'badge-warn'}">${i.status||'disponivel'}</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-outline" onclick="itensAbrirModal(${i.id})">✎</button>
+                        <button class="btn btn-sm btn-outline" onclick="itensMovModal(${i.id},'${i.codigo}','${i.nome}')">↻</button>
+                        <button class="btn btn-sm btn-danger" onclick="itensExcluir(${i.id})">✕</button>
+                    </td>
+                </tr>`).join('')}
+            </table></div>`;
+        } catch(e) { el.innerHTML=`<div class="empty">Erro: ${e.message}</div>`; }
+    }, 300);
+}
+
+async function itensAbrirModal(id) {
+    let item = {codigo:'',nome:'',nome_comercial:'',unidade_medida:'un',quantidade_atual:0,quantidade_minima:0,quantidade_maxima:0,status:'disponivel',tipo_controle:'almoxarifado',localizacao:'',descricao:'',categoria_id:null,fornecedor_id:null,fabricante:'',modelo:'',numero_serie:'',valor_unitario:0,observacoes:''};
+    if (id) { try { item = await api('/itens/'+id); } catch(e) {} }
+    let cats = []; try { cats = await api('/categorias'); } catch(e) {}
+
+    const m = document.getElementById('modalContent');
+    m.innerHTML = `
+        <h3>${id?'Editar':'Novo'} Item</h3>
+        <div class="row">
+            <div class="field"><label>Código</label><input id="mf_codigo" value="${item.codigo}" ${id?'readonly':''}></div>
+            <div class="field"><label>Nome *</label><input id="mf_nome" value="${item.nome.replace(/"/g,'&quot;')}"></div>
+        </div>
+        <div class="row">
+            <div class="field"><label>Nome Comercial</label><input id="mf_nome_comercial" value="${(item.nome_comercial||'').replace(/"/g,'&quot;')}"></div>
+            <div class="field"><label>Fabricante (Marca)</label><input id="mf_fab" value="${item.fabricante||''}"></div>
+        </div>
+        <div class="row">
+            <div class="field"><label>Descrição</label><textarea id="mf_descricao">${(item.descricao||'').replace(/"/g,'&quot;')}</textarea></div>
+            <div class="field"><label>Observações</label><textarea id="mf_obs">${(item.observacoes||'').replace(/"/g,'&quot;')}</textarea></div>
+        </div>
+        <div class="row">
+            <div class="field"><label>Categoria</label><select id="mf_categoria"><option value="">Sem categoria</option>${cats.map(c=>`<option value="${c.id}" ${item.categoria_id==c.id?'selected':''}>${c.nome}</option>`).join('')}</select></div>
+            <div class="field"><label>Status</label><select id="mf_status"><option value="disponivel" ${item.status=='disponivel'?'selected':''}>Disponível</option><option value="emprestado" ${item.status=='emprestado'?'selected':''}>Emprestado</option><option value="manutencao" ${item.status=='manutencao'?'selected':''}>Manutenção</option><option value="baixado" ${item.status=='baixado'?'selected':''}>Baixado</option></select></div>
+        </div>
+        <div class="row">
+            <div class="field"><label>Qtd. Atual</label><input id="mf_qtd" type="number" step="0.01" value="${item.quantidade_atual||0}"></div>
+            <div class="field"><label>Unidade</label><input id="mf_un" value="${item.unidade_medida||'un'}"></div>
+        </div>
+        <div class="row">
+            <div class="field"><label>Qtd. Mínima</label><input id="mf_min" type="number" step="0.01" value="${item.quantidade_minima||0}"></div>
+            <div class="field"><label>Qtd. Máxima</label><input id="mf_max" type="number" step="0.01" value="${item.quantidade_maxima||0}"></div>
+        </div>
+        <div class="row">
+            <div class="field"><label><input type="checkbox" id="mf_email" ${item.solicitar_por_email?'checked':''}> Solicitar por Email</label></div>
+            <div class="field"><label>Valor Unitário (R$)</label><input id="mf_valor" type="number" step="0.01" value="${item.valor_unitario||0}"></div>
+        </div>
+        <div class="row">            <div class="field"><label>Modelo</label><input id="mf_modelo" value="${item.modelo||""}"></div>            <div class="field"><label></label></div>        </div>
+        <div class="row">
+            <div class="field"><label>Nº Série</label><input id="mf_serie" value="${item.numero_serie||''}"></div>
+            <div class="field"><label>Tipo Controle</label><select id="mf_tipo"><option value="almoxarifado" ${item.tipo_controle=='almoxarifado'?'selected':''}>Almoxarifado</option><option value="patrimonio" ${item.tipo_controle=='patrimonio'?'selected':''}>Patrimônio</option></select></div>
+        </div>
+        <div class="actions">
+            <button class="btn btn-outline" onclick="fecharModal()">Cancelar</button>
+            <button class="btn btn-primary" onclick="itensSalvar(${id||'null'})">${id?'Atualizar':'Criar'}</button>
+        </div>
+    `;
+    document.getElementById('modalOverlay').classList.add('open');
+}
+
+async function itensSalvar(id) {
+    const data = {
+        codigo: document.getElementById('mf_codigo').value,
+        nome: document.getElementById('mf_nome').value,
+        nome_comercial: document.getElementById('mf_nome_comercial').value,
+        descricao: document.getElementById('mf_descricao').value,
+        observacoes: document.getElementById('mf_obs').value,
+        categoria_id: parseInt(document.getElementById('mf_categoria').value)||null,
+        status: document.getElementById('mf_status').value,
+        quantidade_atual: parseFloat(document.getElementById('mf_qtd').value)||0,
+        unidade_medida: document.getElementById('mf_un').value,
+        quantidade_minima: parseFloat(document.getElementById('mf_min').value)||0,
+        quantidade_maxima: parseFloat(document.getElementById('mf_max').value)||0,
+        solicitar_por_email: document.getElementById('mf_email').checked,
+        valor_unitario: parseFloat(document.getElementById('mf_valor').value)||0,
+        fabricante: document.getElementById('mf_fab').value,
+        modelo: document.getElementById('mf_modelo').value,
+        numero_serie: document.getElementById('mf_serie').value,
+        tipo_controle: document.getElementById('mf_tipo').value,
+    };
+    if (!data.codigo || !data.nome) { toast('Código e Nome são obrigatórios','error'); return; }
+    try {
+        if (id) { await api('/itens/'+id, {method:'PUT', body:data}); toast('Item atualizado'); }
+        else { await api('/itens', {method:'POST', body:data}); toast('Item criado'); }
+        fecharModal(); itensBuscar();
+    } catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+async function itensExcluir(id) {
+    if (!confirm('Excluir este item?')) return;
+    try { await api('/itens/'+id, {method:'DELETE'}); toast('Item excluído'); itensBuscar(); }
+    catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+function itensMovModal(itemId, codigo, nome) {
+    const m = document.getElementById('modalContent');
+    m.innerHTML = `
+        <h3>Registrar Movimentação</h3>
+        <p style="margin-bottom:16px;color:#666;font-size:0.9rem;">Item: <strong>${codigo}</strong> &mdash; ${nome}</p>
+        <div class="row">
+            <div class="field"><label>Tipo</label><select id="mf_mov_tipo"><option value="entrada">Entrada</option><option value="saida">Saída</option></select></div>
+            <div class="field"><label>Quantidade *</label><input id="mf_mov_qtd" type="number" step="0.01" min="0.01"></div>
+        </div>
+        <div class="row">
+            <div class="field"><label>Responsável</label><input id="mf_mov_resp"></div>
+            <div class="field"><label>Destino</label><input id="mf_mov_dest"></div>
+        </div>
+        <div class="field"><label>Observações</label><textarea id="mf_mov_obs"></textarea></div>
+        <div class="actions">
+            <button class="btn btn-outline" onclick="fecharModal()">Cancelar</button>
+            <button class="btn btn-primary" onclick="itensSalvarMov(${itemId})">Registrar</button>
+        </div>
+    `;
+    document.getElementById('modalOverlay').classList.add('open');
+}
+
+async function itensSalvarMov(itemId) {
+    const data = {
+        item_id: itemId,
+        tipo: document.getElementById('mf_mov_tipo').value,
+        quantidade: parseFloat(document.getElementById('mf_mov_qtd').value),
+        responsavel: document.getElementById('mf_mov_resp').value,
+        destino: document.getElementById('mf_mov_dest').value,
+        observacoes: document.getElementById('mf_mov_obs').value,
+    };
+    if (!data.quantidade || data.quantidade<=0) { toast('Quantidade deve ser maior que zero','error'); return; }
+    try {
+        await api(`/itens/${itemId}/movimentacao`, {method:'POST', body:data});
+        toast('Movimentação registrada'); fecharModal(); itensBuscar();
+    } catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+// ====== CATEGORIAS ======
+async function renderCategorias(el) {
+    el.innerHTML = `
+        <div class="toolbar"><button class="btn btn-primary" onclick="catAbrirModal()">+ Nova Categoria</button></div>
+        <div class="card"><div id="catTabela"><div class="loading">Carregando</div></div></div>
+    `;
+    catCarregar();
+}
+
+async function catCarregar() {
+    const el = document.getElementById('catTabela');
+    if (!el) return;
+    try {
+        const cats = await api('/categorias');
+        if (!cats||!cats.length) { el.innerHTML='<div class="empty">Nenhuma categoria</div>'; return; }
+        el.innerHTML = `<div class="table-wrap"><table><tr><th>ID</th><th>Nome</th><th>Descrição</th><th>Ações</th></tr>
+            ${cats.map(c=>`<tr><td>${c.id}</td><td><strong>${c.nome}</strong></td><td>${c.descricao||'-'}</td>
+            <td><button class="btn btn-sm btn-outline" onclick="catAbrirModal(${c.id})">✎</button>
+            <button class="btn btn-sm btn-danger" onclick="catExcluir(${c.id})">✕</button></td></tr>`).join('')}
+        </table></div>`;
+    } catch(e) { el.innerHTML=`<div class="empty">Erro: ${e.message}</div>`; }
+}
+
+async function catAbrirModal(id) {
+    let item = {nome:'',descricao:''};
+    if (id) { try { const cats = await api('/categorias'); item = cats.find(c=>c.id===id)||item; } catch(e) {} }
+    const m = document.getElementById('modalContent');
+    m.innerHTML = `
+        <h3>${id?'Editar':'Nova'} Categoria</h3>
+        <div class="field"><label>Nome *</label><input id="cf_nome" value="${item.nome.replace(/"/g,'&quot;')}"></div>
+        <div class="field"><label>Descrição</label><textarea id="cf_desc">${(item.descricao||'').replace(/"/g,'&quot;')}</textarea></div>
+        <div class="actions">
+            <button class="btn btn-outline" onclick="fecharModal()">Cancelar</button>
+            <button class="btn btn-primary" onclick="catSalvar(${id||'null'})">${id?'Atualizar':'Criar'}</button>
+        </div>
+    `;
+    document.getElementById('modalOverlay').classList.add('open');
+}
+
+async function catSalvar(id) {
+    const data = {nome: document.getElementById('cf_nome').value, descricao: document.getElementById('cf_desc').value};
+    if (!data.nome) { toast('Nome é obrigatório','error'); return; }
+    try {
+        if (id) { await api('/categorias/'+id, {method:'PUT', body:data}); toast('Categoria atualizada'); }
+        else { await api('/categorias', {method:'POST', body:data}); toast('Categoria criada'); }
+        fecharModal(); catCarregar();
+    } catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+async function catExcluir(id) {
+    if (!confirm('Excluir categoria?')) return;
+    try { await api('/categorias/'+id, {method:'DELETE'}); toast('Categoria excluída'); catCarregar(); }
+    catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+// ====== MOVIMENTAÇÕES ======
+async function renderMovimentacoes(el) {
+    el.innerHTML = '<div class="card"><div id="movTabela"><div class="loading">Carregando</div></div></div>';
+    try {
+        const movs = await api('/movimentacoes?limit=200');
+        const el2 = document.getElementById('movTabela');
+        if (!el2) return;
+        if (!movs||!movs.length) { el2.innerHTML='<div class="empty">Nenhuma movimentação</div>'; return; }
+        el2.innerHTML = `<div style="margin-bottom:8px;color:#888;font-size:0.82rem;">${movs.length} registro(s)</div><div class="table-wrap"><table>
+            <tr><th>Data</th><th>Item</th><th>Código</th><th>Tipo</th><th>Qtd</th><th>Responsável</th><th>Destino</th><th>Obs</th></tr>
+            ${movs.map(m=>`<tr>
+                <td>${new Date(m.data_movimentacao).toLocaleString('pt-BR')}</td>
+                <td>${m.item_nome||'-'}</td>
+                <td><strong>${m.item_codigo||'-'}</strong></td>
+                <td><span class="badge ${m.tipo==='entrada'?'badge-ok':'badge-warn'}">${m.tipo}</span></td>
+                <td>${m.quantidade}</td>
+                <td>${m.responsavel||'-'}</td>
+                <td>${m.destino||'-'}</td>
+                <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${m.observacoes||'-'}</td>
+            </tr>`).join('')}
+        </table></div>`;
+    } catch(e) { const el2 = document.getElementById('movTabela'); if (el2) el2.innerHTML=`<div class="empty">Erro: ${e.message}</div>`; }
+}
+
+// ====== CONSUMO POR CENTRO/ITEM ======
+async function renderConsumo(el) {
+    el.innerHTML = `
+        <div class="card" style="margin-bottom:16px;">
+            <h3>Importar Dados de Consumo (CSV)</h3>
+            <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Envie o arquivo CSV com os dados de consumo para compor o banco de dados.</p>
+            <input type="file" id="consumoFile" accept=".csv" style="margin-bottom:8px;">
+            <button class="btn btn-primary" onclick="consumoImportar()">📥 Importar CSV</button>
+            <button class="btn btn-danger" onclick="consumoLimpar()" style="margin-left:8px;">🗑️ Limpar Dados</button>
+            <div id="consumoImportResult" style="margin-top:8px;"></div>
+        </div>
+
+        <div class="card" style="margin-bottom:20px;">
+            <h3>Filtros</h3>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;">
+                <div style="flex:1;min-width:200px;">
+                    <label style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:4px;color:#555;">Centro de Despacho</label>
+                    <select id="consumoCentroFiltro" onchange="consumoAplicarFiltros()" style="width:100%;padding:8px 10px;border:1px solid var(--borda);border-radius:6px;font-size:0.9rem;">
+                        <option value="">Todos os centros</option>
+                    </select>
+                </div>
+                <div style="flex:2;min-width:300px;">
+                    <label style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:4px;color:#555;">Buscar por Bem (código ou descrição)</label>
+                    <input type="text" id="consumoBusca" placeholder="Ex: 5626757 ou PAPEL SULFITE..." style="width:100%;padding:8px 10px;border:1px solid var(--borda);border-radius:6px;font-size:0.9rem;" oninput="consumoAplicarFiltros()">
+                </div>
+                <div>
+                    <button class="btn btn-outline" onclick="consumoLimparFiltros()">Limpar Filtros</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
+            <div class="card">
+                <h3 id="consumoGraficoTitle">Consumo por Centro de Despacho</h3>
+                <div id="consumoGraficoArea">
+                    <div id="consumoCentroChart" class="chart-container"><canvas id="chartConsumoCentro"></canvas></div>
+                    <div id="consumoPizzaArea" style="display:none;height:300px;"><canvas id="chartConsumoPizza"></canvas></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Resumo por Centro</h3>
+                <div id="consumoCentroTabela"><div class="loading">Carregando</div></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Consumo por Item</h3>
+            <div id="consumoItensTabela"><div class="loading">Carregando</div></div>
+        </div>
+    `;
+    consumoCarregarCentros();
+    consumoAplicarFiltros();
+}
+
+async function consumoCarregarCentros() {
+    try {
+        const centros = await api('/consumo/centros');
+        const sel = document.getElementById('consumoCentroFiltro');
+        if (sel && centros.length) {
+            sel.innerHTML = '<option value="">Todos os centros</option>' +
+                centros.map(c => `<option value="${c}">${c}</option>`).join('');
+        }
+    } catch(e) {}
+}
+
+function consumoLimparFiltros() {
+    document.getElementById('consumoCentroFiltro').value = '';
+    document.getElementById('consumoBusca').value = '';
+    consumoAplicarFiltros();
+}
+
+async function consumoAplicarFiltros() {
+    const centro = document.getElementById('consumoCentroFiltro')?.value || '';
+    const busca = document.getElementById('consumoBusca')?.value || '';
+
+    let paramsCentro = '';
+    let paramsItens = '?limit=500';
+
+    if (centro) {
+        paramsCentro = '?centro=' + encodeURIComponent(centro);
+        paramsItens += '&centro=' + encodeURIComponent(centro);
+    }
+    if (busca) {
+        paramsItens += '&busca=' + encodeURIComponent(busca);
+    }
+
+    const barEl = document.getElementById('consumoCentroChart');
+    const pizzaEl = document.getElementById('consumoPizzaArea');
+    const titleEl = document.getElementById('consumoGraficoTitle');
+
+    if (centro) {
+        barEl.style.display = 'none';
+        pizzaEl.style.display = 'block';
+        titleEl.textContent = 'Consumo por Item — ' + centro;
+        consumoMostrarPizzaPorCentro(centro);
+        consumoBuscarItens(paramsItens);
+    } else if (busca) {
+        barEl.style.display = 'none';
+        pizzaEl.style.display = 'block';
+        titleEl.textContent = 'Distribuição por Centro (Bem)';
+        consumoMostrarPizzaInline(busca);
+        consumoCarregarResumo(paramsCentro);
+        consumoBuscarItens(paramsItens);
+    } else {
+        barEl.style.display = 'block';
+        pizzaEl.style.display = 'none';
+        titleEl.textContent = 'Consumo por Centro de Despacho';
+        if (window._chartConsumoPizza) { window._chartConsumoPizza.destroy(); window._chartConsumoPizza = null; }
+        consumoCarregarResumo(paramsCentro);
+        consumoBuscarItens(paramsItens);
+    }
+}
+
+async function consumoCarregarResumo(params) {
+    try {
+        const centros = await api('/consumo/resumo-por-centro' + (params || ''));
+        const el = document.getElementById('consumoCentroTabela');
+
+        if (!el) return;
+        if (!centros || !centros.length) {
+            el.innerHTML = '<div class="empty">Nenhum dado encontrado para o filtro selecionado</div>';
+            const ctx = document.getElementById('chartConsumoCentro');
+            if (ctx && window._chartConsumoCentro) { window._chartConsumoCentro.destroy(); window._chartConsumoCentro = null; }
+            return;
+        }
+
+        const totalGeral = centros.reduce((s, c) => s + c.total_valor, 0);
+        el.innerHTML = `
+            <div style="margin-bottom:12px;padding:12px;background:var(--usp-cinza);border-radius:6px;">
+                <strong>Valor Total:</strong> <span style="color:var(--usp-azul);font-size:1.2rem;font-weight:700;">R$ ${totalGeral.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
+                <span style="margin-left:12px;color:#888;font-size:0.85rem;">(${centros.length} centro(s))</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Centro</th><th>Registros</th><th>Qtd Total</th><th>Valor Total (R$)</th><th>% do Total</th></tr>
+                    ${centros.map(c => `
+                        <tr>
+                            <td><strong>${c.centro_despacho}</strong></td>
+                            <td>${c.total_itens}</td>
+                            <td>${c.total_quantidade.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                            <td>R$ ${c.total_valor.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                            <td>${((c.total_valor / totalGeral) * 100).toFixed(1)}%</td>
+                        </tr>
+                    `).join('')}
+                </table>
+            </div>
+        `;
+
+        const ctx = document.getElementById('chartConsumoCentro');
+        if (ctx) {
+            const labels = centros.map(c => c.centro_despacho);
+            const values = centros.map(c => c.total_valor);
+            const colors = ['#00509e','#f5a623','#28a745','#dc3545','#17a2b8','#6f42c1','#fd7e14','#20c997','#e83e8c','#007bff'];
+            if (window._chartConsumoCentro) window._chartConsumoCentro.destroy();
+            window._chartConsumoCentro = new Chart(ctx.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [{ label: 'Valor Total (R$)', data: values, backgroundColor: colors.slice(0, labels.length) }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: true, ticks: { callback: v => 'R$ ' + v.toLocaleString('pt-BR') } } }
+                }
+            });
+        }
+    } catch(e) {
+        const el = document.getElementById('consumoCentroTabela');
+        if (el) el.innerHTML = `<div class="empty">Erro: ${e.message}</div>`;
+    }
+}
+
+async function consumoBuscarItens(params) {
+    const el = document.getElementById('consumoItensTabela');
+    if (!el) return;
+    el.innerHTML = '<div class="loading">Buscando</div>';
+
+    try {
+        const itens = await api('/consumo/resumo-por-item' + (params || '?limit=500'));
+        if (!itens || !itens.length) {
+            el.innerHTML = '<div class="empty">Nenhum item encontrado para o filtro selecionado</div>';
+            return;
+        }
+
+        const totalGeral = itens.reduce((s, i) => s + i.total_valor, 0);
+        el.innerHTML = `
+            <div style="margin-bottom:8px;color:#888;font-size:0.82rem;">
+                ${itens.length} item(ns) encontrado(s) &mdash; Total: R$ ${totalGeral.toLocaleString('pt-BR', {minimumFractionDigits: 2})}
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Código</th><th>Descrição</th><th>Unidade</th><th>Qtd Total</th><th>Valor Total (R$)</th><th>% do Total</th></tr>
+                    ${itens.map(i => `
+                        <tr>
+                            <td><strong>${i.codigo_bem}</strong></td>
+                            <td style="max-width:350px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${i.descricao || '-'}</td>
+                            <td>${i.unidade_composicao || '-'}</td>
+                            <td>${i.total_quantidade.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                            <td>R$ ${i.total_valor.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                            <td>${totalGeral > 0 ? ((i.total_valor / totalGeral) * 100).toFixed(1) : 0}%</td>
+                        </tr>
+                    `).join('')}
+                </table>
+            </div>
+        `;
+    } catch(e) {
+        el.innerHTML = `<div class="empty">Erro: ${e.message}</div>`;
+    }
+}
+
+async function consumoMostrarPizzaInline(busca) {
+    const pizzaEl = document.getElementById('consumoPizzaArea');
+    const titleEl = document.getElementById('consumoGraficoTitle');
+    if (!pizzaEl) return;
+
+    try {
+        const itens = await api('/consumo/resumo-por-item?busca=' + encodeURIComponent(busca) + '&limit=1');
+        if (!itens || !itens.length) {
+            titleEl.textContent = 'Distribuição por Centro (Bem)';
+            return;
+        }
+
+        const item = itens[0];
+        titleEl.textContent = `Distribuição por Centro — ${item.codigo_bem}`;
+
+        const dados = await api('/consumo/item-por-centro?codigo_bem=' + encodeURIComponent(item.codigo_bem));
+        if (!dados || !dados.length) return;
+
+        const totalGeral = dados.reduce((s, d) => s + d.total_valor, 0);
+        const labels = dados.map(d => d.centro_despacho);
+        const values = dados.map(d => d.total_valor);
+        const colors = ['#00509e','#f5a623','#28a745','#dc3545','#17a2b8','#6f42c1','#fd7e14','#20c997','#e83e8c','#007bff','#e91e63','#00bcd4','#8bc34a','#ff9800','#795548'];
+
+        const el = document.getElementById('consumoCentroTabela');
+        if (el) {
+            el.innerHTML = `
+                <div style="margin-bottom:10px;padding:10px;background:var(--usp-cinza);border-radius:6px;">
+                    <strong>Total:</strong> <span style="color:var(--usp-azul);font-size:1.1rem;font-weight:700;">R$ ${totalGeral.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <tr><th>Centro</th><th>Qtd</th><th>Valor (R$)</th><th>%</th></tr>
+                        ${dados.map(d => `
+                            <tr>
+                                <td><strong>${d.centro_despacho}</strong></td>
+                                <td>${d.total_quantidade.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                                <td>R$ ${d.total_valor.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                                <td>${((d.total_valor / totalGeral) * 100).toFixed(1)}%</td>
+                            </tr>
+                        `).join('')}
+                    </table>
+                </div>
+            `;
+        }
+
+        const ctx = document.getElementById('chartConsumoPizza');
+        if (window._chartConsumoPizza) window._chartConsumoPizza.destroy();
+        window._chartConsumoPizza = new Chart(ctx.getContext('2d'), {
+            type: 'pie',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: colors.slice(0, labels.length),
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 10 } },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                const v = ctx.parsed;
+                                const pct = ((v / totalGeral) * 100).toFixed(1);
+                                return ` ${ctx.label}: R$ ${v.toLocaleString('pt-BR', {minimumFractionDigits: 2})} (${pct}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    } catch(e) {}
+}
+
+async function consumoMostrarPizzaPorCentro(centro) {
+    const pizzaEl = document.getElementById('consumoPizzaArea');
+    const titleEl = document.getElementById('consumoGraficoTitle');
+    if (!pizzaEl) return;
+    try {
+        const itens = await api('/consumo/resumo-por-item?centro=' + encodeURIComponent(centro) + '&limit=500');
+        if (!itens || !itens.length) {
+            pizzaEl.innerHTML = '<div class="empty">Nenhum item encontrado para este centro</div>';
+            return;
+        }
+        pizzaEl.innerHTML = '<div class="chart-container" style="height:350px;"><canvas id="chartConsumoPizza"></canvas></div>';
+        const totalGeral = itens.reduce((s, i) => s + i.total_valor, 0);
+        const top10 = itens.slice(0, 10);
+        const outrosTotal = itens.slice(10).reduce((s, i) => s + i.total_valor, 0);
+        if (outrosTotal > 0) top10.push({ descricao: 'Outros', total_valor: outrosTotal });
+        const labels = top10.map(i => i.descricao || i.codigo_bem || 'N/A');
+        const values = top10.map(i => i.total_valor);
+        const colors = ['#00509e','#f5a623','#28a745','#dc3545','#17a2b8','#6f42c1','#fd7e14','#20c997','#e83e8c','#007bff','#999999'];
+        const ctx = document.getElementById('chartConsumoPizza');
+        if (window._chartConsumoPizza) window._chartConsumoPizza.destroy();
+        window._chartConsumoPizza = new Chart(ctx.getContext('2d'), {
+            type: 'pie',
+            data: {
+                labels,
+                datasets: [{ data: values, backgroundColor: colors.slice(0, labels.length) }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 8 } },
+                    tooltip: { callbacks: { label: function(ctx) {
+                        const pct = ((ctx.parsed / totalGeral) * 100).toFixed(1);
+                        return ' ' + ctx.label + ': R$ ' + ctx.parsed.toLocaleString('pt-BR', {minimumFractionDigits: 2}) + ' (' + pct + '%)';
+                    }}}
+                }
+            }
+        });
+        const el = document.getElementById('consumoCentroTabela');
+        if (el) {
+            el.innerHTML = `
+                <div style="margin-bottom:10px;padding:10px;background:var(--usp-cinza);border-radius:6px;">
+                    <strong>Total:</strong> <span style="color:var(--usp-azul);font-size:1.1rem;font-weight:700;">R$ ${totalGeral.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
+                    <span style="margin-left:12px;color:#888;font-size:0.85rem;">(${itens.length} item(ns))</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <tr><th>Código</th><th>Descrição</th><th>Unidade</th><th>Qtd Total</th><th>Valor (R$)</th><th>%</th></tr>
+                        ${itens.slice(0, 15).map(i => `
+                            <tr>
+                                <td><strong>${i.codigo_bem}</strong></td>
+                                <td style="max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${i.descricao || '-'}</td>
+                                <td>${i.unidade_composicao || '-'}</td>
+                                <td>${i.total_quantidade.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                                <td>R$ ${i.total_valor.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                                <td>${((i.total_valor / totalGeral) * 100).toFixed(1)}%</td>
+                            </tr>
+                        `).join('')}
+                    </table>
+                </div>
+            `;
+        }
+    } catch(e) {
+        const el = document.getElementById('consumoCentroTabela');
+        if (el) el.innerHTML = '<div class="empty">Erro: ' + e.message + '</div>';
+    }
+}
+
+async function consumoImportar() {
+    const file = document.getElementById('consumoFile')?.files[0];
+    if (!file) { toast('Selecione um arquivo CSV', 'error'); return; }
+    const el = document.getElementById('consumoImportResult');
+    el.innerHTML = '<div class="loading">Importando</div>';
+
+    const fd = new FormData();
+    fd.append('arquivo', file);
+    try {
+        const r = await api('/consumo/importar-csv', { method: 'POST', body: fd });
+        el.innerHTML = `<span class="badge badge-ok">✓ ${r.mensagem}</span>`;
+        toast(`${r.detalhes?.importados || 0} registros importados`);
+        consumoCarregarCentros();
+        consumoAplicarFiltros();
+    } catch(e) {
+        el.innerHTML = `<span class="badge badge-danger">Erro:</span> ${e.message}`;
+    }
+}
+
+async function consumoLimpar() {
+    if (!confirm('Tem certeza que deseja limpar todos os dados de consumo?')) return;
+    try {
+        const r = await api('/consumo/limpar', { method: 'DELETE' });
+        toast(r.mensagem);
+        consumoCarregarCentros();
+        consumoAplicarFiltros();
+    } catch(e) { toast('Erro: ' + e.message, 'error'); }
+}
+
+// ====== SINCRONIA ======
+async function renderSincronia(el) {
+    el.innerHTML = '<div class="loading">Carregando</div>';
+    try {
+        const [cfg, status, hist] = await Promise.all([
+            api('/sync/config').catch(()=>({})),
+            api('/sync/status').catch(()=>({})),
+            api('/sync/historico?limite=20').catch(()=>([])),
+        ]);
+        el.innerHTML = `
+            <div class="card"><h3>Configuração da Sincronia</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                    <div><label style="font-weight:600;font-size:0.85rem;">Intervalo</label>
+                        <select id="sc_intervalo" style="width:100%;padding:8px;border:1px solid var(--borda);border-radius:6px;margin-top:4px;">
+                            <option value="12" ${cfg.intervalo_horas==12?'selected':''}>12 horas</option>
+                            <option value="24" ${cfg.intervalo_horas==24?'selected':''}>24 horas</option>
+                            <option value="48" ${cfg.intervalo_horas==48?'selected':''}>48 horas</option>
+                            <option value="72" ${cfg.intervalo_horas==72?'selected':''}>72 horas</option>
+                            <option value="168" ${cfg.intervalo_horas==168?'selected':''}>7 dias</option>
+                        </select>
+                    </div>
+                    <div><label style="font-weight:600;font-size:0.85rem;">Horário</label>
+                        <input type="time" id="sc_horario" value="${cfg.horario_execucao||'06:00'}" style="width:100%;padding:8px;border:1px solid var(--borda);border-radius:6px;margin-top:4px;">
+                    </div>
+                </div>
+                <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+                    <label style="display:flex;align-items:center;gap:6px;font-size:0.9rem;"><input type="checkbox" id="sc_ativo" ${cfg.ativo?'checked':''}> Sincronia automática ativa</label>
+                    <label style="display:flex;align-items:center;gap:6px;font-size:0.9rem;"><input type="checkbox" id="sc_uteis" ${cfg.apenas_dias_uteis?'checked':''}> Apenas dias úteis</label>
+                    <button class="btn btn-primary" onclick="syncSalvarConfig()">Salvar Config</button>
+                </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                <div class="card"><h3>Status do Scheduler</h3>
+                    <p><strong>Status:</strong> <span class="badge ${status.scheduler_status?.ativo?'badge-ok':'badge-danger'}">${status.scheduler_status?.ativo?'Ativo':status.scheduler_status?.pausado?'Pausado':'Parado'}</span></p>
+                    <p><strong>Próxima execução:</strong> ${status.scheduler_status?.proxima_execucao ? new Date(status.scheduler_status.proxima_execucao).toLocaleString('pt-BR') : '-'}</p>
+                    <p><strong>Última execução:</strong> ${status.ultimo_sync?.concluido_em ? new Date(status.ultimo_sync.concluido_em).toLocaleString('pt-BR') : 'Nunca'}</p>
+                    <p><strong>Último resultado:</strong> ${status.ultimo_sync?.status||'-'} (${status.ultimo_sync?.total_importados||0} importados)</p>
+                    <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+                        <button class="btn btn-primary" onclick="syncAcao('iniciar')">▶ Iniciar</button>
+                        <button class="btn btn-outline" onclick="syncAcao('pausar')">⏸ Pausar</button>
+                        <button class="btn btn-danger" onclick="syncAcao('parar')">⏹ Parar</button>
+                    </div>
+                </div>
+                <div class="card"><h3>Ações</h3>
+                    <button class="btn btn-success" onclick="syncExecutarAgora()" style="width:100%;margin-bottom:8px;">▶ Executar Sincronia Agora</button>
+                    <button class="btn btn-outline" onclick="syncTestarConexao()" style="width:100%;">Testar Conexão USP Digital</button>
+                    <div id="syncTestResult" style="margin-top:8px;"></div>
+                </div>
+            </div>
+            <div class="card"><h3>Histórico de Sincronia</h3>
+                ${hist && hist.length ? `<div class="table-wrap"><table><tr><th>Data</th><th>Tipo</th><th>Status</th><th>Extraídos</th><th>Importados</th><th>Erros</th></tr>
+                    ${hist.map(h=>`<tr><td>${h.iniciado_em?new Date(h.iniciado_em).toLocaleString('pt-BR'):'-'}</td><td>${h.tipo}</td><td><span class="badge ${h.status==='sucesso'?'badge-ok':h.status==='erro'?'badge-danger':'badge-warn'}">${h.status}</span></td><td>${h.total_extraidos}</td><td>${h.total_importados}</td><td>${h.erros}</td></tr>`).join('')}
+                </table></div>` : '<div class="empty">Nenhum histórico de sincronia</div>'}
+            </div>
+        `;
+    } catch(e) { el.innerHTML=`<div class="empty">Erro: ${e.message}</div>`; }
+}
+
+async function syncSalvarConfig() {
+    const data = {
+        intervalo_horas: parseInt(document.getElementById('sc_intervalo').value),
+        horario_execucao: document.getElementById('sc_horario').value,
+        ativo: document.getElementById('sc_ativo').checked,
+        apenas_dias_uteis: document.getElementById('sc_uteis').checked,
+    };
+    try { await api('/sync/config', {method:'POST', body:data}); toast('Configuração salva'); } catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+async function syncAcao(a) {
+    try { const r = await api('/sync/scheduler/'+a, {method:'POST'}); toast(r.mensagem); renderSincronia(document.getElementById('pageContent')); }
+    catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+async function syncExecutarAgora() {
+    const btn = event.target; btn.disabled=true; btn.textContent='Executando...';
+    try {
+        const r = await api('/sync/executar', {method:'POST'});
+        toast(`Sincronia concluída: ${r.importados||0} itens importados`);
+        renderSincronia(document.getElementById('pageContent'));
+    } catch(e) { toast('Erro: '+e.message,'error'); btn.disabled=false; btn.textContent='▶ Executar Sincronia Agora'; }
+}
+
+async function syncTestarConexao() {
+    const el = document.getElementById('syncTestResult');
+    el.innerHTML = '<div class="loading">Testando</div>';
+    try {
+        const r = await api('/sync/testar-conexao', {method:'POST'});
+        el.innerHTML = `<span class="badge ${r.status==='ok'?'badge-ok':'badge-danger'}">${r.status==='ok'?'✓ Conexão OK':'✗ Falha'}</span> ${r.mensagem||r.detalhe||''}`;
+    } catch(e) { el.innerHTML = `<span class="badge badge-danger">✗ Erro:</span> ${e.message}`; }
+}
+
+// ====== RELATÓRIOS ======
+async function renderRelatorios(el) {
+    let cats = []; try { cats = await api('/categorias'); } catch(e) {}
+    el.innerHTML = `
+        <div class="card"><h3>Gerar Relatório</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:600px;">
+                <div class="field"><label>Tipo</label><select id="rel_tipo"><option value="completo">Completo</option><option value="estoque">Estoque</option><option value="movimentacoes">Movimentações</option><option value="patrimonio">Patrimônio</option></select></div>
+                <div class="field"><label>Formato</label><select id="rel_formato"><option value="xlsx">Excel (XLSX)</option><option value="pdf">PDF</option></select></div>
+                <div class="field"><label>Categoria</label><select id="rel_cat"><option value="">Todas</option>${cats.map(c=>`<option value="${c.id}">${c.nome}</option>`).join('')}</select></div>
+                <div class="field"><label>Status</label><select id="rel_status"><option value="">Todos</option><option value="disponivel">Disponível</option><option value="baixado">Baixado</option></select></div>
+                <div class="field"><label>Data Início</label><input type="date" id="rel_dtini"></div>
+                <div class="field"><label>Data Fim</label><input type="date" id="rel_dtfim"></div>
+            </div>
+            <button class="btn btn-primary" onclick="relGerar()" style="margin-top:12px;">📥 Gerar Relatório</button>
+            <div id="relResult" style="margin-top:12px;"></div>
+        </div>
+        <div class="card"><h3>Importar Relatório</h3>
+            <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Faça upload de um relatório baixado manualmente do USP Digital (CSV ou XLSX)</p>
+            <input type="file" id="relFile" accept=".csv,.xlsx" style="margin-bottom:8px;">
+            <button class="btn btn-primary" onclick="relUpload()">📤 Enviar e Importar</button>
+            <div id="relUploadResult" style="margin-top:8px;"></div>
+        </div>
+    `;
+}
+
+async function relGerar() {
+    const el = document.getElementById('relResult');
+    el.innerHTML = '<div class="loading">Gerando relatório</div>';
+    try {
+        const r = await api('/relatorios/gerar', {method:'POST', body:{
+            tipo: document.getElementById('rel_tipo').value,
+            formato: document.getElementById('rel_formato').value,
+            categoria_id: parseInt(document.getElementById('rel_cat').value)||null,
+            status: document.getElementById('rel_status').value||null,
+            data_inicio: document.getElementById('rel_dtini').value||null,
+            data_fim: document.getElementById('rel_dtfim').value||null,
+        }});
+        el.innerHTML = `<span class="badge badge-ok">✓ Relatório gerado</span> <a href="${API}/relatorios/download/${r.arquivo}" target="_blank" style="color:var(--usp-azul);">📥 Baixar ${r.arquivo}</a>`;
+    } catch(e) { el.innerHTML=`<span class="badge badge-danger">Erro:</span> ${e.message}`; }
+}
+
+async function relUpload() {
+    const file = document.getElementById('relFile').files[0];
+    if (!file) { toast('Selecione um arquivo','error'); return; }
+    const el = document.getElementById('relUploadResult');
+    el.innerHTML = '<div class="loading">Importando</div>';
+    const fd = new FormData();
+    fd.append('arquivo', file);
+    const ext = file.name.split('.').pop().toLowerCase();
+    const endpoint = ext==='csv' ? '/importar-relatorio/upload-csv' : '/importar-relatorio/upload';
+    try {
+        const r = await api(endpoint, {method:'POST', body:fd});
+        el.innerHTML = `<span class="badge badge-ok">✓ ${r.mensagem||'Importado'}</span>`;
+        toast(`${r.detalhes?.total_itens||r.detalhes?.itens||0} itens importados`);
+    } catch(e) { el.innerHTML=`<span class="badge badge-danger">Erro:</span> ${e.message}`; }
+}
+
+async function abrirModalSenha() {
+    const m = document.getElementById('modalContent');
+    m.innerHTML = `
+        <h3>Alterar Senha</h3>
+        <div class="field"><label>Senha Atual</label><input type="password" id="uf_pass_old"></div>
+        <div class="field"><label>Nova Senha * (mín 6 caracteres)</label><input type="password" id="uf_pass_new"></div>
+        <div class="field"><label>Confirmar Nova Senha *</label><input type="password" id="uf_pass_new2"></div>
+        <div class="actions">
+            <button class="btn btn-outline" onclick="fecharModal()">Cancelar</button>
+            <button class="btn btn-primary" onclick="alterarSenha()">Alterar</button>
+        </div>
+    `;
+    document.getElementById('modalOverlay').classList.add('open');
+}
+
+async function alterarSenha() {
+    const old_password = document.getElementById('uf_pass_old').value;
+    const new_password = document.getElementById('uf_pass_new').value;
+    const new_password_2 = document.getElementById('uf_pass_new2').value;
+    if (!old_password || !new_password) { toast('Todos os campos sao obrigatorios','error'); return; }
+    if (new_password !== new_password_2) { toast('As novas senhas nao coincidem','error'); return; }
+    if (new_password.length < 6) { toast('Senha minimo 6 caracteres','error'); return; }
+    try {
+        await api('/auth/alterar-senha', {method:'POST', body:{old_password, new_password}});
+        toast('Senha alterada com sucesso'); fecharModal();
+    } catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+// ====== USUÁRIOS ======
+async function renderUsuarios(el) {
+    el.innerHTML = `
+        <div class="toolbar"><button class="btn btn-primary" onclick="userAbrirModal()">+ Novo Usuário</button></div>
+        <div class="card"><div id="userTabela"><div class="loading">Carregando</div></div></div>
+    `;
+    userCarregar();
+}
+
+async function userCarregar() {
+    const el = document.getElementById('userTabela');
+    if (!el) return;
+    try {
+        const users = await api('/auth/usuarios');
+        if (!users||!users.length) { el.innerHTML='<div class="empty">Nenhum usuário</div>'; return; }
+        el.innerHTML = `<div class="table-wrap"><table><tr><th>ID</th><th>Usuário</th><th>Nome</th><th>Email</th><th>Admin</th><th>Ativo</th></tr>
+            ${users.map(u=>`<tr><td>${u.id}</td><td><strong>${u.username}</strong></td><td>${u.nome_completo||'-'}</td><td>${u.email||'-'}</td><td><span class="badge ${u.is_admin?'badge-info':'badge-ok'}">${u.is_admin?'Sim':'Não'}</span></td><td><span class="badge ${u.ativo?'badge-ok':'badge-danger'}">${u.ativo?'Sim':'Não'}</span></td></tr>`).join('')}
+        </table></div>`;
+    } catch(e) { 
+        if (el) el.innerHTML=`<div class="empty">Erro ao carregar usuários: ${e.message}</div>`; 
+    }
+}
+
+async function userAbrirModal() {
+    const m = document.getElementById('modalContent');
+    m.innerHTML = `
+        <h3>Novo Usuário</h3>
+        <div class="row">
+            <div class="field"><label>Usuário *</label><input id="uf_user"></div>
+            <div class="field"><label>Senha * (mín 6 caracteres)</label><input type="password" id="uf_pass"></div>
+        </div>
+        <div class="field"><label>Nome Completo</label><input id="uf_nome"></div>
+        <div class="field"><label>Email</label><input id="uf_email" type="email"></div>
+        <div class="actions">
+            <button class="btn btn-outline" onclick="fecharModal()">Cancelar</button>
+            <button class="btn btn-primary" onclick="userCriar()">Criar</button>
+        </div>
+    `;
+    document.getElementById('modalOverlay').classList.add('open');
+}
+
+async function userCriar() {
+    const data = {
+        username: document.getElementById('uf_user').value,
+        password: document.getElementById('uf_pass').value,
+        nome_completo: document.getElementById('uf_nome').value,
+        email: document.getElementById('uf_email').value,
+    };
+    if (!data.username||!data.password) { toast('Usuário e senha obrigatórios','error'); return; }
+    if (data.password.length<6) { toast('Senha mínimo 6 caracteres','error'); return; }
+    try {
+        await api('/auth/usuarios', {method:'POST', body:data});
+        toast('Usuário criado'); fecharModal(); userCarregar();
+    } catch(e) { toast('Erro: '+e.message,'error'); }
+}
+
+// ====== MODAL ======
+function fecharModal() { document.getElementById('modalOverlay').classList.remove('open'); }
+document.getElementById('modalOverlay').addEventListener('click', function(e) { if (e.target===this) fecharModal(); });
+
+// ====== INIT ======
+checkAuth();
+</script>
+</body>
+</html>
