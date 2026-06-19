@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>__WP_TITLE__ - USP</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f5f5;color:#333;line-height:1.6}
+.header{background:linear-gradient(135deg,#003366,#00509e);color:#fff;padding:20px 0;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.header h1{font-size:1.5rem;font-weight:600}
+.header .sub{font-size:.85rem;opacity:.85;margin-top:2px}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.card{background:#fff;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:24px;margin-bottom:20px}
+.card h2{font-size:1.15rem;color:#00509e;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #f5f5f5}
+.search-box{display:flex;gap:12px;flex-wrap:wrap}
+.search-box input,.search-box select{padding:10px 14px;border:1px solid #ddd;border-radius:6px;font-size:.95rem;flex:1;min-width:180px;outline:none}
+.search-box input:focus,.search-box select:focus{border-color:#00509e;box-shadow:0 0 0 3px rgba(0,80,158,.1)}
+.btn{padding:10px 24px;background:#00509e;color:#fff;border:none;border-radius:6px;font-size:.95rem;cursor:pointer;white-space:nowrap}
+.btn:hover{background:#003366}
+.btn-outline{background:transparent;color:#00509e;border:1px solid #00509e}
+.btn-outline:hover{background:#f5f5f5}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:20px}
+.stat-card{background:#fff;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:18px;text-align:center}
+.stat-card .number{font-size:2rem;font-weight:700;color:#00509e}
+.stat-card .label{font-size:.85rem;color:#666}
+.stat-card.green .number{color:#4caf50}
+.stat-card.red .number{color:#f44336}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;color:#003366;border-bottom:2px solid #ddd}
+td{padding:10px 12px;border-bottom:1px solid #f5f5f5}
+tr:hover td{background:#fafafa}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:.8rem;font-weight:500}
+.badge-ok{background:#e8f5e9;color:#2e7d32}
+.badge-warn{background:#fff3e0;color:#e65100}
+.badge-danger{background:#ffebee;color:#c62828}
+.status-indicator{display:inline-flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot-ok{background:#4caf50}
+.dot-warn{background:#ff9800}
+.dot-danger{background:#f44336}
+.tag{display:inline-block;background:#f5f5f5;padding:2px 8px;border-radius:4px;font-size:.8rem;color:#666}
+.footer{text-align:center;padding:20px;color:#999;font-size:.85rem}
+.empty{text-align:center;padding:40px;color:#999}
+.info-bar{margin-bottom:12px;color:#666;font-size:.85rem}
+.pagination{margin-top:12px;text-align:center;display:flex;justify-content:center;align-items:center;gap:8px}
+.pagination .btn{padding:6px 14px;font-size:.88rem}
+.pagination span{font-size:.9rem;color:#555}
+.ultima-atualizacao{font-size:.82rem;color:#999;text-align:center;margin-bottom:16px}
+@media(max-width:768px){.header-inner{flex-direction:column;text-align:center;gap:8px}.search-box{flex-direction:column}.search-box input{min-width:auto}.stats{grid-template-columns:1fr 1fr}table{font-size:.8rem}th,td{padding:6px 8px}}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<div><h1>Sistema de Controle de Almoxarifado</h1><div class="sub">Universidade de Sao Paulo - Consulta Publica</div></div>
+<div style="display:flex;align-items:center;gap:12px"><span style="font-size:.85rem;opacity:.85">Dados do estoque</span></div>
+</div>
+</header>
+<div class="container">
+<div class="ultima-atualizacao">Ultima atualizacao: __ULTIMA_DATA__</div>
+<div class="stats" id="stats">
+__STATS_HTML__
+</div>
+<div class="card">
+<h2>Consultar Itens</h2>
+<div class="search-box">
+<input type="text" id="sc" placeholder="Codigo do item..." oninput="f()">
+<input type="text" id="sn" placeholder="Nome do item..." oninput="f()">
+<select id="scat" onchange="f()"><option value="">Todas as categorias</option>__CAT_OPTIONS__</select>
+<button class="btn" onclick="f()">Buscar</button>
+<button class="btn btn-outline" onclick="l()">Limpar</button>
+</div>
+</div>
+<div class="card"><h2>Resultados</h2><div id="r"><div class="empty">Carregando dados...</div></div></div>
+</div>
+<div class="footer">Sistema de Controle de Almoxarifado &mdash; USP &mdash; Dados de __ULTIMA_DATA__</div>
+<script>
+var D=__DATA_JSON__;
+var I=D.itens,C=D.categorias,P=50,p=1,F=[];
+var sel=document.getElementById("scat");
+sel.innerHTML='<option value="">Todas as categorias</option>';
+for(var i=0;i<C.length;i++){var o=document.createElement("option");o.value=C[i];o.textContent=C[i];sel.appendChild(o);}
+function b(s){
+  var m={disponivel:["Disponivel","badge-ok","dot-ok"],emprestado:["Emprestado","badge-warn","dot-warn"],manutencao:["Manutencao","badge-warn","dot-warn"],baixado:["Baixado","badge-danger","dot-danger"],reservado:["Reservado","badge-warn","dot-warn"]};
+  var a=m[s]||["Desconhecido","badge-warn","dot-warn"];
+  return '<span class="status-indicator"><span class="dot '+a[2]+'"></span><span class="badge '+a[1]+'">'+a[0]+'</span></span>';
+}
+function f(){
+  var a=document.getElementById("sc").value.trim().toLowerCase();
+  var b=document.getElementById("sn").value.trim().toLowerCase();
+  var c=document.getElementById("scat").value;
+  F=I.filter(function(i){
+    if(a&&i.codigo.toLowerCase().indexOf(a)===-1)return false;
+    if(b&&i.nome.toLowerCase().indexOf(b)===-1)return false;
+    if(c&&i.categoria!==c)return false;
+    return true;
+  });
+  p=1;r();
+}
+function l(){
+  document.getElementById("sc").value="";
+  document.getElementById("sn").value="";
+  document.getElementById("scat").value="";
+  F=I.slice();p=1;r();
+}
+function r(){
+  var e=document.getElementById("r"),t=F.length,tp=Math.max(1,Math.ceil(t/P));
+  if(p>tp)p=tp;if(p<1)p=1;
+  var s=(p-1)*P,o=Math.min(s+P,t),pg=F.slice(s,o);
+  if(t===0){e.innerHTML='<div class="empty">Nenhum item encontrado</div>';return;}
+  var h='<div class="info-bar">Mostrando '+(s+1)+'-'+o+' de '+t+' item(ns)</div>';
+  h+='<table><thead><tr><th>Codigo</th><th>Nome</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Pedidos por:</th><th>Status</th></tr></thead><tbody>';
+  for(var i=0;i<pg.length;i++){
+    var x=pg[i];
+    h+='<tr><td><strong>'+(x.codigo||'-')+'</strong></td><td>'+(x.nome||'-')+'</td><td>'+(x.nome_comercial||'-')+'</td><td>'+(x.fabricante||'-')+'</td><td><span class="tag">'+(x.categoria||'N/A')+'</span></td><td>'+(x.pedidos_info||'Almox')+'</td><td>'+b(x.status)+'</td></tr>';
+  }
+  h+='</tbody></table>';
+  if(tp>1){
+    h+='<div class="pagination">';
+    if(p>1)h+='<button class="btn btn-outline" onclick="g('+(p-1)+')">&laquo; Anterior</button>';
+    h+='<span>Pagina '+p+' de '+tp+'</span>';
+    if(p<tp)h+='<button class="btn btn-outline" onclick="g('+(p+1)+')">Proxima &raquo;</button>';
+    h+='</div>';
+  }
+  e.innerHTML=h;
+}
+function g(x){if(x<1)return;p=x;r();}
+F=I.slice();r();
+</script>
+</body>
+</html>
