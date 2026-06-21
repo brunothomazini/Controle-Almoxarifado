@@ -1,0 +1,10 @@
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = true
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
