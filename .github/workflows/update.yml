@@ -1,0 +1,30 @@
+name: Update Almoxarifado Data
+on:
+  schedule:
+    - cron: '0 0 * * *' # Executa todo dia à meia-noite
+  workflow_dispatch:    # Permite rodar manualmente a qualquer momento
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Necessário para o bot poder fazer commit
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run Fetch Script
+        run: python scripts/fetch.py
+      - name: Run Build Script
+        run: python scripts/build.py
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add data/almox.json index.html
+          git commit -m "chore: auto-update almoxarifado data" || echo "No changes to commit"
+          git push
