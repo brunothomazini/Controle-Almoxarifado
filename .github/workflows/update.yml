@@ -26,5 +26,10 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add data/almox.json index.html
-          git commit -m "chore: auto-update almoxarifado data" || echo "No changes to commit"
-          git push
+          # Verifica se há mudanças antes de comitar
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto-update almoxarifado data"
+            git push
+          fi
