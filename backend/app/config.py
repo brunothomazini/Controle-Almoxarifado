@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     DEBUG: bool = True
 
     DATABASE_URL: str = f"sqlite:///{Path(__file__).parent.parent / 'data' / 'almoxarifado.db'}"
-    SECRET_KEY: str = "change-this-secret-key-in-production"
+    SECRET_KEY: str = ""
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 480
 
     USP_DIGITAL_BASE_URL: str = "https://uspdigital.usp.br/administrativo"

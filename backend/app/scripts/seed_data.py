@@ -5,6 +5,7 @@ Uso:
     python -m app.scripts.seed_data
 """
 
+import os
 from app.database import SessionLocal, init_db
 from app.models.models import Categoria, Item, Fornecedor, StatusItem
 from app.services.auth_service import gerar_hash_senha
@@ -94,7 +95,7 @@ def seed():
             username="externo",
             email="externo@consulta.usp.br",
             nome_completo="Usuario Externo",
-            senha_hash=gerar_hash_senha("externo123"),
+            senha_hash=gerar_hash_senha(os.environ["EXTERNO_PASS"]),
             is_externo=True,
         )
         db.add(externo)
@@ -102,8 +103,6 @@ def seed():
     db.commit()
     db.close()
     print("Dados de exemplo inseridos com sucesso!")
-    print("Usuario admin: admin / admin123")
-    print("Usuario externo: externo / externo123")
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ PROJECT_DIR = Path(__file__).resolve().parent.parent
 DB_PATH = PROJECT_DIR / "data" / "almoxarifado.db"
 TEMPLATE_PATH = Path(__file__).parent / "html_template.txt"
 WP_URL = "https://fob.usp.br"
-WP_USER = "brubiro"
+WP_USER = os.environ.get("WP_USER")
 WP_SLUG = "estoque-almoxarifado"
 WP_TITLE = "Consulta Almoxarifado"
 
@@ -292,9 +292,11 @@ def main():
     parser.add_argument("--output", default=None)
     args = parser.parse_args()
 
+    wp_user = args.wp_user or os.environ.get("WP_USER")
     wp_pass = args.wp_pass or os.environ.get("WP_PASS")
-    if not wp_pass and not args.dry_run:
-        print("[ERRO] Informe a senha via --wp-pass ou variavel WP_PASS")
+    if (not wp_user or not wp_pass) and not args.dry_run:
+        print("[ERRO] Informe o usuario via --wp-user ou variavel WP_USER")
+        print("       Informe a senha via --wp-pass ou variavel WP_PASS")
         sys.exit(1)
 
     print("=" * 50)

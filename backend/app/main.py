@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -27,7 +28,7 @@ async def lifespan(app: FastAPI):
                 username="admin",
                 email="admin@almoxarifado.usp.br",
                 nome_completo="Administrador",
-                senha_hash=gerar_hash_senha("admin123"),
+                senha_hash=gerar_hash_senha(os.environ["ADMIN_PASS"]),
                 is_admin=True,
             )
             db.add(admin)

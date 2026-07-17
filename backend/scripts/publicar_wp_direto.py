@@ -4,16 +4,16 @@ import xmlrpc.client, os, sys
 from pathlib import Path
 
 WP_URL = "https://fob.usp.br"
-WP_USER = "brubiro"
+WP_USER = os.environ.get("WP_USER")
 SLUG = "estoque-almoxarifado"
 TITLE = "Consulta Almoxarifado"
 HTML_FILE = Path(__file__).resolve().parent.parent.parent / "almoxarifado-wordpress.html"
 
 def main():
     wp_pass = os.environ.get("WP_PASS")
-    if not wp_pass:
-        print("[ERRO] Defina a variavel WP_PASS")
-        print("    $env:WP_PASS = 'sua-senha'")
+    if not WP_USER or not wp_pass:
+        print("[ERRO] Defina as variaveis WP_USER e WP_PASS")
+        print("    $env:WP_USER = 'seu-usuario'; $env:WP_PASS = 'sua-senha'")
         sys.exit(1)
 
     if not HTML_FILE.exists():

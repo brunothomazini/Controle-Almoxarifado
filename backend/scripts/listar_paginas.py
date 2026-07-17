@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import xmlrpc.client, os, sys
-wp_user = "brubiro"
+wp_user = os.environ.get("WP_USER")
 wp_pass = os.environ.get("WP_PASS")
-if not wp_pass:
-    print("[ERRO] WP_PASS nao definida")
+if not wp_user or not wp_pass:
+    print("[ERRO] Defina WP_USER e WP_PASS")
     sys.exit(1)
 server = xmlrpc.client.ServerProxy("https://fob.usp.br/xmlrpc.php")
 blogs = server.wp.getUsersBlogs(wp_user, wp_pass)
