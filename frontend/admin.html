@@ -454,10 +454,11 @@ function itensBuscar() {
             const itens = await api('/itens'+params);
             if (!itens||!itens.length) { el.innerHTML='<div class="empty">Nenhum item encontrado</div>'; return; }
             el.innerHTML = `<div style="margin-bottom:8px;color:#888;font-size:0.82rem;">${itens.length} item(ns)</div><div class="table-wrap"><table>
-                <tr><th>Código</th><th>Nome</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Qtd</th><th>Min</th><th>Un</th><th>Pedidos por:</th><th>Status</th><th>Ações</th></tr>
+                <tr><th>Código</th><th>Nome</th><th>Modelo</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Qtd</th><th>Min</th><th>Un</th><th>Pedidos por:</th><th>Status</th><th>Ações</th></tr>
                 ${itens.map(i=>`<tr>
                     <td><strong>${i.codigo}</strong></td>
                     <td>${i.nome}</td>
+                    <td>${i.modelo||'-'}</td>
                                                             <td>${i.nome_comercial||'-'}</td>
                     <td>${i.fabricante||'-'}</td>
                     <td><span class="tag">${i.categoria_nome||'-'}</span></td>

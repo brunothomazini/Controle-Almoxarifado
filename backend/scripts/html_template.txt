@@ -111,10 +111,10 @@ function r(){
   var s=(p-1)*P,o=Math.min(s+P,t),pg=F.slice(s,o);
   if(t===0){e.innerHTML='<div class="empty">Nenhum item encontrado</div>';return;}
   var h='<div class="info-bar">Mostrando '+(s+1)+'-'+o+' de '+t+' item(ns)</div>';
-  h+='<table><thead><tr><th>Codigo</th><th>Nome</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Pedidos por:</th><th>Status</th></tr></thead><tbody>';
+  h+='<table><thead><tr><th>Codigo</th><th>Nome</th><th>Especificacao</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Pedidos por:</th><th>Status</th></tr></thead><tbody>';
   for(var i=0;i<pg.length;i++){
     var x=pg[i];
-    h+='<tr><td><strong>'+(x.codigo||'-')+'</strong></td><td>'+(x.nome||'-')+'</td><td>'+(x.nome_comercial||'-')+'</td><td>'+(x.fabricante||'-')+'</td><td><span class="tag">'+(x.categoria||'N/A')+'</span></td><td>'+(x.pedidos_info||'Almox')+'</td><td>'+b(x.status)+'</td></tr>';
+    h+='<tr><td><strong>'+(x.codigo||'-')+'</strong></td><td>'+(x.nome||'-')+'</td><td>'+(x.especificacao||'-')+'</td><td>'+(x.nome_comercial||'-')+'</td><td>'+(x.fabricante||'-')+'</td><td><span class="tag">'+(x.categoria||'N/A')+'</span></td><td>'+(x.pedidos_info||'Almox')+'</td><td>'+b(x.status)+'</td></tr>';
   }
   h+='</tbody></table>';
   if(tp>1){

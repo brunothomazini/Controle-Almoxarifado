@@ -34,7 +34,8 @@
       "quantidade_disponivel": 10000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "RIO"
     },
     {
       "codigo": "6911889",
@@ -45,7 +46,8 @@
       "quantidade_disponivel": 110000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ACENDEDOR TIPO FÓSFOROS, CONTÉM 10 CAIXAS C/40"
     },
     {
       "codigo": "7839588",
@@ -56,7 +58,8 @@
       "quantidade_disponivel": 2260000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "AÇUCAR REFINADO SACO 1  QUILOGRAMA"
     },
     {
       "codigo": "8785830",
@@ -78,7 +81,8 @@
       "quantidade_disponivel": 680000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ADOÇANTE DIETETICO FRASCO 100  MILILITRO SUCRALOSE"
     },
     {
       "codigo": "10113037",
@@ -89,7 +93,8 @@
       "quantidade_disponivel": 260000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "2025"
     },
     {
       "codigo": "8709467",
@@ -100,7 +105,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "10 VOLUMES"
     },
     {
       "codigo": "5654670",
@@ -111,7 +117,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "ÁGUA INJEÇÃO AMPOLA 10ML"
     },
     {
       "codigo": "8634521",
@@ -122,7 +129,8 @@
       "quantidade_disponivel": 170000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DFL"
     },
     {
       "codigo": "5653533",
@@ -133,7 +141,8 @@
       "quantidade_disponivel": 170000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DFL"
     },
     {
       "codigo": "9437320",
@@ -144,7 +153,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DFL"
     },
     {
       "codigo": "8981060",
@@ -155,7 +165,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "25X6"
     },
     {
       "codigo": "5993075",
@@ -166,7 +177,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "25X12"
     },
     {
       "codigo": "8613974",
@@ -177,7 +189,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "30X07"
     },
     {
       "codigo": "5659752",
@@ -199,7 +212,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DENTSPLY"
     },
     {
       "codigo": "5804736",
@@ -210,7 +224,8 @@
       "quantidade_disponivel": 1240000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ALCOOL ETILICO TEOR: COM TEOR DE NO MINIMO 92,8 INPM OU 96 GL  FRASCO 1  LITRO"
     },
     {
       "codigo": "9242830",
@@ -221,7 +236,8 @@
       "quantidade_disponivel": 280000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ALCOOL ETILICO CONCENTRACAO: A 70º INPM FRASCO 1  LITRO"
     },
     {
       "codigo": "8720720",
@@ -232,7 +248,8 @@
       "quantidade_disponivel": 1140000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DENTSPLY"
     },
     {
       "codigo": "5664691",
@@ -243,7 +260,8 @@
       "quantidade_disponivel": 1530000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SS PLUS"
     },
     {
       "codigo": "8721971",
@@ -254,7 +272,8 @@
       "quantidade_disponivel": 20000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DFL"
     },
     {
       "codigo": "8776652",
@@ -265,7 +284,8 @@
       "quantidade_disponivel": 830000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DFL"
     },
     {
       "codigo": "8359024",
@@ -276,7 +296,8 @@
       "quantidade_disponivel": 1410000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DFL"
     },
     {
       "codigo": "8829004",
@@ -287,7 +308,8 @@
       "quantidade_disponivel": 510000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DFL"
     },
     {
       "codigo": "5773989",
@@ -298,7 +320,8 @@
       "quantidade_disponivel": 790000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "COOLMINT"
     },
     {
       "codigo": "8503443",
@@ -309,7 +332,8 @@
       "quantidade_disponivel": 800000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PERIOPLAK"
     },
     {
       "codigo": "9816275",
@@ -320,7 +344,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "APAGADOR DE QUADRO E LOUSA,QUADRO BCO,PP,PRETO,DEPOS.EXTERNO,CAMURCA"
     },
     {
       "codigo": "8395470",
@@ -331,7 +356,8 @@
       "quantidade_disponivel": 190000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "KG SORENSEN"
     },
     {
       "codigo": "9207040",
@@ -342,7 +368,8 @@
       "quantidade_disponivel": 140000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "APONTADOR PARA LAPIS,POLIESTIRENO,SIMPLES,C/DEPOSITO,(2X4)CM"
     },
     {
       "codigo": "9870547",
@@ -364,7 +391,8 @@
       "quantidade_disponivel": 72470000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "AVENTAL DESCARTAVEL PACOTE COM 10 UND EM  NAO TECIDO, COM GRAMATURA MINIMA DE 30G/M², NA COR BRANCA"
     },
     {
       "codigo": "MAT005",
@@ -386,7 +414,8 @@
       "quantidade_disponivel": 2590000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BABADOR ODONTOLOGICO PACOTE 100  UND MEDINDO 35 X 45CM EM NAO TECIDO 100% POLIPROPILENO, GRAMATURA 40G/M2"
     },
     {
       "codigo": "9121951",
@@ -397,7 +426,8 @@
       "quantidade_disponivel": 320000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "FX-CR2032"
     },
     {
       "codigo": "9879944",
@@ -408,7 +438,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIOPLIC KIT"
     },
     {
       "codigo": "8493634",
@@ -419,7 +450,8 @@
       "quantidade_disponivel": 300000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "57X196"
     },
     {
       "codigo": "9232451",
@@ -441,7 +473,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Aquario"
     },
     {
       "codigo": "9266712",
@@ -463,7 +496,8 @@
       "quantidade_disponivel": 230000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "UNIVERSITARIO"
     },
     {
       "codigo": "9091998",
@@ -474,7 +508,8 @@
       "quantidade_disponivel": 3010000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CAFE ESPECIAL TIPO SUPERIOR MOÍDO PACOTE 500 GRAMAS EMBALADO À VACUO"
     },
     {
       "codigo": "9594744",
@@ -485,7 +520,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Multilaser"
     },
     {
       "codigo": "5614899",
@@ -496,7 +532,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "360X250X135"
     },
     {
       "codigo": "8321159",
@@ -507,7 +544,8 @@
       "quantidade_disponivel": 2320000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CAMPO CIRURGICO DESCARTAVEL PACOTE 50 UND 30 X 40 CM (TNT), 100% POLIPROPILENO, GR 40G/M2, COR BRANCA, NAO ESTERIL"
     },
     {
       "codigo": "8657017",
@@ -518,7 +556,8 @@
       "quantidade_disponivel": 130300000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CAMPO CIRURGICO DESCARTAVEL PACOTE 50 UND 40 X 60 CM (TNT), 100% POLIPROPILENO, GR 40G/M2, COR BRANCA, NAO ESTERIL"
     },
     {
       "codigo": "8084432",
@@ -529,7 +568,8 @@
       "quantidade_disponivel": 1910000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "AZUL"
     },
     {
       "codigo": "9550348",
@@ -540,7 +580,8 @@
       "quantidade_disponivel": 1750000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "VERMELHA"
     },
     {
       "codigo": "8182957",
@@ -551,7 +592,8 @@
       "quantidade_disponivel": 2080000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PRETA"
     },
     {
       "codigo": "9189254",
@@ -562,7 +604,8 @@
       "quantidade_disponivel": 400000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "AMARELA"
     },
     {
       "codigo": "8781397",
@@ -573,7 +616,8 @@
       "quantidade_disponivel": 300000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "AZUL"
     },
     {
       "codigo": "7931409",
@@ -584,7 +628,8 @@
       "quantidade_disponivel": 330000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "VERMELHA"
     },
     {
       "codigo": "8671842",
@@ -595,7 +640,8 @@
       "quantidade_disponivel": 390000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CANUDO DESCARTAVEL BIODEGRADÁVEL  PACOTE 250  UNIDADE MEDINDO  APROXIMADAMENTE 210 MM"
     },
     {
       "codigo": "5489954",
@@ -617,7 +663,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "IODONTOSUL"
     },
     {
       "codigo": "8389241",
@@ -628,7 +675,8 @@
       "quantidade_disponivel": 130000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "KOTA"
     },
     {
       "codigo": "8698007",
@@ -639,7 +687,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ANGELUS"
     },
     {
       "codigo": "7307713",
@@ -650,7 +699,8 @@
       "quantidade_disponivel": 290000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SL-M4070FR"
     },
     {
       "codigo": "8718725",
@@ -661,7 +711,8 @@
       "quantidade_disponivel": 490000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LYSANDRA"
     },
     {
       "codigo": "8996440",
@@ -672,7 +723,8 @@
       "quantidade_disponivel": 310000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LYSANDRA"
     },
     {
       "codigo": "8056501",
@@ -683,7 +735,8 @@
       "quantidade_disponivel": 1900000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CHA MATE SOLÚVEL CAIXA COM 250 GRAMAS"
     },
     {
       "codigo": "8737231",
@@ -694,7 +747,8 @@
       "quantidade_disponivel": 90000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MAQUIRA"
     },
     {
       "codigo": "5707811",
@@ -705,7 +759,8 @@
       "quantidade_disponivel": 110000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIODINAMICA"
     },
     {
       "codigo": "8373507",
@@ -716,7 +771,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MTA"
     },
     {
       "codigo": "8939470",
@@ -727,7 +783,8 @@
       "quantidade_disponivel": 50000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DENTSPLY"
     },
     {
       "codigo": "8976996",
@@ -738,7 +795,8 @@
       "quantidade_disponivel": 110000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "KERR"
     },
     {
       "codigo": "8977062",
@@ -749,7 +807,8 @@
       "quantidade_disponivel": 150000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DENTSPLY"
     },
     {
       "codigo": "8547530",
@@ -760,7 +819,8 @@
       "quantidade_disponivel": 40000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTUM"
     },
     {
       "codigo": "10176594",
@@ -771,7 +831,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "WHITENESS PERFECT 16%"
     },
     {
       "codigo": "8687498",
@@ -782,7 +843,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "WHITENESS HP 35%"
     },
     {
       "codigo": "9856110",
@@ -793,7 +855,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "WHITENESS PERBORATO"
     },
     {
       "codigo": "9565213/10177620",
@@ -815,7 +878,8 @@
       "quantidade_disponivel": 1040000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Nº 0"
     },
     {
       "codigo": "7883277",
@@ -826,7 +890,8 @@
       "quantidade_disponivel": 1230000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Nº 4"
     },
     {
       "codigo": "5606330",
@@ -837,7 +902,8 @@
       "quantidade_disponivel": 1020000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Nº 8"
     },
     {
       "codigo": "8395306",
@@ -848,7 +914,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "SORO FISIOLÓGICO AMPOLA 10ML"
     },
     {
       "codigo": "9169300",
@@ -859,7 +926,8 @@
       "quantidade_disponivel": 440000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "05 GRAMAS"
     },
     {
       "codigo": "9545921",
@@ -870,7 +938,8 @@
       "quantidade_disponivel": 330000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "10 GRAMAS"
     },
     {
       "codigo": "9872833",
@@ -881,7 +950,8 @@
       "quantidade_disponivel": 280000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "90GRAMAS"
     },
     {
       "codigo": "XXXXXXX",
@@ -903,7 +973,8 @@
       "quantidade_disponivel": 1650000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GAZE NÃO ESTERIL PACOTE C/ 500 7,5X7,5"
     },
     {
       "codigo": "8402558",
@@ -914,7 +985,8 @@
       "quantidade_disponivel": 6080000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GAZE ESTERIL PACOTE C/ 10 7,5X7,5"
     },
     {
       "codigo": "8609896",
@@ -925,7 +997,8 @@
       "quantidade_disponivel": 140000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SCOTCH BOND PRIMER"
     },
     {
       "codigo": "8901511",
@@ -958,7 +1031,8 @@
       "quantidade_disponivel": 130000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "IODONTOSUL"
     },
     {
       "codigo": "8622400",
@@ -969,7 +1043,8 @@
       "quantidade_disponivel": 2270000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "COPO DESCARTAVEL POLIPROPILENO  COM CAPACIDADE MINIMA PARA  50ML, NA COR BRANCO LEITOSO - CENTO"
     },
     {
       "codigo": "8622418",
@@ -980,7 +1055,8 @@
       "quantidade_disponivel": 4170000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "COPO DESCARTAVEL POLIPROPILENO  COM CAPACIDADE MINIMA PARA  200ML, NA COR BRANCO LEITOSO - CENTO"
     },
     {
       "codigo": "8402450",
@@ -991,7 +1067,8 @@
       "quantidade_disponivel": 160000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "18ML"
     },
     {
       "codigo": "9541004",
@@ -1002,7 +1079,8 @@
       "quantidade_disponivel": 620000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "-"
     },
     {
       "codigo": "10238026",
@@ -1013,7 +1091,8 @@
       "quantidade_disponivel": 90000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "IODONTOSUL"
     },
     {
       "codigo": "10176187",
@@ -1035,7 +1114,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "TDV"
     },
     {
       "codigo": "MAT001",
@@ -1057,7 +1137,8 @@
       "quantidade_disponivel": 150000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FGM"
     },
     {
       "codigo": "7816421",
@@ -1068,7 +1149,8 @@
       "quantidade_disponivel": 1370000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DETERGENTE LIQUIDO FRASCO 500  MILILITRO"
     },
     {
       "codigo": "8659443",
@@ -1079,7 +1161,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "TDV"
     },
     {
       "codigo": "9694102",
@@ -1090,7 +1173,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "LABORDENTAL"
     },
     {
       "codigo": "8487456",
@@ -1112,7 +1196,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Seagate"
     },
     {
       "codigo": "7307039",
@@ -1123,7 +1208,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Toshiba"
     },
     {
       "codigo": "9580930",
@@ -1134,7 +1220,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "XPG"
     },
     {
       "codigo": "9166505",
@@ -1145,7 +1232,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Exbom"
     },
     {
       "codigo": "MAT004",
@@ -1167,7 +1255,8 @@
       "quantidade_disponivel": 170000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIODINAMICA"
     },
     {
       "codigo": "8898090",
@@ -1178,7 +1267,8 @@
       "quantidade_disponivel": 20000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "KULZER"
     },
     {
       "codigo": "5893348",
@@ -1189,7 +1279,8 @@
       "quantidade_disponivel": 30000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ZHERMACK"
     },
     {
       "codigo": "8786801",
@@ -1200,7 +1291,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "KULZER"
     },
     {
       "codigo": "10177345",
@@ -1211,7 +1303,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "KULZER"
     },
     {
       "codigo": "8732922",
@@ -1222,7 +1315,8 @@
       "quantidade_disponivel": 170000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ZHERMACK"
     },
     {
       "codigo": "8777403",
@@ -1233,7 +1327,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTRUM"
     },
     {
       "codigo": "8542791",
@@ -1244,7 +1339,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTRUM"
     },
     {
       "codigo": "5745780",
@@ -1277,7 +1373,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "DESCARTAVEL P/ EQUIPAMENTO INFANTIL"
     },
     {
       "codigo": "9704248",
@@ -1288,7 +1385,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "DESCARTAVEL ADULTO"
     },
     {
       "codigo": "8511489",
@@ -1299,7 +1397,8 @@
       "quantidade_disponivel": 10000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GRAU CIRURGICO 5CMX100M"
     },
     {
       "codigo": "8189986",
@@ -1310,7 +1409,8 @@
       "quantidade_disponivel": 340000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GRAU CIRURGICO 10CMX100M"
     },
     {
       "codigo": "8878404",
@@ -1321,7 +1421,8 @@
       "quantidade_disponivel": 160000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GRAU CIRURGICO 15CMX100M"
     },
     {
       "codigo": "8009740",
@@ -1332,7 +1433,8 @@
       "quantidade_disponivel": 160000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GRAU CIRURGICO 20CMX100M"
     },
     {
       "codigo": "8189960",
@@ -1343,7 +1445,8 @@
       "quantidade_disponivel": 220000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GRAU CIRURGICO 25CMX100M"
     },
     {
       "codigo": "8189978",
@@ -1354,7 +1457,8 @@
       "quantidade_disponivel": 250000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GRAU CIRURGICO 30CMX100M"
     },
     {
       "codigo": "8442681",
@@ -1365,7 +1469,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "EMBALAGEM POLIPROP (SMS) 100X100 CM G60"
     },
     {
       "codigo": "8442665",
@@ -1376,7 +1481,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "EMBALAGEM POLIPROP (SMS) 50X50 CM G40"
     },
     {
       "codigo": "5616999",
@@ -1387,7 +1493,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "260X360 - 90 GRAMAS"
     },
     {
       "codigo": "9223894",
@@ -1398,7 +1505,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "260X360 - 90 GRAMAS"
     },
     {
       "codigo": "5607760",
@@ -1409,7 +1517,8 @@
       "quantidade_disponivel": 1180000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "A4"
     },
     {
       "codigo": "7128363",
@@ -1420,7 +1529,8 @@
       "quantidade_disponivel": 3080000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ESPONJA PARA LIMPEZA DUPLA FACE"
     },
     {
       "codigo": "5629101",
@@ -1431,7 +1541,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "9MM"
     },
     {
       "codigo": "8321124",
@@ -1442,7 +1553,8 @@
       "quantidade_disponivel": 30000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "18MM"
     },
     {
       "codigo": "3111687",
@@ -1486,7 +1598,8 @@
       "quantidade_disponivel": 90000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIODINAMICA"
     },
     {
       "codigo": "5684099",
@@ -1508,7 +1621,8 @@
       "quantidade_disponivel": 30000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIODINAMICA"
     },
     {
       "codigo": "5652936",
@@ -1519,7 +1633,8 @@
       "quantidade_disponivel": 50000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIODINAMICA"
     },
     {
       "codigo": "5660092",
@@ -1530,7 +1645,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "BIODINAMICA"
     },
     {
       "codigo": "5620198",
@@ -1541,7 +1657,8 @@
       "quantidade_disponivel": 140000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "-"
     },
     {
       "codigo": "8652767",
@@ -1552,7 +1669,8 @@
       "quantidade_disponivel": 50000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PLÁSTICO FILME PARA ALIMENTOS ROLO 600 METROS"
     },
     {
       "codigo": "8343756",
@@ -1574,7 +1692,8 @@
       "quantidade_disponivel": 2090000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FILTRO DE PAPEL TAMANHO 103 PARA COAR CAFÉ 100% CELULOSE CAIXA COM 30 UNIDADES"
     },
     {
       "codigo": "5767415",
@@ -1585,7 +1704,8 @@
       "quantidade_disponivel": 680000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FIO SEDA 3-0"
     },
     {
       "codigo": "8359717",
@@ -1596,7 +1716,8 @@
       "quantidade_disponivel": 400000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FIO SEDA 4-0"
     },
     {
       "codigo": "5782899",
@@ -1607,7 +1728,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FIO NYLON 4-0"
     },
     {
       "codigo": "6036627",
@@ -1618,7 +1740,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FIO NYLON 3-0"
     },
     {
       "codigo": "8401152",
@@ -1629,7 +1752,8 @@
       "quantidade_disponivel": 160000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FIO ABSORVÍVEL 4-0"
     },
     {
       "codigo": "8776687",
@@ -1640,7 +1764,8 @@
       "quantidade_disponivel": 400000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FIO ABSORVÍVEL 5-0"
     },
     {
       "codigo": "5670586",
@@ -1651,7 +1776,8 @@
       "quantidade_disponivel": 270000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "HILLO"
     },
     {
       "codigo": "5690439",
@@ -1662,7 +1788,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FIO NYLON 6-0"
     },
     {
       "codigo": "8041865",
@@ -1673,7 +1800,8 @@
       "quantidade_disponivel": 170000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ULTRADENT"
     },
     {
       "codigo": "6046606",
@@ -1684,7 +1812,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ULTRADENT"
     },
     {
       "codigo": "8870551",
@@ -1695,7 +1824,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ULTRADENT"
     },
     {
       "codigo": "5695627",
@@ -1706,7 +1836,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ULTRADENT"
     },
     {
       "codigo": "5686822",
@@ -1717,7 +1848,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FIO NYLON 5-0"
     },
     {
       "codigo": "5606853",
@@ -1728,7 +1860,8 @@
       "quantidade_disponivel": 1010000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "19X50"
     },
     {
       "codigo": "8291209",
@@ -1739,7 +1872,8 @@
       "quantidade_disponivel": 2360000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "19X50"
     },
     {
       "codigo": "8085838",
@@ -1750,7 +1884,8 @@
       "quantidade_disponivel": 1810000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "48X50"
     },
     {
       "codigo": "8210675",
@@ -1761,7 +1896,8 @@
       "quantidade_disponivel": 990000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "48X50"
     },
     {
       "codigo": "10177892",
@@ -1772,7 +1908,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "FGM - FLUORCARE"
     },
     {
       "codigo": "5697808",
@@ -1783,7 +1920,8 @@
       "quantidade_disponivel": 20000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ALLPLAN"
     },
     {
       "codigo": "9779523",
@@ -1805,7 +1943,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Lenovo"
     },
     {
       "codigo": "8093733",
@@ -1827,7 +1966,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMOCRESOL,SOLUCAO,FORMULA BUCKLEY,FRASCO C/10 ML"
     },
     {
       "codigo": "10040609",
@@ -1838,7 +1978,8 @@
       "quantidade_disponivel": 90000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "GAVETEIRO PLASTICO 3 GAVETAS 22X27X18CM"
     },
     {
       "codigo": "5680174",
@@ -1849,7 +1990,8 @@
       "quantidade_disponivel": 850000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "RIO"
     },
     {
       "codigo": "8725438",
@@ -1860,7 +2002,8 @@
       "quantidade_disponivel": 750000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "RIO"
     },
     {
       "codigo": "8108986",
@@ -1871,7 +2014,8 @@
       "quantidade_disponivel": 1250000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "RIO"
     },
     {
       "codigo": "9303448",
@@ -1882,7 +2026,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "GH83"
     },
     {
       "codigo": "5697646",
@@ -1893,7 +2038,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "KERR"
     },
     {
       "codigo": "8350477",
@@ -1904,7 +2050,8 @@
       "quantidade_disponivel": 410000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LYSANDRA"
     },
     {
       "codigo": "7946775",
@@ -1915,7 +2062,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "GRAMPEADOR,MANUAL,TODO ACO INOX,BASE EMBORRACHADA,24/6E26/6,ATé 35FLS"
     },
     {
       "codigo": "5640814",
@@ -1926,7 +2074,8 @@
       "quantidade_disponivel": 480000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "2025-06-26 00:00:00"
     },
     {
       "codigo": "6506445",
@@ -1937,7 +2086,8 @@
       "quantidade_disponivel": 1810000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GUARDANAPO DE PAPEL GOFRADO TAMANHO 30 X 32 CM FOLHA SIMPLES PACOTE COM 50 UNIDADES"
     },
     {
       "codigo": "8367280",
@@ -1959,7 +2109,8 @@
       "quantidade_disponivel": 210000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MAQUIRA HEMOSPON"
     },
     {
       "codigo": "5697816",
@@ -1970,7 +2121,8 @@
       "quantidade_disponivel": 60000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIODINAMICA HEMOSTANK"
     },
     {
       "codigo": "9267930",
@@ -1981,7 +2133,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIODINAMICA"
     },
     {
       "codigo": "9816712",
@@ -1992,7 +2145,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "HIPOCLORITO DE SÓDIO A 1%, OPACO, ESCURO E RESISTENTE GALÃO 5 LITROS"
     },
     {
       "codigo": "6215351/5657318",
@@ -2014,7 +2168,8 @@
       "quantidade_disponivel": 10000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "AEROSOL 300 MILILITRO INSETICIDA DOMESTICO"
     },
     {
       "codigo": "9054014",
@@ -2025,7 +2180,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "INVOLUCRO DESCARTÁVEL P/ESTERILIZAÇÃO FOLHA 60X60"
     },
     {
       "codigo": "5682061",
@@ -2036,7 +2192,8 @@
       "quantidade_disponivel": 90000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "K - DENT"
     },
     {
       "codigo": "10177655",
@@ -2047,7 +2204,8 @@
       "quantidade_disponivel": 130000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FGM"
     },
     {
       "codigo": "8969868",
@@ -2058,7 +2216,8 @@
       "quantidade_disponivel": 240000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTRUM"
     },
     {
       "codigo": "8973296",
@@ -2069,7 +2228,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FGM"
     },
     {
       "codigo": "8976856",
@@ -2080,7 +2240,8 @@
       "quantidade_disponivel": 30000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GC AMERICA"
     },
     {
       "codigo": "6201920",
@@ -2091,7 +2252,8 @@
       "quantidade_disponivel": 110000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTRUM"
     },
     {
       "codigo": "6201962",
@@ -2102,7 +2264,8 @@
       "quantidade_disponivel": 50000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTRUM"
     },
     {
       "codigo": "9487565",
@@ -2113,7 +2276,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTRUM"
     },
     {
       "codigo": "8775737",
@@ -2124,7 +2288,8 @@
       "quantidade_disponivel": 240000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SDI"
     },
     {
       "codigo": "6098673",
@@ -2179,7 +2344,8 @@
       "quantidade_disponivel": 180000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SS WHITE"
     },
     {
       "codigo": "8320830",
@@ -2190,7 +2356,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GC"
     },
     {
       "codigo": "9225765",
@@ -2201,7 +2368,8 @@
       "quantidade_disponivel": 30000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "LÂMINA BISTURI 12"
     },
     {
       "codigo": "8732876",
@@ -2212,7 +2380,8 @@
       "quantidade_disponivel": 260000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LÂMINA BISTURI 15 C"
     },
     {
       "codigo": "8589585",
@@ -2223,7 +2392,8 @@
       "quantidade_disponivel": 200000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LÂMINA BISTURI 15"
     },
     {
       "codigo": "8709009",
@@ -2234,7 +2404,8 @@
       "quantidade_disponivel": 130000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "ML0426G"
     },
     {
       "codigo": "7860250",
@@ -2245,7 +2416,8 @@
       "quantidade_disponivel": 740000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "2=b"
     },
     {
       "codigo": "9313176",
@@ -2256,7 +2428,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "LENÇOL DE PAPEL DESCARTÁVEL TAMANHO 50 X 50 M OU 70 X 50 M"
     },
     {
       "codigo": "9427619",
@@ -2278,7 +2451,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "205X297"
     },
     {
       "codigo": "5629047",
@@ -2311,7 +2485,8 @@
       "quantidade_disponivel": 2900000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CIRURGICA 6,0"
     },
     {
       "codigo": "6192890",
@@ -2322,7 +2497,8 @@
       "quantidade_disponivel": 6080000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CIRURGICA 6,5"
     },
     {
       "codigo": "6192904",
@@ -2333,7 +2509,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CIRURGICA 7,0"
     },
     {
       "codigo": "6192920",
@@ -2344,7 +2521,8 @@
       "quantidade_disponivel": 450000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CIRURGICA 7,5"
     },
     {
       "codigo": "6192939",
@@ -2355,7 +2533,8 @@
       "quantidade_disponivel": 1460000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CIRURGICA 8,0"
     },
     {
       "codigo": "6192947",
@@ -2377,7 +2556,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "LUVA VINÍLICA  SEM PÓ G"
     },
     {
       "codigo": "9727345",
@@ -2388,7 +2568,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "LUVA VINÍLICA  SEM PÓ M"
     },
     {
       "codigo": "9727353",
@@ -2399,7 +2580,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "LUVA VINÍLICA  SEM PÓ P"
     },
     {
       "codigo": "8522634",
@@ -2410,7 +2592,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "LUVA NÍTRILICA G"
     },
     {
       "codigo": "7127650",
@@ -2421,7 +2604,8 @@
       "quantidade_disponivel": 1780000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PARA LIMPEZA LATEX, TAMANHO P"
     },
     {
       "codigo": "8006962",
@@ -2432,7 +2616,8 @@
       "quantidade_disponivel": 1770000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PARA LIMPEZA LATEX, TAMANHO M"
     },
     {
       "codigo": "7929773",
@@ -2443,7 +2628,8 @@
       "quantidade_disponivel": 1680000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PARA LIMPEZA LATEX, TAMANHO G"
     },
     {
       "codigo": "7391650",
@@ -2454,7 +2640,8 @@
       "quantidade_disponivel": 1510000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PROCEDIMENTO COM PÓ PP"
     },
     {
       "codigo": "8354340",
@@ -2465,7 +2652,8 @@
       "quantidade_disponivel": 220000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PROCEDIMENTO COM PÓ P"
     },
     {
       "codigo": "6215661",
@@ -2476,7 +2664,8 @@
       "quantidade_disponivel": 770000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PROCEDIMENTO COM PÓ G"
     },
     {
       "codigo": "6215696",
@@ -2487,7 +2676,8 @@
       "quantidade_disponivel": 2310000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PROCEDIMENTO SEM PÓ PP"
     },
     {
       "codigo": "6215688",
@@ -2498,7 +2688,8 @@
       "quantidade_disponivel": 970000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PROCEDIMENTO SEM PÓ M"
     },
     {
       "codigo": "8615837",
@@ -2509,7 +2700,8 @@
       "quantidade_disponivel": 660000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PROCEDIMENTO SEM PÓ G"
     },
     {
       "codigo": "8417482",
@@ -2520,7 +2712,8 @@
       "quantidade_disponivel": 1910000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA NÍTRILICA PP"
     },
     {
       "codigo": "8380791",
@@ -2531,7 +2724,8 @@
       "quantidade_disponivel": 1740000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA NÍTRILICA P"
     },
     {
       "codigo": "9061746",
@@ -2542,7 +2736,8 @@
       "quantidade_disponivel": 2210000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA NÍTRILICA M"
     },
     {
       "codigo": "8054002",
@@ -2553,7 +2748,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PROCEDIMENTO COM PÓ M"
     },
     {
       "codigo": "6215653",
@@ -2564,7 +2760,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "LUVA PROCEDIMENTO SEM PÓ P"
     },
     {
       "codigo": "8917779",
@@ -2608,7 +2805,8 @@
       "quantidade_disponivel": 4410000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MASCARA CIRURGICA DESCARTAVEL EM NÃO TECIDO, C/ FIXAÇÃO ELÁSTICO"
     },
     {
       "codigo": "8364427",
@@ -2619,7 +2817,8 @@
       "quantidade_disponivel": 60000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTRUM"
     },
     {
       "codigo": "6188664",
@@ -2630,7 +2829,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MAQUIRA"
     },
     {
       "codigo": "6188680",
@@ -2641,7 +2841,8 @@
       "quantidade_disponivel": 40000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MAQUIRA"
     },
     {
       "codigo": "5774365",
@@ -2652,7 +2853,8 @@
       "quantidade_disponivel": 7170000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLOREXIDINA 1 LITRO 2%"
     },
     {
       "codigo": "5898137",
@@ -2663,7 +2865,8 @@
       "quantidade_disponivel": 200000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLOREXIDINA DIGLICONATO(OU GLICONATO)20MG/ML(2%), SABONETE LIQUIDO"
     },
     {
       "codigo": "8415412",
@@ -2674,7 +2877,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "KG SORENSEN"
     },
     {
       "codigo": "7293437",
@@ -2740,7 +2944,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SMS"
     },
     {
       "codigo": "8511756",
@@ -2751,7 +2956,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SMS"
     },
     {
       "codigo": "9227768",
@@ -2762,7 +2968,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SMS"
     },
     {
       "codigo": "Código Bem",
@@ -2784,7 +2991,8 @@
       "quantidade_disponivel": 290000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MAQUIRA"
     },
     {
       "codigo": "8901635",
@@ -2795,7 +3003,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FGM"
     },
     {
       "codigo": "8901643",
@@ -2806,7 +3015,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FGM"
     },
     {
       "codigo": "9015795",
@@ -2817,7 +3027,8 @@
       "quantidade_disponivel": 790000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PANO MULTI-USO ROLO 300  METROS"
     },
     {
       "codigo": "9433422",
@@ -2828,7 +3039,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "ALLPLAN"
     },
     {
       "codigo": "7984065",
@@ -2839,7 +3051,8 @@
       "quantidade_disponivel": 870000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PAPEL ALUMINIO ROLO 7,5 METROS COM LARGURA DE 45 CM"
     },
     {
       "codigo": "9639594",
@@ -2850,7 +3063,8 @@
       "quantidade_disponivel": 3610000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PAPEL HIGIENICO - ROLO 250 METROS  FOLHA DUPLA PACOTE 8  UNIDADES"
     },
     {
       "codigo": "8366632",
@@ -2861,7 +3075,8 @@
       "quantidade_disponivel": 12780000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PAPEL HIGIENICO - ROLO 30 METROS  FOLHA DUPLA PACOTE 4  UNIDADES"
     },
     {
       "codigo": "8595259",
@@ -2872,7 +3087,8 @@
       "quantidade_disponivel": 20000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "66X96"
     },
     {
       "codigo": "5626757",
@@ -2883,7 +3099,8 @@
       "quantidade_disponivel": 1730000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "A4"
     },
     {
       "codigo": "1800884",
@@ -2905,7 +3122,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BIODINAMICA"
     },
     {
       "codigo": "8558990",
@@ -2916,7 +3134,8 @@
       "quantidade_disponivel": 10000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "VERDE"
     },
     {
       "codigo": "8420696",
@@ -2938,7 +3157,8 @@
       "quantidade_disponivel": 570000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "TRANSPARENTE"
     },
     {
       "codigo": "8293104",
@@ -2949,7 +3169,8 @@
       "quantidade_disponivel": 350000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CRISTAL"
     },
     {
       "codigo": "5720508",
@@ -2960,7 +3181,8 @@
       "quantidade_disponivel": 150000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FGM DIAMOND EXCEL"
     },
     {
       "codigo": "8332231",
@@ -2971,7 +3193,8 @@
       "quantidade_disponivel": 260000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ALLPLAN"
     },
     {
       "codigo": "8003653",
@@ -3015,7 +3238,8 @@
       "quantidade_disponivel": 40000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "-"
     },
     {
       "codigo": "2315246",
@@ -3037,7 +3261,8 @@
       "quantidade_disponivel": 1550000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FX-AAK2"
     },
     {
       "codigo": "8603642",
@@ -3048,7 +3273,8 @@
       "quantidade_disponivel": 300000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FX-CK2"
     },
     {
       "codigo": "6798365",
@@ -3059,7 +3285,8 @@
       "quantidade_disponivel": 1620000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FX-AAAK2"
     },
     {
       "codigo": "9652442",
@@ -3070,7 +3297,8 @@
       "quantidade_disponivel": 320000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FX-9K1"
     },
     {
       "codigo": "8752303",
@@ -3081,7 +3309,8 @@
       "quantidade_disponivel": 120000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PRETO"
     },
     {
       "codigo": "8752311",
@@ -3092,7 +3321,8 @@
       "quantidade_disponivel": 120000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "VERMELHO"
     },
     {
       "codigo": "8752320",
@@ -3103,7 +3333,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "AZUL"
     },
     {
       "codigo": "8752338",
@@ -3114,7 +3345,8 @@
       "quantidade_disponivel": 120000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "VERDE"
     },
     {
       "codigo": "9191038",
@@ -3125,7 +3357,8 @@
       "quantidade_disponivel": 30000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "ANGELUS"
     },
     {
       "codigo": "9186360",
@@ -3136,7 +3369,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "ANGELUS"
     },
     {
       "codigo": "9186379",
@@ -3147,7 +3381,8 @@
       "quantidade_disponivel": 40000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "ANGELUS"
     },
     {
       "codigo": "8565414",
@@ -3169,7 +3404,8 @@
       "quantidade_disponivel": 250000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MAQUIRA"
     },
     {
       "codigo": "8979820",
@@ -3180,7 +3416,8 @@
       "quantidade_disponivel": 1650000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SS PLUS"
     },
     {
       "codigo": "10208925",
@@ -3202,7 +3439,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "-"
     },
     {
       "codigo": "8877874",
@@ -3213,7 +3451,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "-"
     },
     {
       "codigo": "8838666",
@@ -3224,7 +3463,8 @@
       "quantidade_disponivel": 90000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "-"
     },
     {
       "codigo": "8404259",
@@ -3235,7 +3475,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "KOTA"
     },
     {
       "codigo": "8901716",
@@ -3246,7 +3487,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "ZHERMACK"
     },
     {
       "codigo": "8901651",
@@ -3279,7 +3521,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PROTETOR EQUIPAMENTO ODONTOLÓGICO REFLETOR, TNT 30/M2,BRANCO,9X45CM,DESCARTAVÉL"
     },
     {
       "codigo": "MAT002",
@@ -3301,7 +3544,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "1,00X0,70"
     },
     {
       "codigo": "9687556",
@@ -3312,7 +3556,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "1,50X0,80"
     },
     {
       "codigo": "9438378",
@@ -3323,7 +3568,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "120X90"
     },
     {
       "codigo": "9687505",
@@ -3334,7 +3580,8 @@
       "quantidade_disponivel": 260000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "AMARELO"
     },
     {
       "codigo": "7859155",
@@ -3345,7 +3592,8 @@
       "quantidade_disponivel": 590000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "AMARELO"
     },
     {
       "codigo": "10012931",
@@ -3356,7 +3604,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "RECIPIENTE PARA LIXO ,30 LITROS, (32X42X48)CM C/TAMPA, BRANCA"
     },
     {
       "codigo": "8647798",
@@ -3367,7 +3616,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "RECIPIENTE PARA LIXO 15 LITROS"
     },
     {
       "codigo": "8896623",
@@ -3378,7 +3628,8 @@
       "quantidade_disponivel": 130000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GC"
     },
     {
       "codigo": "10023925",
@@ -3389,7 +3640,8 @@
       "quantidade_disponivel": 40000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "GC"
     },
     {
       "codigo": "9816267",
@@ -3400,7 +3652,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "30CM"
     },
     {
       "codigo": "6617190",
@@ -3411,7 +3664,8 @@
       "quantidade_disponivel": 150000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLASSICO JET"
     },
     {
       "codigo": "6617204",
@@ -3422,7 +3676,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLASSICO JET"
     },
     {
       "codigo": "6617506",
@@ -3433,7 +3688,8 @@
       "quantidade_disponivel": 490000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLASSICO  JET"
     },
     {
       "codigo": "6617620",
@@ -3444,7 +3700,8 @@
       "quantidade_disponivel": 210000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLASSICO JET"
     },
     {
       "codigo": "6617298",
@@ -3455,7 +3712,8 @@
       "quantidade_disponivel": 180000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLASSICO DENCOR"
     },
     {
       "codigo": "6617387",
@@ -3466,7 +3724,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLASSICO DENCOR"
     },
     {
       "codigo": "6617395",
@@ -3477,7 +3736,8 @@
       "quantidade_disponivel": 20000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLASSICO DENCOR"
     },
     {
       "codigo": "6617409",
@@ -3488,7 +3748,8 @@
       "quantidade_disponivel": 180000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "RELIANCE"
     },
     {
       "codigo": "8324670",
@@ -3499,7 +3760,8 @@
       "quantidade_disponivel": 150000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CLASSICO"
     },
     {
       "codigo": "9782532",
@@ -3510,7 +3772,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA EA2"
     },
     {
       "codigo": "5948487",
@@ -3521,7 +3784,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA EA3"
     },
     {
       "codigo": "6162436",
@@ -3554,7 +3818,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BEUTIFIL FLOW PLUS"
     },
     {
       "codigo": "8985260",
@@ -3565,7 +3830,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BEUTIFIL FLOW PLUS F01 (A2)"
     },
     {
       "codigo": "8977135",
@@ -3576,7 +3842,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BEUTIFIL FLOW PLUS F02 (A3)"
     },
     {
       "codigo": "5953499",
@@ -3587,7 +3854,8 @@
       "quantidade_disponivel": 140000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA  BA1"
     },
     {
       "codigo": "8789525",
@@ -3598,7 +3866,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA  DA1"
     },
     {
       "codigo": "8789517",
@@ -3609,7 +3878,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA  EA1"
     },
     {
       "codigo": "9465766",
@@ -3620,7 +3890,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA  BA2"
     },
     {
       "codigo": "8775745",
@@ -3631,7 +3902,8 @@
       "quantidade_disponivel": 20000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA DA2"
     },
     {
       "codigo": "5948550",
@@ -3642,7 +3914,8 @@
       "quantidade_disponivel": 80000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA BA3"
     },
     {
       "codigo": "6207189",
@@ -3653,7 +3926,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA DA3"
     },
     {
       "codigo": "5948525",
@@ -3664,7 +3938,8 @@
       "quantidade_disponivel": 130000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA EB1"
     },
     {
       "codigo": "5949130",
@@ -3675,7 +3950,8 @@
       "quantidade_disponivel": 120000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA EB2"
     },
     {
       "codigo": "8615560",
@@ -3686,7 +3962,8 @@
       "quantidade_disponivel": 140000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA BC1"
     },
     {
       "codigo": "5949050",
@@ -3697,7 +3974,8 @@
       "quantidade_disponivel": 200000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FORMA BC2"
     },
     {
       "codigo": "9782540",
@@ -3708,7 +3986,8 @@
       "quantidade_disponivel": 50000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "Z350(COBC3)"
     },
     {
       "codigo": "8542694",
@@ -3719,7 +3998,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "FGM"
     },
     {
       "codigo": "8542716",
@@ -3730,7 +4010,8 @@
       "quantidade_disponivel": 110000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTUM"
     },
     {
       "codigo": "9614621",
@@ -3741,7 +4022,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BEUTIFIL (COR BW)"
     },
     {
       "codigo": "9614699",
@@ -3752,7 +4034,8 @@
       "quantidade_disponivel": 60000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "BEUTIFIL (COR A1)"
     },
     {
       "codigo": "8662665",
@@ -3774,7 +4057,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SDI"
     },
     {
       "codigo": "237345",
@@ -3796,7 +4080,8 @@
       "quantidade_disponivel": 160000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SABONETE LÍQUIDO BOMBONA 5  LITRO"
     },
     {
       "codigo": "5747171",
@@ -3807,7 +4092,8 @@
       "quantidade_disponivel": 1000000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SACO PLASTICO DESCARTAVEL 4,5 X 23 CM PARA PROTECAO DE CANETA (TIPO GELADINHO) MILHEIRO"
     },
     {
       "codigo": "8430268",
@@ -3818,7 +4104,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "SACO PLASTICO DESCARTAVEL DE POLIROPILENO,(20X30)CM, TRANSPARENTE"
     },
     {
       "codigo": "8290385",
@@ -3829,7 +4116,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "SACO PLASTICO DESCARTAVEL DE POLIROPILENO,(30X40)CM, TRANSPARENTE"
     },
     {
       "codigo": "9616802",
@@ -3840,7 +4128,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SACO PLASTICO DESCARTAVEL DE POLIROPILENO,(40X60)CM, TRANSPARENTE"
     },
     {
       "codigo": "9660178",
@@ -3851,7 +4140,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "SACO PLASTICO DESCARTAVEL DE POLIROPILENO,(60X80)CM, TRANSPARENTE"
     },
     {
       "codigo": "9129456",
@@ -3862,7 +4152,8 @@
       "quantidade_disponivel": 1230000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SACO PLASTICO PARA EMBALAGEM POLIETILENO MEDINDO (40 X 60)CM PACOTE 1  QUILOGRAMA"
     },
     {
       "codigo": "97541113",
@@ -3873,7 +4164,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTUM"
     },
     {
       "codigo": "10181059",
@@ -3895,7 +4187,8 @@
       "quantidade_disponivel": 3700000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SERINGA 1ML COM AGULHA"
     },
     {
       "codigo": "5879213",
@@ -3906,7 +4199,8 @@
       "quantidade_disponivel": 5800000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SERINGA 3ML COM AGULHA"
     },
     {
       "codigo": "7795351",
@@ -3917,7 +4211,8 @@
       "quantidade_disponivel": 900000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SERINGA 5ML COM AGULHA"
     },
     {
       "codigo": "5663806",
@@ -3928,7 +4223,8 @@
       "quantidade_disponivel": 5200000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SERINGA 10ML COM AGULHA"
     },
     {
       "codigo": "6061451",
@@ -3939,7 +4235,8 @@
       "quantidade_disponivel": 1010000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SERINGA 20ML COM AGULHA"
     },
     {
       "codigo": "5940729",
@@ -3972,7 +4269,8 @@
       "quantidade_disponivel": 90000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTUM"
     },
     {
       "codigo": "9536310",
@@ -3983,7 +4281,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "ANGELUS"
     },
     {
       "codigo": "9834460",
@@ -3994,7 +4293,8 @@
       "quantidade_disponivel": 20000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTUM"
     },
     {
       "codigo": "10177698",
@@ -4005,7 +4305,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SHOFU"
     },
     {
       "codigo": "9754113",
@@ -4038,7 +4339,8 @@
       "quantidade_disponivel": 110000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SOLUÇÃO DESINFETANTE/ESTERILIZANTE"
     },
     {
       "codigo": "9062416",
@@ -4049,7 +4351,8 @@
       "quantidade_disponivel": 140000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "DETERGENTE ENZIMATICO"
     },
     {
       "codigo": "5739403",
@@ -4060,7 +4363,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SOLUÇÃO DESINFETANTE BASE DE QUARTENARIO DE AMONIA 0,2%, FRASCO 1 LITRO"
     },
     {
       "codigo": "8367256",
@@ -4082,7 +4386,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "SUPORTE P/ MONITOR"
     },
     {
       "codigo": "8201129",
@@ -4104,7 +4409,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "20CM"
     },
     {
       "codigo": "7982291",
@@ -4115,7 +4421,8 @@
       "quantidade_disponivel": 270000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "IODONTOSUL"
     },
     {
       "codigo": "5631173",
@@ -4126,7 +4433,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "40ML"
     },
     {
       "codigo": "5945895",
@@ -4137,7 +4445,8 @@
       "quantidade_disponivel": 120000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MAQUIRA"
     },
     {
       "codigo": "8727708",
@@ -4148,7 +4457,8 @@
       "quantidade_disponivel": 70000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "MAQUIRA"
     },
     {
       "codigo": "8702446",
@@ -4159,7 +4469,8 @@
       "quantidade_disponivel": 470000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "e-mail padronizados@fob.usp.br"
+      "pedidos_info": "e-mail padronizados@fob.usp.br",
+      "especificacao": "TIRA REAGENTE PARA MEDIDOR GH83"
     },
     {
       "codigo": "8923957",
@@ -4170,7 +4481,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "TOALHA DE PAPEL SIMPLES - INTERFOLHAS INSTITUCIONAL"
     },
     {
       "codigo": "5586500",
@@ -4192,7 +4504,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "TOALHA DESCARTÁVEL EM NÃO TECIDO, NÃO ESTÉRIL, 30X40CM, COR BRANCA"
     },
     {
       "codigo": "8287422",
@@ -4203,7 +4516,8 @@
       "quantidade_disponivel": 2290000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "TOUCA CIRURGICA DESCARTAVEL  100% DE POLIROPILENO; FORMATO ANATOMICO, GRAMATURA 18G;"
     },
     {
       "codigo": "10181089",
@@ -4214,7 +4528,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "PERMA SEAL"
     },
     {
       "codigo": "8421510",
@@ -4225,7 +4540,8 @@
       "quantidade_disponivel": 100000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "CAVITAF"
     },
     {
       "codigo": "5679028",
@@ -4247,7 +4563,8 @@
       "quantidade_disponivel": 50000.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "VOCO"
     },
     {
       "codigo": "6222129",
@@ -4258,7 +4575,8 @@
       "quantidade_disponivel": 0.0,
       "unidade": "un",
       "status": "disponivel",
-      "pedidos_info": "Almox"
+      "pedidos_info": "Almox",
+      "especificacao": "3M SOLVENTRUM"
     },
     {
       "codigo": "8579857",

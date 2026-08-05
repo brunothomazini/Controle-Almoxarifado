@@ -19,7 +19,7 @@ cat_map = {r["id"]: r["nome"] for r in cur.fetchall()}
 
 cur.execute(
     "SELECT i.codigo,i.nome,i.nome_comercial,i.fabricante,i.categoria_id,"
-    "i.quantidade_atual,i.unidade_medida,i.solicitar_por_email,i.tipo_controle,i.status "
+    "i.quantidade_atual,i.unidade_medida,i.solicitar_por_email,i.tipo_controle,i.status,i.modelo "
     "FROM itens i ORDER BY i.nome"
 )
 itens = []
@@ -37,6 +37,7 @@ for r in cur.fetchall():
         ped = "Almox"
     itens.append({
         "codigo": row["codigo"], "nome": row["nome"],
+        "especificacao": row["modelo"] or "-",
         "nome_comercial": row["nome_comercial"] or "-",
         "fabricante": row["fabricante"] or "-",
         "categoria": cn,
@@ -149,7 +150,7 @@ for(var i=0;i<C.length;i++){{var o=document.createElement('option');o.value=C[i]
 function b(s){{var m={{disponivel:['Disponivel','#e8f5e9','#2e7d32','#4caf50'],emprestado:['Emprestado','#fff3e0','#e65100','#ff9800'],manutencao:['Manutencao','#fff3e0','#e65100','#ff9800'],baixado:['Baixado','#ffebee','#c62828','#f44336'],reservado:['Reservado','#fff3e0','#e65100','#ff9800']}};var a=m[s]||['Desconhecido','#fff3e0','#e65100','#ff9800'];return '<span class="si"><span style="width:9px;height:9px;border-radius:50%;display:inline-block;background:'+a[3]+'"></span><span class="sg" style="background:'+a[1]+';color:'+a[2]+'">'+a[0]+'</span></span>';}}
 function r(){{var a=document.getElementById('s_c').value.trim().toLowerCase();var b=document.getElementById('s_n').value.trim().toLowerCase();var c=document.getElementById('s_t').value;F=I.filter(function(i){{if(a&&i.codigo.toLowerCase().indexOf(a)===-1)return false;if(b&&i.nome.toLowerCase().indexOf(b)===-1)return false;if(c&&i.categoria!==c)return false;return true;}});p=1;render();}}
 function l(){{document.getElementById('s_c').value='';document.getElementById('s_n').value='';document.getElementById('s_t').value='';F=I.slice();p=1;render();}}
-function render(){{var e=document.getElementById('res'),t=F.length,tp=Math.max(1,Math.ceil(t/P));if(p>tp)p=tp;if(p<1)p=1;var s=(p-1)*P,o=Math.min(s+P,t),pg=F.slice(s,o);if(t===0){{e.innerHTML='<div class="emp">Nenhum item encontrado</div>';return;}}var h='<div class="inf">Mostrando '+(s+1)+'-'+o+' de '+t+' item(ns)</div><table><thead><tr><th>Codigo</th><th>Nome</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Pedidos por:</th><th>Status</th></tr></thead><tbody>';for(var i=0;i<pg.length;i++){{var x=pg[i];h+='<tr><td><strong>'+(x.codigo||'-')+'</strong></td><td>'+(x.nome||'-')+'</td><td>'+(x.nome_comercial||'-')+'</td><td>'+(x.fabricante||'-')+'</td><td><span class="tag">'+(x.categoria||'N/A')+'</span></td><td>'+(x.pedidos_info||'Almox')+'</td><td>'+b(x.status)+'</td></tr>';}}h+='</tbody></table>';if(tp>1){{h+='<div class="pag">';if(p>1)h+='<a class="bt bt-o" href="javascript:g('+(p-1)+')">&laquo; Anterior</a>';h+='<span>Pagina '+p+' de '+tp+'</span>';if(p<tp)h+='<a class="bt bt-o" href="javascript:g('+(p+1)+')">Proxima &raquo;</a>';h+='</div>';}}e.innerHTML=h;}}
+function render(){{var e=document.getElementById('res'),t=F.length,tp=Math.max(1,Math.ceil(t/P));if(p>tp)p=tp;if(p<1)p=1;var s=(p-1)*P,o=Math.min(s+P,t),pg=F.slice(s,o);if(t===0){{e.innerHTML='<div class="emp">Nenhum item encontrado</div>';return;}}var h='<div class="inf">Mostrando '+(s+1)+'-'+o+' de '+t+' item(ns)</div><table><thead><tr><th>Codigo</th><th>Nome</th><th>Especificacao</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Pedidos por:</th><th>Status</th></tr></thead><tbody>';for(var i=0;i<pg.length;i++){{var x=pg[i];h+='<tr><td><strong>'+(x.codigo||'-')+'</strong></td><td>'+(x.nome||'-')+'</td><td>'+(x.especificacao||'-')+'</td><td>'+(x.nome_comercial||'-')+'</td><td>'+(x.fabricante||'-')+'</td><td><span class="tag">'+(x.categoria||'N/A')+'</span></td><td>'+(x.pedidos_info||'Almox')+'</td><td>'+b(x.status)+'</td></tr>';}}h+='</tbody></table>';if(tp>1){{h+='<div class="pag">';if(p>1)h+='<a class="bt bt-o" href="javascript:g('+(p-1)+')">&laquo; Anterior</a>';h+='<span>Pagina '+p+' de '+tp+'</span>';if(p<tp)h+='<a class="bt bt-o" href="javascript:g('+(p+1)+')">Proxima &raquo;</a>';h+='</div>';}}e.innerHTML=h;}}
 function g(x){{if(x<1)return;p=x;render();}}
 F=I.slice();render();
 </script>

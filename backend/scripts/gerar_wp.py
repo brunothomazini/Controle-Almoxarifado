@@ -17,7 +17,7 @@ cat_map = {c["id"]: c["nome"] for c in categorias}
 cur.execute(
     "SELECT i.codigo,i.nome,i.nome_comercial,i.fabricante,i.categoria_id,"
     "i.quantidade_atual,i.unidade_medida,i.solicitar_por_email,"
-    "i.tipo_controle,i.status FROM itens i ORDER BY i.nome"
+    "i.tipo_controle,i.status,i.modelo FROM itens i ORDER BY i.nome"
 )
 itens = []
 for r in cur.fetchall():
@@ -34,6 +34,7 @@ for r in cur.fetchall():
         pedidos_info = "Almox"
     itens.append({
         "codigo": row["codigo"], "nome": row["nome"],
+        "especificacao": row["modelo"] or "-",
         "nome_comercial": row["nome_comercial"] or "-",
         "fabricante": row["fabricante"] or "-",
         "categoria": cat_nome,
@@ -95,6 +96,7 @@ js_funcs = (
     "h+='<table style=\"width:100%;border-collapse:collapse;font-size:.9rem\"><thead><tr>';"
     "h+='<th style=\"background:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;color:#003366;border-bottom:2px solid #ddd\">Codigo</th>';"
     "h+='<th style=\"background:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;color:#003366;border-bottom:2px solid #ddd\">Nome</th>';"
+    "h+='<th style=\"background:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;color:#003366;border-bottom:2px solid #ddd\">Especificacao</th>';"
     "h+='<th style=\"background:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;color:#003366;border-bottom:2px solid #ddd\">Nome Comercial</th>';"
     "h+='<th style=\"background:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;color:#003366;border-bottom:2px solid #ddd\">Marca</th>';"
     "h+='<th style=\"background:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;color:#003366;border-bottom:2px solid #ddd\">Categoria</th>';"
@@ -104,6 +106,7 @@ js_funcs = (
     "for(var i=0;i<pg.length;i++){var x=pg[i];"
     "h+='<tr><td style=\"padding:10px 12px;border-bottom:1px solid #f5f5f5\"><strong>'+(x.codigo||'-')+'</strong></td>';"
     "h+='<td style=\"padding:10px 12px;border-bottom:1px solid #f5f5f5\">'+(x.nome||'-')+'</td>';"
+    "h+='<td style=\"padding:10px 12px;border-bottom:1px solid #f5f5f5\">'+(x.especificacao||'-')+'</td>';"
     "h+='<td style=\"padding:10px 12px;border-bottom:1px solid #f5f5f5\">'+(x.nome_comercial||'-')+'</td>';"
     "h+='<td style=\"padding:10px 12px;border-bottom:1px solid #f5f5f5\">'+(x.fabricante||'-')+'</td>';"
     "h+='<td style=\"padding:10px 12px;border-bottom:1px solid #f5f5f5\"><span style=\"display:inline-block;background:#f5f5f5;padding:2px 8px;border-radius:4px;font-size:.8rem;color:#666\">'+(x.categoria||'N/A')+'</span></td>';"

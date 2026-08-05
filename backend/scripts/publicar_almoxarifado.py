@@ -25,7 +25,7 @@ def extrair_dados():
     cur.execute(
         "SELECT i.codigo,i.nome,i.nome_comercial,i.fabricante,i.categoria_id,"
         "i.quantidade_atual,i.unidade_medida,i.solicitar_por_email,"
-        "i.tipo_controle,i.status FROM itens i ORDER BY i.nome"
+        "i.tipo_controle,i.status,i.modelo FROM itens i ORDER BY i.nome"
     )
     itens = []
     for r in cur.fetchall():
@@ -43,6 +43,7 @@ def extrair_dados():
         itens.append({
             "codigo": row["codigo"],
             "nome": row["nome"],
+            "especificacao": row["modelo"] or "-",
             "nome_comercial": row["nome_comercial"] or "-",
             "fabricante": row["fabricante"] or "-",
             "categoria": cat_nome,

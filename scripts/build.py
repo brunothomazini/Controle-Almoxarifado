@@ -26,7 +26,7 @@ def main():
         print("ERRO: nao foi possivel encontrar o marcador DADOS no HTML")
         sys.exit(1)
 
-    new_html = html[:start_idx] + marker_start + json_str + marker_end + html[end_idx:]
+    new_html = html[:start_idx] + marker_start + json_str + html[end_idx:]
 
     with open(HTML_PATH, 'w', encoding='utf-8') as f:
         f.write(new_html)
