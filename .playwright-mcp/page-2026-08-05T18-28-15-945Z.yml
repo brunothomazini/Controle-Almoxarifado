@@ -1,0 +1,3278 @@
+- generic [ref=f3e2]:
+  - navigation [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - text: Almoxarifado
+      - generic [ref=f3e5]: Painel Administrativo
+    - generic [ref=f3e6]:
+      - generic [ref=f3e7] [cursor=pointer]:
+        - generic [ref=f3e8]: 📊
+        - generic [ref=f3e9]: Dashboard
+      - generic [ref=f3e10] [cursor=pointer]:
+        - generic [ref=f3e11]: 📦
+        - generic [ref=f3e12]: Itens
+      - generic [ref=f3e13] [cursor=pointer]:
+        - generic [ref=f3e14]: 🔄
+        - generic [ref=f3e15]: Movimentações
+      - generic [ref=f3e16] [cursor=pointer]:
+        - generic [ref=f3e17]: 📊
+        - generic [ref=f3e18]: Consumo
+      - generic [ref=f3e19] [cursor=pointer]:
+        - generic [ref=f3e20]: 🏷️
+        - generic [ref=f3e21]: Categorias
+      - generic [ref=f3e22] [cursor=pointer]:
+        - generic [ref=f3e23]: 📡
+        - generic [ref=f3e24]: Sincronia
+      - generic [ref=f3e25] [cursor=pointer]:
+        - generic [ref=f3e26]: 📄
+        - generic [ref=f3e27]: Relatórios
+      - generic [ref=f3e28] [cursor=pointer]:
+        - generic [ref=f3e29]: 👤
+        - generic [ref=f3e30]: Usuários
+    - generic [ref=f3e31]:
+      - generic [ref=f3e32]: Administrador
+      - generic [ref=f3e33] [cursor=pointer]: Senha
+      - text: "|"
+      - generic [ref=f3e34] [cursor=pointer]: Sair
+  - generic [ref=f3e35]:
+    - generic [ref=f3e36]:
+      - heading "Itens" [level=2] [ref=f3e73]
+      - generic [ref=f3e38]:
+        - generic [ref=f3e39]: Administrador
+        - generic [ref=f3e40]: "|"
+        - generic [ref=f3e41] [cursor=pointer]: sair
+    - generic [ref=f3e42]:
+      - generic [ref=f3e74]:
+        - textbox "Buscar código ou nome..." [ref=f3e75]
+        - combobox [ref=f3e76]:
+          - option "Todas categorias" [selected]
+          - option "Descartáveis Higiene e Limpeza"
+          - option "Descartáveis médico-hospitalar"
+          - option "Gêneros alimentícios e copa"
+          - option "Informática"
+          - option "Limpeza"
+          - option "Médico-Hospitalar"
+          - option "Odontológico"
+          - option "Papelaria"
+        - combobox [ref=f3e77]:
+          - option "Todos status" [selected]
+          - option "Disponível"
+          - option "Baixado"
+          - option "Manutenção"
+          - option "Emprestado"
+        - button "+ Novo Item" [ref=f3e78] [cursor=pointer]
+      - generic [ref=f3e80]:
+        - generic [ref=f3e81]: 200 item(ns)
+        - table [ref=f3e83]:
+          - rowgroup [ref=f3e84]:
+            - row [ref=f3e85]:
+              - columnheader "Código" [ref=f3e86]
+              - columnheader "Nome" [ref=f3e87]
+              - columnheader "Nome Comercial" [ref=f3e88]
+              - columnheader "Marca" [ref=f3e89]
+              - columnheader "Categoria" [ref=f3e90]
+              - columnheader "Qtd" [ref=f3e91]
+              - columnheader "Min" [ref=f3e92]
+              - columnheader "Un" [ref=f3e93]
+              - columnheader "Pedidos por:" [ref=f3e94]
+              - columnheader "Status" [ref=f3e95]
+              - columnheader "Ações" [ref=f3e96]
+            - row [ref=f3e97]:
+              - cell [ref=f3e98]:
+                - strong [ref=f3e99]: "8214611"
+              - cell "ABAIXADOR DE LINGUA (225800)" [ref=f3e100]
+              - cell "-" [ref=f3e101]
+              - cell "-" [ref=f3e102]
+              - cell "Médico-Hospitalar" [ref=f3e103]
+              - cell "1950000" [ref=f3e105]
+              - cell "0" [ref=f3e107]
+              - cell "FOB" [ref=f3e108]
+              - cell "Almox" [ref=f3e109]
+              - cell "disponivel" [ref=f3e110]
+              - cell [ref=f3e112]:
+                - button "✎" [ref=f3e113] [cursor=pointer]
+                - button "↻" [ref=f3e114] [cursor=pointer]
+                - button "✕" [ref=f3e115] [cursor=pointer]
+            - row [ref=f3e116]:
+              - cell [ref=f3e117]:
+                - strong [ref=f3e118]: "8720207"
+              - cell "ABRASIVO ODONTOLOGICO (314501)" [ref=f3e119]
+              - cell "PEDRA POMES" [ref=f3e120]
+              - cell "RIO" [ref=f3e121]
+              - cell "Odontológico" [ref=f3e122]
+              - cell "10000" [ref=f3e124]
+              - cell "0" [ref=f3e126]
+              - cell "un" [ref=f3e127]
+              - cell "Almox" [ref=f3e128]
+              - cell "disponivel" [ref=f3e129]
+              - cell [ref=f3e131]:
+                - button "✎" [ref=f3e132] [cursor=pointer]
+                - button "↻" [ref=f3e133] [cursor=pointer]
+                - button "✕" [ref=f3e134] [cursor=pointer]
+            - row [ref=f3e135]:
+              - cell [ref=f3e136]:
+                - strong [ref=f3e137]: "6911889"
+              - cell "ACENDEDOR (340472)" [ref=f3e138]
+              - cell "-" [ref=f3e139]
+              - cell "FIAT LUX PINHEIRO" [ref=f3e140]
+              - cell "Gêneros alimentícios e copa" [ref=f3e141]
+              - cell "110000" [ref=f3e143]
+              - cell "0" [ref=f3e145]
+              - cell "un" [ref=f3e146]
+              - cell "Almox" [ref=f3e147]
+              - cell "disponivel" [ref=f3e148]
+              - cell [ref=f3e150]:
+                - button "✎" [ref=f3e151] [cursor=pointer]
+                - button "↻" [ref=f3e152] [cursor=pointer]
+                - button "✕" [ref=f3e153] [cursor=pointer]
+            - row [ref=f3e154]:
+              - cell [ref=f3e155]:
+                - strong [ref=f3e156]: "7839588"
+              - cell "ACUCAR NOVO (479764)" [ref=f3e157]
+              - cell "-" [ref=f3e158]
+              - cell "DA CANA" [ref=f3e159]
+              - cell "Gêneros alimentícios e copa" [ref=f3e160]
+              - cell "2260000" [ref=f3e162]
+              - cell "0" [ref=f3e164]
+              - cell "un" [ref=f3e165]
+              - cell "Almox" [ref=f3e166]
+              - cell "disponivel" [ref=f3e167]
+              - cell [ref=f3e169]:
+                - button "✎" [ref=f3e170] [cursor=pointer]
+                - button "↻" [ref=f3e171] [cursor=pointer]
+                - button "✕" [ref=f3e172] [cursor=pointer]
+            - row [ref=f3e173]:
+              - cell [ref=f3e174]:
+                - strong [ref=f3e175]: "8785830"
+              - cell "ADAPTADOR DE CONECTOR" [ref=f3e176]
+              - cell "-" [ref=f3e177]
+              - cell "-" [ref=f3e178]
+              - cell "Informática" [ref=f3e179]
+              - cell "0" [ref=f3e181]
+              - cell "0" [ref=f3e183]
+              - cell "un" [ref=f3e184]
+              - cell "solicitar para o setor de Informática" [ref=f3e185]
+              - cell "disponivel" [ref=f3e186]
+              - cell [ref=f3e188]:
+                - button "✎" [ref=f3e189] [cursor=pointer]
+                - button "↻" [ref=f3e190] [cursor=pointer]
+                - button "✕" [ref=f3e191] [cursor=pointer]
+            - row [ref=f3e192]:
+              - cell [ref=f3e193]:
+                - strong [ref=f3e194]: "8087512"
+              - cell "ADOCANTE DIETETICO (357057)" [ref=f3e195]
+              - cell "-" [ref=f3e196]
+              - cell "ZEROCAL" [ref=f3e197]
+              - cell "Gêneros alimentícios e copa" [ref=f3e198]
+              - cell "680000" [ref=f3e200]
+              - cell "0" [ref=f3e202]
+              - cell "un" [ref=f3e203]
+              - cell "Almox" [ref=f3e204]
+              - cell "disponivel" [ref=f3e205]
+              - cell [ref=f3e207]:
+                - button "✎" [ref=f3e208] [cursor=pointer]
+                - button "↻" [ref=f3e209] [cursor=pointer]
+                - button "✕" [ref=f3e210] [cursor=pointer]
+            - row [ref=f3e211]:
+              - cell [ref=f3e212]:
+                - strong [ref=f3e213]: "10113037"
+              - cell "AGENDA EXECUTIVA/COMERCIAL (220965)" [ref=f3e214]
+              - cell "-" [ref=f3e215]
+              - cell "TILIBRA/NAPOLI" [ref=f3e216]
+              - cell "Papelaria" [ref=f3e217]
+              - cell "260000" [ref=f3e219]
+              - cell "0" [ref=f3e221]
+              - cell "un" [ref=f3e222]
+              - cell "Almox" [ref=f3e223]
+              - cell "disponivel" [ref=f3e224]
+              - cell [ref=f3e226]:
+                - button "✎" [ref=f3e227] [cursor=pointer]
+                - button "↻" [ref=f3e228] [cursor=pointer]
+                - button "✕" [ref=f3e229] [cursor=pointer]
+            - row [ref=f3e230]:
+              - cell [ref=f3e231]:
+                - strong [ref=f3e232]: "8709467"
+              - cell "AGUA OXIGENADA (224120)" [ref=f3e233]
+              - cell "-" [ref=f3e234]
+              - cell "RIOQUINICA" [ref=f3e235]
+              - cell "Médico-Hospitalar" [ref=f3e236]
+              - cell "80000" [ref=f3e238]
+              - cell "0" [ref=f3e240]
+              - cell "un" [ref=f3e241]
+              - cell "Almox" [ref=f3e242]
+              - cell "disponivel" [ref=f3e243]
+              - cell [ref=f3e245]:
+                - button "✎" [ref=f3e246] [cursor=pointer]
+                - button "↻" [ref=f3e247] [cursor=pointer]
+                - button "✕" [ref=f3e248] [cursor=pointer]
+            - row [ref=f3e249]:
+              - cell [ref=f3e250]:
+                - strong [ref=f3e251]: "5654670"
+              - cell "AGUA PARA INJEÇÃO. LIQ, ESTERIL,10ML,IV" [ref=f3e252]
+              - cell "-" [ref=f3e253]
+              - cell "-" [ref=f3e254]
+              - cell "Médico-Hospitalar" [ref=f3e255]
+              - cell "0" [ref=f3e257]
+              - cell "0" [ref=f3e259]
+              - cell "un" [ref=f3e260]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e261]
+              - cell "disponivel" [ref=f3e262]
+              - cell [ref=f3e264]:
+                - button "✎" [ref=f3e265] [cursor=pointer]
+                - button "↻" [ref=f3e266] [cursor=pointer]
+                - button "✕" [ref=f3e267] [cursor=pointer]
+            - row [ref=f3e268]:
+              - cell [ref=f3e269]:
+                - strong [ref=f3e270]: "8634521"
+              - cell "AGULHA GENGIVAL DESCARTAVEL (224014)" [ref=f3e271]
+              - cell "AGULHA GENGIVAL EXTRA CURTA 30 G" [ref=f3e272]
+              - cell "DFL" [ref=f3e273]
+              - cell "Odontológico" [ref=f3e274]
+              - cell "170000" [ref=f3e276]
+              - cell "0" [ref=f3e278]
+              - cell "un" [ref=f3e279]
+              - cell "Almox" [ref=f3e280]
+              - cell "disponivel" [ref=f3e281]
+              - cell [ref=f3e283]:
+                - button "✎" [ref=f3e284] [cursor=pointer]
+                - button "↻" [ref=f3e285] [cursor=pointer]
+                - button "✕" [ref=f3e286] [cursor=pointer]
+            - row [ref=f3e287]:
+              - cell [ref=f3e288]:
+                - strong [ref=f3e289]: "5653533"
+              - cell "AGULHA GENGIVAL DESCARTAVEL (224014)" [ref=f3e290]
+              - cell "AGULHA GENGIVAL CURTA 30 G" [ref=f3e291]
+              - cell "DFL" [ref=f3e292]
+              - cell "Odontológico" [ref=f3e293]
+              - cell "170000" [ref=f3e295]
+              - cell "0" [ref=f3e297]
+              - cell "un" [ref=f3e298]
+              - cell "Almox" [ref=f3e299]
+              - cell "disponivel" [ref=f3e300]
+              - cell [ref=f3e302]:
+                - button "✎" [ref=f3e303] [cursor=pointer]
+                - button "↻" [ref=f3e304] [cursor=pointer]
+                - button "✕" [ref=f3e305] [cursor=pointer]
+            - row [ref=f3e306]:
+              - cell [ref=f3e307]:
+                - strong [ref=f3e308]: "9437320"
+              - cell "AGULHA GENGIVAL LONGA" [ref=f3e309]
+              - cell "AGULHA GENGIVAL LONGA" [ref=f3e310]
+              - cell "DFL" [ref=f3e311]
+              - cell "Odontológico" [ref=f3e312]
+              - cell "0" [ref=f3e314]
+              - cell "0" [ref=f3e316]
+              - cell "un" [ref=f3e317]
+              - cell "Almox" [ref=f3e318]
+              - cell "disponivel" [ref=f3e319]
+              - cell [ref=f3e321]:
+                - button "✎" [ref=f3e322] [cursor=pointer]
+                - button "↻" [ref=f3e323] [cursor=pointer]
+                - button "✕" [ref=f3e324] [cursor=pointer]
+            - row [ref=f3e325]:
+              - cell [ref=f3e326]:
+                - strong [ref=f3e327]: "8981060"
+              - cell "AGULHA HIP. PARA IRRIGAÇÃO ENDO,CANULA AÇO INOX,25X6, ESTERIL, DESCARTAVEL" [ref=f3e328]
+              - cell "-" [ref=f3e329]
+              - cell "MEDIX" [ref=f3e330]
+              - cell "Médico-Hospitalar" [ref=f3e331]
+              - cell "0" [ref=f3e333]
+              - cell "0" [ref=f3e335]
+              - cell "un" [ref=f3e336]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e337]
+              - cell "disponivel" [ref=f3e338]
+              - cell [ref=f3e340]:
+                - button "✎" [ref=f3e341] [cursor=pointer]
+                - button "↻" [ref=f3e342] [cursor=pointer]
+                - button "✕" [ref=f3e343] [cursor=pointer]
+            - row [ref=f3e344]:
+              - cell [ref=f3e345]:
+                - strong [ref=f3e346]: "5993075"
+              - cell "AGULHA HIPODERMICA C/PONTA ROMBA, CALIBRE 25 MM X 12 MM, ESTERIL," [ref=f3e347]
+              - cell "-" [ref=f3e348]
+              - cell "MEDIX" [ref=f3e349]
+              - cell "Médico-Hospitalar" [ref=f3e350]
+              - cell "0" [ref=f3e352]
+              - cell "0" [ref=f3e354]
+              - cell "un" [ref=f3e355]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e356]
+              - cell "disponivel" [ref=f3e357]
+              - cell [ref=f3e359]:
+                - button "✎" [ref=f3e360] [cursor=pointer]
+                - button "↻" [ref=f3e361] [cursor=pointer]
+                - button "✕" [ref=f3e362] [cursor=pointer]
+            - row [ref=f3e363]:
+              - cell [ref=f3e364]:
+                - strong [ref=f3e365]: "8613974"
+              - cell "AGULHA HIPODERMICA DESCARTAVEL 30 X 07 MM" [ref=f3e366]
+              - cell "-" [ref=f3e367]
+              - cell "MEDIX" [ref=f3e368]
+              - cell "Médico-Hospitalar" [ref=f3e369]
+              - cell "0" [ref=f3e371]
+              - cell "0" [ref=f3e373]
+              - cell "un" [ref=f3e374]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e375]
+              - cell "disponivel" [ref=f3e376]
+              - cell [ref=f3e378]:
+                - button "✎" [ref=f3e379] [cursor=pointer]
+                - button "↻" [ref=f3e380] [cursor=pointer]
+                - button "✕" [ref=f3e381] [cursor=pointer]
+            - row [ref=f3e382]:
+              - cell [ref=f3e383]:
+                - strong [ref=f3e384]: "5659752"
+              - cell "AGULHA HIPODERMICA DESCARTAVEL BIPOLAR (225789)" [ref=f3e385]
+              - cell "-" [ref=f3e386]
+              - cell "-" [ref=f3e387]
+              - cell "Médico-Hospitalar" [ref=f3e388]
+              - cell "4500000" [ref=f3e390]
+              - cell "0" [ref=f3e392]
+              - cell "FOB" [ref=f3e393]
+              - cell "Almox" [ref=f3e394]
+              - cell "disponivel" [ref=f3e395]
+              - cell [ref=f3e397]:
+                - button "✎" [ref=f3e398] [cursor=pointer]
+                - button "↻" [ref=f3e399] [cursor=pointer]
+                - button "✕" [ref=f3e400] [cursor=pointer]
+            - row [ref=f3e401]:
+              - cell [ref=f3e402]:
+                - strong [ref=f3e403]: "8620849"
+              - cell "AH PLUS" [ref=f3e404]
+              - cell "AH PLUS" [ref=f3e405]
+              - cell "DENTSPLY" [ref=f3e406]
+              - cell "Odontológico" [ref=f3e407]
+              - cell "0" [ref=f3e409]
+              - cell "0" [ref=f3e411]
+              - cell "un" [ref=f3e412]
+              - cell "Almox" [ref=f3e413]
+              - cell "disponivel" [ref=f3e414]
+              - cell [ref=f3e416]:
+                - button "✎" [ref=f3e417] [cursor=pointer]
+                - button "↻" [ref=f3e418] [cursor=pointer]
+                - button "✕" [ref=f3e419] [cursor=pointer]
+            - row [ref=f3e420]:
+              - cell [ref=f3e421]:
+                - strong [ref=f3e422]: "5804736"
+              - cell "ALCOOL ETILICO (228060)" [ref=f3e423]
+              - cell "-" [ref=f3e424]
+              - cell "TAMINI" [ref=f3e425]
+              - cell "Limpeza" [ref=f3e426]
+              - cell "1240000" [ref=f3e428]
+              - cell "0" [ref=f3e430]
+              - cell "un" [ref=f3e431]
+              - cell "Almox" [ref=f3e432]
+              - cell "disponivel" [ref=f3e433]
+              - cell [ref=f3e435]:
+                - button "✎" [ref=f3e436] [cursor=pointer]
+                - button "↻" [ref=f3e437] [cursor=pointer]
+                - button "✕" [ref=f3e438] [cursor=pointer]
+            - row [ref=f3e439]:
+              - cell [ref=f3e440]:
+                - strong [ref=f3e441]: "9242830"
+              - cell "ALCOOL ETILICO (273953)" [ref=f3e442]
+              - cell "-" [ref=f3e443]
+              - cell "TAMINI" [ref=f3e444]
+              - cell "Limpeza" [ref=f3e445]
+              - cell "280000" [ref=f3e447]
+              - cell "0" [ref=f3e449]
+              - cell "un" [ref=f3e450]
+              - cell "Almox" [ref=f3e451]
+              - cell "disponivel" [ref=f3e452]
+              - cell [ref=f3e454]:
+                - button "✎" [ref=f3e455] [cursor=pointer]
+                - button "↻" [ref=f3e456] [cursor=pointer]
+                - button "✕" [ref=f3e457] [cursor=pointer]
+            - row [ref=f3e458]:
+              - cell [ref=f3e459]:
+                - strong [ref=f3e460]: "8720720"
+              - cell "ALGINATO (227471)" [ref=f3e461]
+              - cell "JELTRAT PLUS" [ref=f3e462]
+              - cell "DENTSPLY" [ref=f3e463]
+              - cell "Odontológico" [ref=f3e464]
+              - cell "1140000" [ref=f3e466]
+              - cell "0" [ref=f3e468]
+              - cell "un" [ref=f3e469]
+              - cell "Almox" [ref=f3e470]
+              - cell "disponivel" [ref=f3e471]
+              - cell [ref=f3e473]:
+                - button "✎" [ref=f3e474] [cursor=pointer]
+                - button "↻" [ref=f3e475] [cursor=pointer]
+                - button "✕" [ref=f3e476] [cursor=pointer]
+            - row [ref=f3e477]:
+              - cell [ref=f3e478]:
+                - strong [ref=f3e479]: "5664691"
+              - cell "ALGODAO EM ROLOS (229750)" [ref=f3e480]
+              - cell "-" [ref=f3e481]
+              - cell "SS PLUS" [ref=f3e482]
+              - cell "Odontológico" [ref=f3e483]
+              - cell "1530000" [ref=f3e485]
+              - cell "0" [ref=f3e487]
+              - cell "un" [ref=f3e488]
+              - cell "Almox" [ref=f3e489]
+              - cell "disponivel" [ref=f3e490]
+              - cell [ref=f3e492]:
+                - button "✎" [ref=f3e493] [cursor=pointer]
+                - button "↻" [ref=f3e494] [cursor=pointer]
+                - button "✕" [ref=f3e495] [cursor=pointer]
+            - row [ref=f3e496]:
+              - cell [ref=f3e497]:
+                - strong [ref=f3e498]: "8721971"
+              - cell "ANESTESICO LOCAL INJETAVEL (229504)" [ref=f3e499]
+              - cell "MEPIADRE 3%" [ref=f3e500]
+              - cell "DFL" [ref=f3e501]
+              - cell "Odontológico" [ref=f3e502]
+              - cell "20000" [ref=f3e504]
+              - cell "0" [ref=f3e506]
+              - cell "un" [ref=f3e507]
+              - cell "Almox" [ref=f3e508]
+              - cell "disponivel" [ref=f3e509]
+              - cell [ref=f3e511]:
+                - button "✎" [ref=f3e512] [cursor=pointer]
+                - button "↻" [ref=f3e513] [cursor=pointer]
+                - button "✕" [ref=f3e514] [cursor=pointer]
+            - row [ref=f3e515]:
+              - cell [ref=f3e516]:
+                - strong [ref=f3e517]: "8776652"
+              - cell "ANESTESICO LOCAL INJETAVEL (229504)" [ref=f3e518]
+              - cell "ARTICAINE ARTICAINA 4%" [ref=f3e519]
+              - cell "DFL" [ref=f3e520]
+              - cell "Odontológico" [ref=f3e521]
+              - cell "830000" [ref=f3e523]
+              - cell "0" [ref=f3e525]
+              - cell "un" [ref=f3e526]
+              - cell "Almox" [ref=f3e527]
+              - cell "disponivel" [ref=f3e528]
+              - cell [ref=f3e530]:
+                - button "✎" [ref=f3e531] [cursor=pointer]
+                - button "↻" [ref=f3e532] [cursor=pointer]
+                - button "✕" [ref=f3e533] [cursor=pointer]
+            - row [ref=f3e534]:
+              - cell [ref=f3e535]:
+                - strong [ref=f3e536]: "8359024"
+              - cell "ANESTESICO LOCAL INJETAVEL (229504)" [ref=f3e537]
+              - cell "MEPIADRE MEPIVACAINA 2%" [ref=f3e538]
+              - cell "DFL" [ref=f3e539]
+              - cell "Odontológico" [ref=f3e540]
+              - cell "1410000" [ref=f3e542]
+              - cell "0" [ref=f3e544]
+              - cell "un" [ref=f3e545]
+              - cell "Almox" [ref=f3e546]
+              - cell "disponivel" [ref=f3e547]
+              - cell [ref=f3e549]:
+                - button "✎" [ref=f3e550] [cursor=pointer]
+                - button "↻" [ref=f3e551] [cursor=pointer]
+                - button "✕" [ref=f3e552] [cursor=pointer]
+            - row [ref=f3e553]:
+              - cell [ref=f3e554]:
+                - strong [ref=f3e555]: "8829004"
+              - cell "ANESTESICO TOPICO (229474)" [ref=f3e556]
+              - cell "BENZOTOP" [ref=f3e557]
+              - cell "DFL" [ref=f3e558]
+              - cell "Odontológico" [ref=f3e559]
+              - cell "510000" [ref=f3e561]
+              - cell "0" [ref=f3e563]
+              - cell "un" [ref=f3e564]
+              - cell "Almox" [ref=f3e565]
+              - cell "disponivel" [ref=f3e566]
+              - cell [ref=f3e568]:
+                - button "✎" [ref=f3e569] [cursor=pointer]
+                - button "↻" [ref=f3e570] [cursor=pointer]
+                - button "✕" [ref=f3e571] [cursor=pointer]
+            - row [ref=f3e572]:
+              - cell [ref=f3e573]:
+                - strong [ref=f3e574]: "5773989"
+              - cell "ANTISSEPTICO BUCAL (236799)" [ref=f3e575]
+              - cell "LISTERINE" [ref=f3e576]
+              - cell "COOLMINT" [ref=f3e577]
+              - cell "Odontológico" [ref=f3e578]
+              - cell "790000" [ref=f3e580]
+              - cell "0" [ref=f3e582]
+              - cell "un" [ref=f3e583]
+              - cell "Almox" [ref=f3e584]
+              - cell "disponivel" [ref=f3e585]
+              - cell [ref=f3e587]:
+                - button "✎" [ref=f3e588] [cursor=pointer]
+                - button "↻" [ref=f3e589] [cursor=pointer]
+                - button "✕" [ref=f3e590] [cursor=pointer]
+            - row [ref=f3e591]:
+              - cell [ref=f3e592]:
+                - strong [ref=f3e593]: "8503443"
+              - cell "ANTISSEPTICO BUCAL (236799)" [ref=f3e594]
+              - cell "PERIOPLAK" [ref=f3e595]
+              - cell "PERIOPLAK" [ref=f3e596]
+              - cell "Odontológico" [ref=f3e597]
+              - cell "800000" [ref=f3e599]
+              - cell "0" [ref=f3e601]
+              - cell "un" [ref=f3e602]
+              - cell "Almox" [ref=f3e603]
+              - cell "disponivel" [ref=f3e604]
+              - cell [ref=f3e606]:
+                - button "✎" [ref=f3e607] [cursor=pointer]
+                - button "↻" [ref=f3e608] [cursor=pointer]
+                - button "✕" [ref=f3e609] [cursor=pointer]
+            - row [ref=f3e610]:
+              - cell [ref=f3e611]:
+                - strong [ref=f3e612]: "9816275"
+              - cell "APAGADOR DE QUADRO E LOUSA (485470)" [ref=f3e613]
+              - cell "-" [ref=f3e614]
+              - cell "LYKE" [ref=f3e615]
+              - cell "Papelaria" [ref=f3e616]
+              - cell "80000" [ref=f3e618]
+              - cell "0" [ref=f3e620]
+              - cell "un" [ref=f3e621]
+              - cell "Almox" [ref=f3e622]
+              - cell "disponivel" [ref=f3e623]
+              - cell [ref=f3e625]:
+                - button "✎" [ref=f3e626] [cursor=pointer]
+                - button "↻" [ref=f3e627] [cursor=pointer]
+                - button "✕" [ref=f3e628] [cursor=pointer]
+            - row [ref=f3e629]:
+              - cell [ref=f3e630]:
+                - strong [ref=f3e631]: "8395470"
+              - cell "APLICADOR DESCARTAVEL (233609)" [ref=f3e632]
+              - cell "MICROBRUSH REGULAR" [ref=f3e633]
+              - cell "KG SORENSEN" [ref=f3e634]
+              - cell "Odontológico" [ref=f3e635]
+              - cell "190000" [ref=f3e637]
+              - cell "0" [ref=f3e639]
+              - cell "un" [ref=f3e640]
+              - cell "Almox" [ref=f3e641]
+              - cell "disponivel" [ref=f3e642]
+              - cell [ref=f3e644]:
+                - button "✎" [ref=f3e645] [cursor=pointer]
+                - button "↻" [ref=f3e646] [cursor=pointer]
+                - button "✕" [ref=f3e647] [cursor=pointer]
+            - row [ref=f3e648]:
+              - cell [ref=f3e649]:
+                - strong [ref=f3e650]: "9207040"
+              - cell "APONTADOR PARA LAPIS (219584)" [ref=f3e651]
+              - cell "-" [ref=f3e652]
+              - cell "LEONORA" [ref=f3e653]
+              - cell "Papelaria" [ref=f3e654]
+              - cell "140000" [ref=f3e656]
+              - cell "0" [ref=f3e658]
+              - cell "un" [ref=f3e659]
+              - cell "Almox" [ref=f3e660]
+              - cell "disponivel" [ref=f3e661]
+              - cell [ref=f3e663]:
+                - button "✎" [ref=f3e664] [cursor=pointer]
+                - button "↻" [ref=f3e665] [cursor=pointer]
+                - button "✕" [ref=f3e666] [cursor=pointer]
+            - row [ref=f3e667]:
+              - cell [ref=f3e668]:
+                - strong [ref=f3e669]: "9870547"
+              - cell "APRESENTADOR WIRELESS" [ref=f3e670]
+              - cell "-" [ref=f3e671]
+              - cell "-" [ref=f3e672]
+              - cell "Informática" [ref=f3e673]
+              - cell "0" [ref=f3e675]
+              - cell "0" [ref=f3e677]
+              - cell "un" [ref=f3e678]
+              - cell "solicitar para o setor de Informática" [ref=f3e679]
+              - cell "disponivel" [ref=f3e680]
+              - cell [ref=f3e682]:
+                - button "✎" [ref=f3e683] [cursor=pointer]
+                - button "↻" [ref=f3e684] [cursor=pointer]
+                - button "✕" [ref=f3e685] [cursor=pointer]
+            - row [ref=f3e686]:
+              - cell [ref=f3e687]:
+                - strong [ref=f3e688]: "8526796"
+              - cell "AVENTAL DESCARTAVEL (225894)" [ref=f3e689]
+              - cell "-" [ref=f3e690]
+              - cell "ROBISA" [ref=f3e691]
+              - cell "Descartáveis médico-hospitalar" [ref=f3e692]
+              - cell "72470000" [ref=f3e694]
+              - cell "0" [ref=f3e696]
+              - cell "un" [ref=f3e697]
+              - cell "Almox" [ref=f3e698]
+              - cell "disponivel" [ref=f3e699]
+              - cell [ref=f3e701]:
+                - button "✎" [ref=f3e702] [cursor=pointer]
+                - button "↻" [ref=f3e703] [cursor=pointer]
+                - button "✕" [ref=f3e704] [cursor=pointer]
+            - row [ref=f3e705]:
+              - cell [ref=f3e706]:
+                - strong [ref=f3e707]: MAT005
+              - cell "Agulha descartavel 25x7" [ref=f3e708]
+              - cell "-" [ref=f3e709]
+              - cell "-" [ref=f3e710]
+              - cell "Médico-Hospitalar" [ref=f3e711]
+              - cell "500" [ref=f3e713]
+              - cell "0" [ref=f3e715]
+              - cell "UN" [ref=f3e716]
+              - cell "Almox" [ref=f3e717]
+              - cell "disponivel" [ref=f3e718]
+              - cell [ref=f3e720]:
+                - button "✎" [ref=f3e721] [cursor=pointer]
+                - button "↻" [ref=f3e722] [cursor=pointer]
+                - button "✕" [ref=f3e723] [cursor=pointer]
+            - row [ref=f3e724]:
+              - cell [ref=f3e725]:
+                - strong [ref=f3e726]: "8291578"
+              - cell "BABADOR ODONTOLOGICO (273856)" [ref=f3e727]
+              - cell "-" [ref=f3e728]
+              - cell "SUPRIMED" [ref=f3e729]
+              - cell "Descartáveis médico-hospitalar" [ref=f3e730]
+              - cell "2590000" [ref=f3e732]
+              - cell "0" [ref=f3e734]
+              - cell "un" [ref=f3e735]
+              - cell "Almox" [ref=f3e736]
+              - cell "disponivel" [ref=f3e737]
+              - cell [ref=f3e739]:
+                - button "✎" [ref=f3e740] [cursor=pointer]
+                - button "↻" [ref=f3e741] [cursor=pointer]
+                - button "✕" [ref=f3e742] [cursor=pointer]
+            - row [ref=f3e743]:
+              - cell [ref=f3e744]:
+                - strong [ref=f3e745]: "9121951"
+              - cell "BATERIA BOTAO (556220)" [ref=f3e746]
+              - cell "-" [ref=f3e747]
+              - cell "FLEXGOLD" [ref=f3e748]
+              - cell "Papelaria" [ref=f3e749]
+              - cell "320000" [ref=f3e751]
+              - cell "0" [ref=f3e753]
+              - cell "un" [ref=f3e754]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e755]
+              - cell "disponivel" [ref=f3e756]
+              - cell [ref=f3e758]:
+                - button "✎" [ref=f3e759] [cursor=pointer]
+                - button "↻" [ref=f3e760] [cursor=pointer]
+                - button "✕" [ref=f3e761] [cursor=pointer]
+            - row [ref=f3e762]:
+              - cell [ref=f3e763]:
+                - strong [ref=f3e764]: "9879944"
+              - cell "BIODINAMICA" [ref=f3e765]
+              - cell "BIODINAMICA" [ref=f3e766]
+              - cell "BIOPLIC KIT" [ref=f3e767]
+              - cell "Odontológico" [ref=f3e768]
+              - cell "0" [ref=f3e770]
+              - cell "0" [ref=f3e772]
+              - cell "un" [ref=f3e773]
+              - cell "Almox" [ref=f3e774]
+              - cell "disponivel" [ref=f3e775]
+              - cell [ref=f3e777]:
+                - button "✎" [ref=f3e778] [cursor=pointer]
+                - button "↻" [ref=f3e779] [cursor=pointer]
+                - button "✕" [ref=f3e780] [cursor=pointer]
+            - row [ref=f3e781]:
+              - cell [ref=f3e782]:
+                - strong [ref=f3e783]: "8493634"
+              - cell "BOBINA DE PAPEL (222437)" [ref=f3e784]
+              - cell "-" [ref=f3e785]
+              - cell "SILFER" [ref=f3e786]
+              - cell "Papelaria" [ref=f3e787]
+              - cell "300000" [ref=f3e789]
+              - cell "0" [ref=f3e791]
+              - cell "un" [ref=f3e792]
+              - cell "Almox" [ref=f3e793]
+              - cell "disponivel" [ref=f3e794]
+              - cell [ref=f3e796]:
+                - button "✎" [ref=f3e797] [cursor=pointer]
+                - button "↻" [ref=f3e798] [cursor=pointer]
+                - button "✕" [ref=f3e799] [cursor=pointer]
+            - row [ref=f3e800]:
+              - cell [ref=f3e801]:
+                - strong [ref=f3e802]: "9232451"
+              - cell "BORRACHA DE PAPELARIA (219576)" [ref=f3e803]
+              - cell "-" [ref=f3e804]
+              - cell "-" [ref=f3e805]
+              - cell "Papelaria" [ref=f3e806]
+              - cell "7040000" [ref=f3e808]
+              - cell "0" [ref=f3e810]
+              - cell "FOB" [ref=f3e811]
+              - cell "Almox" [ref=f3e812]
+              - cell "disponivel" [ref=f3e813]
+              - cell [ref=f3e815]:
+                - button "✎" [ref=f3e816] [cursor=pointer]
+                - button "↻" [ref=f3e817] [cursor=pointer]
+                - button "✕" [ref=f3e818] [cursor=pointer]
+            - row [ref=f3e819]:
+              - cell [ref=f3e820]:
+                - strong [ref=f3e821]: "6871011"
+              - cell "CABO HDMI 1,5 METROS TERMINAL HDMI MACHO NAS 2 PONTAS" [ref=f3e822]
+              - cell "-" [ref=f3e823]
+              - cell "-" [ref=f3e824]
+              - cell "Informática" [ref=f3e825]
+              - cell "0" [ref=f3e827]
+              - cell "0" [ref=f3e829]
+              - cell "un" [ref=f3e830]
+              - cell "solicitar para o setor de Informática" [ref=f3e831]
+              - cell "disponivel" [ref=f3e832]
+              - cell [ref=f3e834]:
+                - button "✎" [ref=f3e835] [cursor=pointer]
+                - button "↻" [ref=f3e836] [cursor=pointer]
+                - button "✕" [ref=f3e837] [cursor=pointer]
+            - row [ref=f3e838]:
+              - cell [ref=f3e839]:
+                - strong [ref=f3e840]: "9266712"
+              - cell "CABO HDMI 2.0,5M,ULTRA HD 4K @ 60HZ" [ref=f3e841]
+              - cell "-" [ref=f3e842]
+              - cell "-" [ref=f3e843]
+              - cell "Informática" [ref=f3e844]
+              - cell "0" [ref=f3e846]
+              - cell "0" [ref=f3e848]
+              - cell "un" [ref=f3e849]
+              - cell "solicitar para o setor de Informática" [ref=f3e850]
+              - cell "disponivel" [ref=f3e851]
+              - cell [ref=f3e853]:
+                - button "✎" [ref=f3e854] [cursor=pointer]
+                - button "↻" [ref=f3e855] [cursor=pointer]
+                - button "✕" [ref=f3e856] [cursor=pointer]
+            - row [ref=f3e857]:
+              - cell [ref=f3e858]:
+                - strong [ref=f3e859]: "8457077"
+              - cell "CADERNO ESPIRAL (220663)" [ref=f3e860]
+              - cell "-" [ref=f3e861]
+              - cell "TAMOIO/CD" [ref=f3e862]
+              - cell "Papelaria" [ref=f3e863]
+              - cell "230000" [ref=f3e865]
+              - cell "0" [ref=f3e867]
+              - cell "un" [ref=f3e868]
+              - cell "Almox" [ref=f3e869]
+              - cell "disponivel" [ref=f3e870]
+              - cell [ref=f3e872]:
+                - button "✎" [ref=f3e873] [cursor=pointer]
+                - button "↻" [ref=f3e874] [cursor=pointer]
+                - button "✕" [ref=f3e875] [cursor=pointer]
+            - row [ref=f3e876]:
+              - cell [ref=f3e877]:
+                - strong [ref=f3e878]: "9091998"
+              - cell "CAFE ESPECIAL (359840)" [ref=f3e879]
+              - cell "-" [ref=f3e880]
+              - cell "AROMA DE OURO" [ref=f3e881]
+              - cell "Gêneros alimentícios e copa" [ref=f3e882]
+              - cell "3010000" [ref=f3e884]
+              - cell "0" [ref=f3e886]
+              - cell "un" [ref=f3e887]
+              - cell "Almox" [ref=f3e888]
+              - cell "disponivel" [ref=f3e889]
+              - cell [ref=f3e891]:
+                - button "✎" [ref=f3e892] [cursor=pointer]
+                - button "↻" [ref=f3e893] [cursor=pointer]
+                - button "✕" [ref=f3e894] [cursor=pointer]
+            - row [ref=f3e895]:
+              - cell [ref=f3e896]:
+                - strong [ref=f3e897]: "9594744"
+              - cell "CAIXA DE SOM PARA COMPUTADOR USB 5V 2X3W" [ref=f3e898]
+              - cell "-" [ref=f3e899]
+              - cell "-" [ref=f3e900]
+              - cell "Informática" [ref=f3e901]
+              - cell "0" [ref=f3e903]
+              - cell "0" [ref=f3e905]
+              - cell "un" [ref=f3e906]
+              - cell "solicitar para o setor de Informática" [ref=f3e907]
+              - cell "disponivel" [ref=f3e908]
+              - cell [ref=f3e910]:
+                - button "✎" [ref=f3e911] [cursor=pointer]
+                - button "↻" [ref=f3e912] [cursor=pointer]
+                - button "✕" [ref=f3e913] [cursor=pointer]
+            - row [ref=f3e914]:
+              - cell [ref=f3e915]:
+                - strong [ref=f3e916]: "5614899"
+              - cell "CAIXA PARA ARQUIVO MORTO PAPEL KRAFT 360X250X135MM, PARDA" [ref=f3e917]
+              - cell "-" [ref=f3e918]
+              - cell "DUBRAVAL" [ref=f3e919]
+              - cell "Papelaria" [ref=f3e920]
+              - cell "0" [ref=f3e922]
+              - cell "0" [ref=f3e924]
+              - cell "un" [ref=f3e925]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e926]
+              - cell "disponivel" [ref=f3e927]
+              - cell [ref=f3e929]:
+                - button "✎" [ref=f3e930] [cursor=pointer]
+                - button "↻" [ref=f3e931] [cursor=pointer]
+                - button "✕" [ref=f3e932] [cursor=pointer]
+            - row [ref=f3e933]:
+              - cell [ref=f3e934]:
+                - strong [ref=f3e935]: "8321159"
+              - cell "CAMPO CIRURGICO DESCARTAVEL (225835)" [ref=f3e936]
+              - cell "-" [ref=f3e937]
+              - cell "SUPRIMED" [ref=f3e938]
+              - cell "Descartáveis médico-hospitalar" [ref=f3e939]
+              - cell "2320000" [ref=f3e941]
+              - cell "0" [ref=f3e943]
+              - cell "un" [ref=f3e944]
+              - cell "Almox" [ref=f3e945]
+              - cell "disponivel" [ref=f3e946]
+              - cell [ref=f3e948]:
+                - button "✎" [ref=f3e949] [cursor=pointer]
+                - button "↻" [ref=f3e950] [cursor=pointer]
+                - button "✕" [ref=f3e951] [cursor=pointer]
+            - row [ref=f3e952]:
+              - cell [ref=f3e953]:
+                - strong [ref=f3e954]: "8657017"
+              - cell "CAMPO CIRURGICO DESCARTAVEL (225835)" [ref=f3e955]
+              - cell "-" [ref=f3e956]
+              - cell "SUPRIMED" [ref=f3e957]
+              - cell "Descartáveis médico-hospitalar" [ref=f3e958]
+              - cell "130300000" [ref=f3e960]
+              - cell "0" [ref=f3e962]
+              - cell "un" [ref=f3e963]
+              - cell "Almox" [ref=f3e964]
+              - cell "disponivel" [ref=f3e965]
+              - cell [ref=f3e967]:
+                - button "✎" [ref=f3e968] [cursor=pointer]
+                - button "↻" [ref=f3e969] [cursor=pointer]
+                - button "✕" [ref=f3e970] [cursor=pointer]
+            - row [ref=f3e971]:
+              - cell [ref=f3e972]:
+                - strong [ref=f3e973]: "8084432"
+              - cell "CANETA ESFEROGRAFICA (222399)" [ref=f3e974]
+              - cell "-" [ref=f3e975]
+              - cell "BIC" [ref=f3e976]
+              - cell "Papelaria" [ref=f3e977]
+              - cell "1910000" [ref=f3e979]
+              - cell "0" [ref=f3e981]
+              - cell "un" [ref=f3e982]
+              - cell "Almox" [ref=f3e983]
+              - cell "disponivel" [ref=f3e984]
+              - cell [ref=f3e986]:
+                - button "✎" [ref=f3e987] [cursor=pointer]
+                - button "↻" [ref=f3e988] [cursor=pointer]
+                - button "✕" [ref=f3e989] [cursor=pointer]
+            - row [ref=f3e990]:
+              - cell [ref=f3e991]:
+                - strong [ref=f3e992]: "9550348"
+              - cell "CANETA ESFEROGRAFICA (222399)" [ref=f3e993]
+              - cell "-" [ref=f3e994]
+              - cell "BIC" [ref=f3e995]
+              - cell "Papelaria" [ref=f3e996]
+              - cell "1750000" [ref=f3e998]
+              - cell "0" [ref=f3e1000]
+              - cell "un" [ref=f3e1001]
+              - cell "Almox" [ref=f3e1002]
+              - cell "disponivel" [ref=f3e1003]
+              - cell [ref=f3e1005]:
+                - button "✎" [ref=f3e1006] [cursor=pointer]
+                - button "↻" [ref=f3e1007] [cursor=pointer]
+                - button "✕" [ref=f3e1008] [cursor=pointer]
+            - row [ref=f3e1009]:
+              - cell [ref=f3e1010]:
+                - strong [ref=f3e1011]: "8182957"
+              - cell "CANETA ESFEROGRAFICA (222399)" [ref=f3e1012]
+              - cell "-" [ref=f3e1013]
+              - cell "BIC" [ref=f3e1014]
+              - cell "Papelaria" [ref=f3e1015]
+              - cell "2080000" [ref=f3e1017]
+              - cell "0" [ref=f3e1019]
+              - cell "un" [ref=f3e1020]
+              - cell "Almox" [ref=f3e1021]
+              - cell "disponivel" [ref=f3e1022]
+              - cell [ref=f3e1024]:
+                - button "✎" [ref=f3e1025] [cursor=pointer]
+                - button "↻" [ref=f3e1026] [cursor=pointer]
+                - button "✕" [ref=f3e1027] [cursor=pointer]
+            - row [ref=f3e1028]:
+              - cell [ref=f3e1029]:
+                - strong [ref=f3e1030]: "9189254"
+              - cell "CANETA MARCA TEXTO (220574)" [ref=f3e1031]
+              - cell "-" [ref=f3e1032]
+              - cell "LYKE" [ref=f3e1033]
+              - cell "Papelaria" [ref=f3e1034]
+              - cell "400000" [ref=f3e1036]
+              - cell "0" [ref=f3e1038]
+              - cell "un" [ref=f3e1039]
+              - cell "Almox" [ref=f3e1040]
+              - cell "disponivel" [ref=f3e1041]
+              - cell [ref=f3e1043]:
+                - button "✎" [ref=f3e1044] [cursor=pointer]
+                - button "↻" [ref=f3e1045] [cursor=pointer]
+                - button "✕" [ref=f3e1046] [cursor=pointer]
+            - row [ref=f3e1047]:
+              - cell [ref=f3e1048]:
+                - strong [ref=f3e1049]: "8781397"
+              - cell "CANETA PERMANENTE (221899)" [ref=f3e1050]
+              - cell "-" [ref=f3e1051]
+              - cell "TWI" [ref=f3e1052]
+              - cell "Papelaria" [ref=f3e1053]
+              - cell "300000" [ref=f3e1055]
+              - cell "0" [ref=f3e1057]
+              - cell "un" [ref=f3e1058]
+              - cell "Almox" [ref=f3e1059]
+              - cell "disponivel" [ref=f3e1060]
+              - cell [ref=f3e1062]:
+                - button "✎" [ref=f3e1063] [cursor=pointer]
+                - button "↻" [ref=f3e1064] [cursor=pointer]
+                - button "✕" [ref=f3e1065] [cursor=pointer]
+            - row [ref=f3e1066]:
+              - cell [ref=f3e1067]:
+                - strong [ref=f3e1068]: "7931409"
+              - cell "CANETA PERMANENTE (221899)" [ref=f3e1069]
+              - cell "-" [ref=f3e1070]
+              - cell "TWI" [ref=f3e1071]
+              - cell "Papelaria" [ref=f3e1072]
+              - cell "330000" [ref=f3e1074]
+              - cell "0" [ref=f3e1076]
+              - cell "un" [ref=f3e1077]
+              - cell "Almox" [ref=f3e1078]
+              - cell "disponivel" [ref=f3e1079]
+              - cell [ref=f3e1081]:
+                - button "✎" [ref=f3e1082] [cursor=pointer]
+                - button "↻" [ref=f3e1083] [cursor=pointer]
+                - button "✕" [ref=f3e1084] [cursor=pointer]
+            - row [ref=f3e1085]:
+              - cell [ref=f3e1086]:
+                - strong [ref=f3e1087]: "8671842"
+              - cell "CANUDO DESCARTAVEL (341231)" [ref=f3e1088]
+              - cell "-" [ref=f3e1089]
+              - cell "-" [ref=f3e1090]
+              - cell "Descartáveis Higiene e Limpeza" [ref=f3e1091]
+              - cell "390000" [ref=f3e1093]
+              - cell "0" [ref=f3e1095]
+              - cell "un" [ref=f3e1096]
+              - cell "Almox" [ref=f3e1097]
+              - cell "disponivel" [ref=f3e1098]
+              - cell [ref=f3e1100]:
+                - button "✎" [ref=f3e1101] [cursor=pointer]
+                - button "↻" [ref=f3e1102] [cursor=pointer]
+                - button "✕" [ref=f3e1103] [cursor=pointer]
+            - row [ref=f3e1104]:
+              - cell [ref=f3e1105]:
+                - strong [ref=f3e1106]: "5489954"
+              - cell "CARBONO PARA ARTICULAÇÃO (80578)" [ref=f3e1107]
+              - cell "-" [ref=f3e1108]
+              - cell "-" [ref=f3e1109]
+              - cell "Odontológico" [ref=f3e1110]
+              - cell "390000" [ref=f3e1112]
+              - cell "0" [ref=f3e1114]
+              - cell "FOB" [ref=f3e1115]
+              - cell "Almox" [ref=f3e1116]
+              - cell "disponivel" [ref=f3e1117]
+              - cell [ref=f3e1119]:
+                - button "✎" [ref=f3e1120] [cursor=pointer]
+                - button "↻" [ref=f3e1121] [cursor=pointer]
+                - button "✕" [ref=f3e1122] [cursor=pointer]
+            - row [ref=f3e1123]:
+              - cell [ref=f3e1124]:
+                - strong [ref=f3e1125]: "10176969"
+              - cell "CARBONO PARA ODONTOLOGIA (224324)" [ref=f3e1126]
+              - cell "-" [ref=f3e1127]
+              - cell "IODONTOSUL" [ref=f3e1128]
+              - cell "Odontológico" [ref=f3e1129]
+              - cell "70000" [ref=f3e1131]
+              - cell "0" [ref=f3e1133]
+              - cell "un" [ref=f3e1134]
+              - cell "Almox" [ref=f3e1135]
+              - cell "disponivel" [ref=f3e1136]
+              - cell [ref=f3e1138]:
+                - button "✎" [ref=f3e1139] [cursor=pointer]
+                - button "↻" [ref=f3e1140] [cursor=pointer]
+                - button "✕" [ref=f3e1141] [cursor=pointer]
+            - row [ref=f3e1142]:
+              - cell [ref=f3e1143]:
+                - strong [ref=f3e1144]: "8389241"
+              - cell "CARBONO PARA ODONTOLOGIA (224324)" [ref=f3e1145]
+              - cell "SUPERFILM" [ref=f3e1146]
+              - cell "KOTA" [ref=f3e1147]
+              - cell "Odontológico" [ref=f3e1148]
+              - cell "130000" [ref=f3e1150]
+              - cell "0" [ref=f3e1152]
+              - cell "un" [ref=f3e1153]
+              - cell "Almox" [ref=f3e1154]
+              - cell "disponivel" [ref=f3e1155]
+              - cell [ref=f3e1157]:
+                - button "✎" [ref=f3e1158] [cursor=pointer]
+                - button "↻" [ref=f3e1159] [cursor=pointer]
+                - button "✕" [ref=f3e1160] [cursor=pointer]
+            - row [ref=f3e1161]:
+              - cell [ref=f3e1162]:
+                - strong [ref=f3e1163]: "8698007"
+              - cell "CARBONO PARA ODONTOLOGIA (224324)" [ref=f3e1164]
+              - cell "CONTACTO FILM" [ref=f3e1165]
+              - cell "ANGELUS" [ref=f3e1166]
+              - cell "Odontológico" [ref=f3e1167]
+              - cell "100000" [ref=f3e1169]
+              - cell "0" [ref=f3e1171]
+              - cell "un" [ref=f3e1172]
+              - cell "Almox" [ref=f3e1173]
+              - cell "disponivel" [ref=f3e1174]
+              - cell [ref=f3e1176]:
+                - button "✎" [ref=f3e1177] [cursor=pointer]
+                - button "↻" [ref=f3e1178] [cursor=pointer]
+                - button "✕" [ref=f3e1179] [cursor=pointer]
+            - row [ref=f3e1180]:
+              - cell [ref=f3e1181]:
+                - strong [ref=f3e1182]: "7307713"
+              - cell "CARTUCHO DE TONER PARA IMPRESSORA (353531)" [ref=f3e1183]
+              - cell "-" [ref=f3e1184]
+              - cell "SAMSUNG" [ref=f3e1185]
+              - cell "Papelaria" [ref=f3e1186]
+              - cell "290000" [ref=f3e1188]
+              - cell "0" [ref=f3e1190]
+              - cell "un" [ref=f3e1191]
+              - cell "Almox" [ref=f3e1192]
+              - cell "disponivel" [ref=f3e1193]
+              - cell [ref=f3e1195]:
+                - button "✎" [ref=f3e1196] [cursor=pointer]
+                - button "↻" [ref=f3e1197] [cursor=pointer]
+                - button "✕" [ref=f3e1198] [cursor=pointer]
+            - row [ref=f3e1199]:
+              - cell [ref=f3e1200]:
+                - strong [ref=f3e1201]: "8718725"
+              - cell "CERA ODONTOLOGICA (314480)" [ref=f3e1202]
+              - cell "CERA UTILIDADE" [ref=f3e1203]
+              - cell "LYSANDRA" [ref=f3e1204]
+              - cell "Odontológico" [ref=f3e1205]
+              - cell "490000" [ref=f3e1207]
+              - cell "0" [ref=f3e1209]
+              - cell "un" [ref=f3e1210]
+              - cell "Almox" [ref=f3e1211]
+              - cell "disponivel" [ref=f3e1212]
+              - cell [ref=f3e1214]:
+                - button "✎" [ref=f3e1215] [cursor=pointer]
+                - button "↻" [ref=f3e1216] [cursor=pointer]
+                - button "✕" [ref=f3e1217] [cursor=pointer]
+            - row [ref=f3e1218]:
+              - cell [ref=f3e1219]:
+                - strong [ref=f3e1220]: "8996440"
+              - cell "CERA ODONTOLOGICA (314480)" [ref=f3e1221]
+              - cell "CERA Nº 7" [ref=f3e1222]
+              - cell "LYSANDRA" [ref=f3e1223]
+              - cell "Odontológico" [ref=f3e1224]
+              - cell "310000" [ref=f3e1226]
+              - cell "0" [ref=f3e1228]
+              - cell "un" [ref=f3e1229]
+              - cell "Almox" [ref=f3e1230]
+              - cell "disponivel" [ref=f3e1231]
+              - cell [ref=f3e1233]:
+                - button "✎" [ref=f3e1234] [cursor=pointer]
+                - button "↻" [ref=f3e1235] [cursor=pointer]
+                - button "✕" [ref=f3e1236] [cursor=pointer]
+            - row [ref=f3e1237]:
+              - cell [ref=f3e1238]:
+                - strong [ref=f3e1239]: "8056501"
+              - cell "CHA NOVO (482480)" [ref=f3e1240]
+              - cell "-" [ref=f3e1241]
+              - cell "PICOLO 250G" [ref=f3e1242]
+              - cell "Gêneros alimentícios e copa" [ref=f3e1243]
+              - cell "1900000" [ref=f3e1245]
+              - cell "0" [ref=f3e1247]
+              - cell "un" [ref=f3e1248]
+              - cell "Almox" [ref=f3e1249]
+              - cell "disponivel" [ref=f3e1250]
+              - cell [ref=f3e1252]:
+                - button "✎" [ref=f3e1253] [cursor=pointer]
+                - button "↻" [ref=f3e1254] [cursor=pointer]
+                - button "✕" [ref=f3e1255] [cursor=pointer]
+            - row [ref=f3e1256]:
+              - cell [ref=f3e1257]:
+                - strong [ref=f3e1258]: "8737231"
+              - cell "CIMENTO CIRURGICO ODONTOLOGICO (224057)" [ref=f3e1259]
+              - cell "PERICEM" [ref=f3e1260]
+              - cell "MAQUIRA" [ref=f3e1261]
+              - cell "Odontológico" [ref=f3e1262]
+              - cell "90000" [ref=f3e1264]
+              - cell "0" [ref=f3e1266]
+              - cell "un" [ref=f3e1267]
+              - cell "Almox" [ref=f3e1268]
+              - cell "disponivel" [ref=f3e1269]
+              - cell [ref=f3e1271]:
+                - button "✎" [ref=f3e1272] [cursor=pointer]
+                - button "↻" [ref=f3e1273] [cursor=pointer]
+                - button "✕" [ref=f3e1274] [cursor=pointer]
+            - row [ref=f3e1275]:
+              - cell [ref=f3e1276]:
+                - strong [ref=f3e1277]: "5707811"
+              - cell "CIMENTO DE OXIDO DE ZINCO (223999)" [ref=f3e1278]
+              - cell "CIMENTO ÓXIDO DE ZINCO" [ref=f3e1279]
+              - cell "BIODINAMICA" [ref=f3e1280]
+              - cell "Odontológico" [ref=f3e1281]
+              - cell "110000" [ref=f3e1283]
+              - cell "0" [ref=f3e1285]
+              - cell "un" [ref=f3e1286]
+              - cell "Almox" [ref=f3e1287]
+              - cell "disponivel" [ref=f3e1288]
+              - cell [ref=f3e1290]:
+                - button "✎" [ref=f3e1291] [cursor=pointer]
+                - button "↻" [ref=f3e1292] [cursor=pointer]
+                - button "✕" [ref=f3e1293] [cursor=pointer]
+            - row [ref=f3e1294]:
+              - cell [ref=f3e1295]:
+                - strong [ref=f3e1296]: "8373507"
+              - cell "CIMENTO ENDODONTICO (224022)" [ref=f3e1297]
+              - cell "ANGELUS" [ref=f3e1298]
+              - cell "MTA" [ref=f3e1299]
+              - cell "Odontológico" [ref=f3e1300]
+              - cell "80000" [ref=f3e1302]
+              - cell "0" [ref=f3e1304]
+              - cell "un" [ref=f3e1305]
+              - cell "Almox" [ref=f3e1306]
+              - cell "disponivel" [ref=f3e1307]
+              - cell [ref=f3e1309]:
+                - button "✎" [ref=f3e1310] [cursor=pointer]
+                - button "↻" [ref=f3e1311] [cursor=pointer]
+                - button "✕" [ref=f3e1312] [cursor=pointer]
+            - row [ref=f3e1313]:
+              - cell [ref=f3e1314]:
+                - strong [ref=f3e1315]: "8939470"
+              - cell "CIMENTO ENDODONTICO (224022)" [ref=f3e1316]
+              - cell "SEALER 26" [ref=f3e1317]
+              - cell "DENTSPLY" [ref=f3e1318]
+              - cell "Odontológico" [ref=f3e1319]
+              - cell "50000" [ref=f3e1321]
+              - cell "0" [ref=f3e1323]
+              - cell "un" [ref=f3e1324]
+              - cell "Almox" [ref=f3e1325]
+              - cell "disponivel" [ref=f3e1326]
+              - cell [ref=f3e1328]:
+                - button "✎" [ref=f3e1329] [cursor=pointer]
+                - button "↻" [ref=f3e1330] [cursor=pointer]
+                - button "✕" [ref=f3e1331] [cursor=pointer]
+            - row [ref=f3e1332]:
+              - cell [ref=f3e1333]:
+                - strong [ref=f3e1334]: "8976996"
+              - cell "CIMENTO PROVISORIO (234907)" [ref=f3e1335]
+              - cell "TEMP BOND" [ref=f3e1336]
+              - cell "KERR" [ref=f3e1337]
+              - cell "Odontológico" [ref=f3e1338]
+              - cell "110000" [ref=f3e1340]
+              - cell "0" [ref=f3e1342]
+              - cell "un" [ref=f3e1343]
+              - cell "Almox" [ref=f3e1344]
+              - cell "disponivel" [ref=f3e1345]
+              - cell [ref=f3e1347]:
+                - button "✎" [ref=f3e1348] [cursor=pointer]
+                - button "↻" [ref=f3e1349] [cursor=pointer]
+                - button "✕" [ref=f3e1350] [cursor=pointer]
+            - row [ref=f3e1351]:
+              - cell [ref=f3e1352]:
+                - strong [ref=f3e1353]: "8977062"
+              - cell "CIMENTO PROVISORIO (234907)" [ref=f3e1354]
+              - cell "IRM KIT" [ref=f3e1355]
+              - cell "DENTSPLY" [ref=f3e1356]
+              - cell "Odontológico" [ref=f3e1357]
+              - cell "150000" [ref=f3e1359]
+              - cell "0" [ref=f3e1361]
+              - cell "un" [ref=f3e1362]
+              - cell "Almox" [ref=f3e1363]
+              - cell "disponivel" [ref=f3e1364]
+              - cell [ref=f3e1366]:
+                - button "✎" [ref=f3e1367] [cursor=pointer]
+                - button "↻" [ref=f3e1368] [cursor=pointer]
+                - button "✕" [ref=f3e1369] [cursor=pointer]
+            - row [ref=f3e1370]:
+              - cell [ref=f3e1371]:
+                - strong [ref=f3e1372]: "8547530"
+              - cell "CIMENTO RESINOSO (237574)" [ref=f3e1373]
+              - cell "RELYX U200" [ref=f3e1374]
+              - cell "3M SOLVENTUM" [ref=f3e1375]
+              - cell "Odontológico" [ref=f3e1376]
+              - cell "40000" [ref=f3e1378]
+              - cell "0" [ref=f3e1380]
+              - cell "un" [ref=f3e1381]
+              - cell "Almox" [ref=f3e1382]
+              - cell "disponivel" [ref=f3e1383]
+              - cell [ref=f3e1385]:
+                - button "✎" [ref=f3e1386] [cursor=pointer]
+                - button "↻" [ref=f3e1387] [cursor=pointer]
+                - button "✕" [ref=f3e1388] [cursor=pointer]
+            - row [ref=f3e1389]:
+              - cell [ref=f3e1390]:
+                - strong [ref=f3e1391]: "10176594"
+              - cell "CLAREADOR" [ref=f3e1392]
+              - cell "CLAREADOR" [ref=f3e1393]
+              - cell "WHITENESS PERFECT 16%" [ref=f3e1394]
+              - cell "Odontológico" [ref=f3e1395]
+              - cell "0" [ref=f3e1397]
+              - cell "0" [ref=f3e1399]
+              - cell "un" [ref=f3e1400]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e1401]
+              - cell "disponivel" [ref=f3e1402]
+              - cell [ref=f3e1404]:
+                - button "✎" [ref=f3e1405] [cursor=pointer]
+                - button "↻" [ref=f3e1406] [cursor=pointer]
+                - button "✕" [ref=f3e1407] [cursor=pointer]
+            - row [ref=f3e1408]:
+              - cell [ref=f3e1409]:
+                - strong [ref=f3e1410]: "8687498"
+              - cell "CLAREADOR" [ref=f3e1411]
+              - cell "CLAREADOR" [ref=f3e1412]
+              - cell "WHITENESS HP 35%" [ref=f3e1413]
+              - cell "Odontológico" [ref=f3e1414]
+              - cell "0" [ref=f3e1416]
+              - cell "0" [ref=f3e1418]
+              - cell "un" [ref=f3e1419]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e1420]
+              - cell "disponivel" [ref=f3e1421]
+              - cell [ref=f3e1423]:
+                - button "✎" [ref=f3e1424] [cursor=pointer]
+                - button "↻" [ref=f3e1425] [cursor=pointer]
+                - button "✕" [ref=f3e1426] [cursor=pointer]
+            - row [ref=f3e1427]:
+              - cell [ref=f3e1428]:
+                - strong [ref=f3e1429]: "9856110"
+              - cell "CLAREADOR" [ref=f3e1430]
+              - cell "CLAREADOR" [ref=f3e1431]
+              - cell "WHITENESS PERBORATO" [ref=f3e1432]
+              - cell "Odontológico" [ref=f3e1433]
+              - cell "0" [ref=f3e1435]
+              - cell "0" [ref=f3e1437]
+              - cell "un" [ref=f3e1438]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e1439]
+              - cell "disponivel" [ref=f3e1440]
+              - cell [ref=f3e1442]:
+                - button "✎" [ref=f3e1443] [cursor=pointer]
+                - button "↻" [ref=f3e1444] [cursor=pointer]
+                - button "✕" [ref=f3e1445] [cursor=pointer]
+            - row [ref=f3e1446]:
+              - cell [ref=f3e1447]:
+                - strong [ref=f3e1448]: 9565213/10177620
+              - cell "CLEAR FILL SE" [ref=f3e1449]
+              - cell "-" [ref=f3e1450]
+              - cell "KURARAY" [ref=f3e1451]
+              - cell "Odontológico" [ref=f3e1452]
+              - cell "0" [ref=f3e1454]
+              - cell "0" [ref=f3e1456]
+              - cell "un" [ref=f3e1457]
+              - cell "Almox" [ref=f3e1458]
+              - cell "disponivel" [ref=f3e1459]
+              - cell [ref=f3e1461]:
+                - button "✎" [ref=f3e1462] [cursor=pointer]
+                - button "↻" [ref=f3e1463] [cursor=pointer]
+                - button "✕" [ref=f3e1464] [cursor=pointer]
+            - row [ref=f3e1465]:
+              - cell [ref=f3e1466]:
+                - strong [ref=f3e1467]: "8287104"
+              - cell "CLIPE (219649)" [ref=f3e1468]
+              - cell "-" [ref=f3e1469]
+              - cell "TOP" [ref=f3e1470]
+              - cell "Papelaria" [ref=f3e1471]
+              - cell "1040000" [ref=f3e1473]
+              - cell "0" [ref=f3e1475]
+              - cell "un" [ref=f3e1476]
+              - cell "Almox" [ref=f3e1477]
+              - cell "disponivel" [ref=f3e1478]
+              - cell [ref=f3e1480]:
+                - button "✎" [ref=f3e1481] [cursor=pointer]
+                - button "↻" [ref=f3e1482] [cursor=pointer]
+                - button "✕" [ref=f3e1483] [cursor=pointer]
+            - row [ref=f3e1484]:
+              - cell [ref=f3e1485]:
+                - strong [ref=f3e1486]: "7883277"
+              - cell "CLIPE (219649)" [ref=f3e1487]
+              - cell "-" [ref=f3e1488]
+              - cell "TOP" [ref=f3e1489]
+              - cell "Papelaria" [ref=f3e1490]
+              - cell "1230000" [ref=f3e1492]
+              - cell "0" [ref=f3e1494]
+              - cell "un" [ref=f3e1495]
+              - cell "Almox" [ref=f3e1496]
+              - cell "disponivel" [ref=f3e1497]
+              - cell [ref=f3e1499]:
+                - button "✎" [ref=f3e1500] [cursor=pointer]
+                - button "↻" [ref=f3e1501] [cursor=pointer]
+                - button "✕" [ref=f3e1502] [cursor=pointer]
+            - row [ref=f3e1503]:
+              - cell [ref=f3e1504]:
+                - strong [ref=f3e1505]: "5606330"
+              - cell "CLIPE (219649)" [ref=f3e1506]
+              - cell "-" [ref=f3e1507]
+              - cell "PUPYLEX" [ref=f3e1508]
+              - cell "Papelaria" [ref=f3e1509]
+              - cell "1020000" [ref=f3e1511]
+              - cell "0" [ref=f3e1513]
+              - cell "un" [ref=f3e1514]
+              - cell "Almox" [ref=f3e1515]
+              - cell "disponivel" [ref=f3e1516]
+              - cell [ref=f3e1518]:
+                - button "✎" [ref=f3e1519] [cursor=pointer]
+                - button "↻" [ref=f3e1520] [cursor=pointer]
+                - button "✕" [ref=f3e1521] [cursor=pointer]
+            - row [ref=f3e1522]:
+              - cell [ref=f3e1523]:
+                - strong [ref=f3e1524]: "8395306"
+              - cell "CLORETO DE SÓDIO CATEGORIA P.A. COM TEOR MINIMO DE 99,5%" [ref=f3e1525]
+              - cell "-" [ref=f3e1526]
+              - cell "-" [ref=f3e1527]
+              - cell "Médico-Hospitalar" [ref=f3e1528]
+              - cell "0" [ref=f3e1530]
+              - cell "0" [ref=f3e1532]
+              - cell "un" [ref=f3e1533]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e1534]
+              - cell "disponivel" [ref=f3e1535]
+              - cell [ref=f3e1537]:
+                - button "✎" [ref=f3e1538] [cursor=pointer]
+                - button "↻" [ref=f3e1539] [cursor=pointer]
+                - button "✕" [ref=f3e1540] [cursor=pointer]
+            - row [ref=f3e1541]:
+              - cell [ref=f3e1542]:
+                - strong [ref=f3e1543]: "9169300"
+              - cell "COLA DE PAPELARIA (222232)" [ref=f3e1544]
+              - cell "-" [ref=f3e1545]
+              - cell "YINS" [ref=f3e1546]
+              - cell "Papelaria" [ref=f3e1547]
+              - cell "440000" [ref=f3e1549]
+              - cell "0" [ref=f3e1551]
+              - cell "un" [ref=f3e1552]
+              - cell "Almox" [ref=f3e1553]
+              - cell "disponivel" [ref=f3e1554]
+              - cell [ref=f3e1556]:
+                - button "✎" [ref=f3e1557] [cursor=pointer]
+                - button "↻" [ref=f3e1558] [cursor=pointer]
+                - button "✕" [ref=f3e1559] [cursor=pointer]
+            - row [ref=f3e1560]:
+              - cell [ref=f3e1561]:
+                - strong [ref=f3e1562]: "9545921"
+              - cell "COLA DE PAPELARIA (222232)" [ref=f3e1563]
+              - cell "-" [ref=f3e1564]
+              - cell "LYKE" [ref=f3e1565]
+              - cell "Papelaria" [ref=f3e1566]
+              - cell "330000" [ref=f3e1568]
+              - cell "0" [ref=f3e1570]
+              - cell "un" [ref=f3e1571]
+              - cell "Almox" [ref=f3e1572]
+              - cell "disponivel" [ref=f3e1573]
+              - cell [ref=f3e1575]:
+                - button "✎" [ref=f3e1576] [cursor=pointer]
+                - button "↻" [ref=f3e1577] [cursor=pointer]
+                - button "✕" [ref=f3e1578] [cursor=pointer]
+            - row [ref=f3e1579]:
+              - cell [ref=f3e1580]:
+                - strong [ref=f3e1581]: "9872833"
+              - cell "COLA DE PAPELARIA (222232)" [ref=f3e1582]
+              - cell "-" [ref=f3e1583]
+              - cell "COLA MAIS" [ref=f3e1584]
+              - cell "Papelaria" [ref=f3e1585]
+              - cell "280000" [ref=f3e1587]
+              - cell "0" [ref=f3e1589]
+              - cell "un" [ref=f3e1590]
+              - cell "Almox" [ref=f3e1591]
+              - cell "disponivel" [ref=f3e1592]
+              - cell [ref=f3e1594]:
+                - button "✎" [ref=f3e1595] [cursor=pointer]
+                - button "↻" [ref=f3e1596] [cursor=pointer]
+                - button "✕" [ref=f3e1597] [cursor=pointer]
+            - row [ref=f3e1598]:
+              - cell [ref=f3e1599]:
+                - strong [ref=f3e1600]: XXXXXXX
+              - cell "COLCHETE LATONADO, 07" [ref=f3e1601]
+              - cell "-" [ref=f3e1602]
+              - cell "SALENAS" [ref=f3e1603]
+              - cell "Papelaria" [ref=f3e1604]
+              - cell "0" [ref=f3e1606]
+              - cell "0" [ref=f3e1608]
+              - cell "un" [ref=f3e1609]
+              - cell "Almox" [ref=f3e1610]
+              - cell "disponivel" [ref=f3e1611]
+              - cell [ref=f3e1613]:
+                - button "✎" [ref=f3e1614] [cursor=pointer]
+                - button "↻" [ref=f3e1615] [cursor=pointer]
+                - button "✕" [ref=f3e1616] [cursor=pointer]
+            - row [ref=f3e1617]:
+              - cell [ref=f3e1618]:
+                - strong [ref=f3e1619]: "8395535"
+              - cell "COMPRESSA DE GAZE HIDROFILA (226254)" [ref=f3e1620]
+              - cell "-" [ref=f3e1621]
+              - cell "COTTON MAX" [ref=f3e1622]
+              - cell "Médico-Hospitalar" [ref=f3e1623]
+              - cell "1650000" [ref=f3e1625]
+              - cell "0" [ref=f3e1627]
+              - cell "un" [ref=f3e1628]
+              - cell "Almox" [ref=f3e1629]
+              - cell "disponivel" [ref=f3e1630]
+              - cell [ref=f3e1632]:
+                - button "✎" [ref=f3e1633] [cursor=pointer]
+                - button "↻" [ref=f3e1634] [cursor=pointer]
+                - button "✕" [ref=f3e1635] [cursor=pointer]
+            - row [ref=f3e1636]:
+              - cell [ref=f3e1637]:
+                - strong [ref=f3e1638]: "8402558"
+              - cell "COMPRESSA DE GAZE HIDROFILA (226254)" [ref=f3e1639]
+              - cell "-" [ref=f3e1640]
+              - cell "ERIMAX MED" [ref=f3e1641]
+              - cell "Médico-Hospitalar" [ref=f3e1642]
+              - cell "6080000" [ref=f3e1644]
+              - cell "0" [ref=f3e1646]
+              - cell "un" [ref=f3e1647]
+              - cell "Almox" [ref=f3e1648]
+              - cell "disponivel" [ref=f3e1649]
+              - cell [ref=f3e1651]:
+                - button "✎" [ref=f3e1652] [cursor=pointer]
+                - button "↻" [ref=f3e1653] [cursor=pointer]
+                - button "✕" [ref=f3e1654] [cursor=pointer]
+            - row [ref=f3e1655]:
+              - cell [ref=f3e1656]:
+                - strong [ref=f3e1657]: "8609896"
+              - cell "CONDICIONADOR DE ESMALTE (228117)" [ref=f3e1658]
+              - cell "3M SOLVENTRUM" [ref=f3e1659]
+              - cell "SCOTCH BOND PRIMER" [ref=f3e1660]
+              - cell "Odontológico" [ref=f3e1661]
+              - cell "140000" [ref=f3e1663]
+              - cell "0" [ref=f3e1665]
+              - cell "un" [ref=f3e1666]
+              - cell "Almox" [ref=f3e1667]
+              - cell "disponivel" [ref=f3e1668]
+              - cell [ref=f3e1670]:
+                - button "✎" [ref=f3e1671] [cursor=pointer]
+                - button "↻" [ref=f3e1672] [cursor=pointer]
+                - button "✕" [ref=f3e1673] [cursor=pointer]
+            - row [ref=f3e1674]:
+              - cell [ref=f3e1675]:
+                - strong [ref=f3e1676]: "8901511"
+              - cell "CONDICIONADOR DE ESMALTE (228117)" [ref=f3e1677]
+              - cell "-" [ref=f3e1678]
+              - cell "-" [ref=f3e1679]
+              - cell "Odontológico" [ref=f3e1680]
+              - cell "50000" [ref=f3e1682]
+              - cell "0" [ref=f3e1684]
+              - cell "FOB" [ref=f3e1685]
+              - cell "Almox" [ref=f3e1686]
+              - cell "disponivel" [ref=f3e1687]
+              - cell [ref=f3e1689]:
+                - button "✎" [ref=f3e1690] [cursor=pointer]
+                - button "↻" [ref=f3e1691] [cursor=pointer]
+                - button "✕" [ref=f3e1692] [cursor=pointer]
+            - row [ref=f3e1693]:
+              - cell [ref=f3e1694]:
+                - strong [ref=f3e1695]: "9225196"
+              - cell "CONDICIONADOR DE ESMALTE (228117)" [ref=f3e1696]
+              - cell "-" [ref=f3e1697]
+              - cell "-" [ref=f3e1698]
+              - cell "Odontológico" [ref=f3e1699]
+              - cell "60000" [ref=f3e1701]
+              - cell "0" [ref=f3e1703]
+              - cell "FOB" [ref=f3e1704]
+              - cell "Almox" [ref=f3e1705]
+              - cell "disponivel" [ref=f3e1706]
+              - cell [ref=f3e1708]:
+                - button "✎" [ref=f3e1709] [cursor=pointer]
+                - button "↻" [ref=f3e1710] [cursor=pointer]
+                - button "✕" [ref=f3e1711] [cursor=pointer]
+            - row [ref=f3e1712]:
+              - cell [ref=f3e1713]:
+                - strong [ref=f3e1714]: "6016081"
+              - cell "CONDICIONADOR DE PORCELANA (272787)" [ref=f3e1715]
+              - cell "CONDICIONADOR DE PORCELANA GEL" [ref=f3e1716]
+              - cell "IODONTOSUL" [ref=f3e1717]
+              - cell "Odontológico" [ref=f3e1718]
+              - cell "130000" [ref=f3e1720]
+              - cell "0" [ref=f3e1722]
+              - cell "un" [ref=f3e1723]
+              - cell "Almox" [ref=f3e1724]
+              - cell "disponivel" [ref=f3e1725]
+              - cell [ref=f3e1727]:
+                - button "✎" [ref=f3e1728] [cursor=pointer]
+                - button "↻" [ref=f3e1729] [cursor=pointer]
+                - button "✕" [ref=f3e1730] [cursor=pointer]
+            - row [ref=f3e1731]:
+              - cell [ref=f3e1732]:
+                - strong [ref=f3e1733]: "8622400"
+              - cell "COPO DESCARTAVEL (341665)" [ref=f3e1734]
+              - cell "-" [ref=f3e1735]
+              - cell "ALTACOPPO" [ref=f3e1736]
+              - cell "Descartáveis Higiene e Limpeza" [ref=f3e1737]
+              - cell "2270000" [ref=f3e1739]
+              - cell "0" [ref=f3e1741]
+              - cell "un" [ref=f3e1742]
+              - cell "Almox" [ref=f3e1743]
+              - cell "disponivel" [ref=f3e1744]
+              - cell [ref=f3e1746]:
+                - button "✎" [ref=f3e1747] [cursor=pointer]
+                - button "↻" [ref=f3e1748] [cursor=pointer]
+                - button "✕" [ref=f3e1749] [cursor=pointer]
+            - row [ref=f3e1750]:
+              - cell [ref=f3e1751]:
+                - strong [ref=f3e1752]: "8622418"
+              - cell "COPO DESCARTAVEL (341665)" [ref=f3e1753]
+              - cell "-" [ref=f3e1754]
+              - cell "KEROCOPPO" [ref=f3e1755]
+              - cell "Descartáveis Higiene e Limpeza" [ref=f3e1756]
+              - cell "4170000" [ref=f3e1758]
+              - cell "0" [ref=f3e1760]
+              - cell "un" [ref=f3e1761]
+              - cell "Almox" [ref=f3e1762]
+              - cell "disponivel" [ref=f3e1763]
+              - cell [ref=f3e1765]:
+                - button "✎" [ref=f3e1766] [cursor=pointer]
+                - button "↻" [ref=f3e1767] [cursor=pointer]
+                - button "✕" [ref=f3e1768] [cursor=pointer]
+            - row [ref=f3e1769]:
+              - cell [ref=f3e1770]:
+                - strong [ref=f3e1771]: "8402450"
+              - cell "CORRETIVO (219614)" [ref=f3e1772]
+              - cell "-" [ref=f3e1773]
+              - cell "RADEX" [ref=f3e1774]
+              - cell "Papelaria" [ref=f3e1775]
+              - cell "160000" [ref=f3e1777]
+              - cell "0" [ref=f3e1779]
+              - cell "un" [ref=f3e1780]
+              - cell "Almox" [ref=f3e1781]
+              - cell "disponivel" [ref=f3e1782]
+              - cell [ref=f3e1784]:
+                - button "✎" [ref=f3e1785] [cursor=pointer]
+                - button "↻" [ref=f3e1786] [cursor=pointer]
+                - button "✕" [ref=f3e1787] [cursor=pointer]
+            - row [ref=f3e1788]:
+              - cell [ref=f3e1789]:
+                - strong [ref=f3e1790]: "9541004"
+              - cell "CORRETIVO (219614)" [ref=f3e1791]
+              - cell "-" [ref=f3e1792]
+              - cell "LYKE" [ref=f3e1793]
+              - cell "Papelaria" [ref=f3e1794]
+              - cell "620000" [ref=f3e1796]
+              - cell "0" [ref=f3e1798]
+              - cell "un" [ref=f3e1799]
+              - cell "Almox" [ref=f3e1800]
+              - cell "disponivel" [ref=f3e1801]
+              - cell [ref=f3e1803]:
+                - button "✎" [ref=f3e1804] [cursor=pointer]
+                - button "↻" [ref=f3e1805] [cursor=pointer]
+                - button "✕" [ref=f3e1806] [cursor=pointer]
+            - row [ref=f3e1807]:
+              - cell [ref=f3e1808]:
+                - strong [ref=f3e1809]: "10238026"
+              - cell "CUNHA INTERDENTAL (229806)" [ref=f3e1810]
+              - cell "CUNHA REFLEXIVA" [ref=f3e1811]
+              - cell "IODONTOSUL" [ref=f3e1812]
+              - cell "Odontológico" [ref=f3e1813]
+              - cell "90000" [ref=f3e1815]
+              - cell "0" [ref=f3e1817]
+              - cell "un" [ref=f3e1818]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e1819]
+              - cell "disponivel" [ref=f3e1820]
+              - cell [ref=f3e1822]:
+                - button "✎" [ref=f3e1823] [cursor=pointer]
+                - button "↻" [ref=f3e1824] [cursor=pointer]
+                - button "✕" [ref=f3e1825] [cursor=pointer]
+            - row [ref=f3e1826]:
+              - cell [ref=f3e1827]:
+                - strong [ref=f3e1828]: "10176187"
+              - cell "CUNHA INTERDENTAL (229806)" [ref=f3e1829]
+              - cell "-" [ref=f3e1830]
+              - cell "-" [ref=f3e1831]
+              - cell "Odontológico" [ref=f3e1832]
+              - cell "100000" [ref=f3e1834]
+              - cell "0" [ref=f3e1836]
+              - cell "FOB" [ref=f3e1837]
+              - cell "Almox" [ref=f3e1838]
+              - cell "disponivel" [ref=f3e1839]
+              - cell [ref=f3e1841]:
+                - button "✎" [ref=f3e1842] [cursor=pointer]
+                - button "↻" [ref=f3e1843] [cursor=pointer]
+                - button "✕" [ref=f3e1844] [cursor=pointer]
+            - row [ref=f3e1845]:
+              - cell [ref=f3e1846]:
+                - strong [ref=f3e1847]: "5665035"
+              - cell "CUNHA MADEIRA" [ref=f3e1848]
+              - cell "CUNHA MADEIRA" [ref=f3e1849]
+              - cell "TDV" [ref=f3e1850]
+              - cell "Odontológico" [ref=f3e1851]
+              - cell "0" [ref=f3e1853]
+              - cell "0" [ref=f3e1855]
+              - cell "un" [ref=f3e1856]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e1857]
+              - cell "disponivel" [ref=f3e1858]
+              - cell [ref=f3e1860]:
+                - button "✎" [ref=f3e1861] [cursor=pointer]
+                - button "↻" [ref=f3e1862] [cursor=pointer]
+                - button "✕" [ref=f3e1863] [cursor=pointer]
+            - row [ref=f3e1864]:
+              - cell [ref=f3e1865]:
+                - strong [ref=f3e1866]: MAT001
+              - cell "Caneta esferografica azul" [ref=f3e1867]
+              - cell "-" [ref=f3e1868]
+              - cell "-" [ref=f3e1869]
+              - cell "Médico-Hospitalar" [ref=f3e1870]
+              - cell "150" [ref=f3e1872]
+              - cell "0" [ref=f3e1874]
+              - cell "UN" [ref=f3e1875]
+              - cell "Almox" [ref=f3e1876]
+              - cell "disponivel" [ref=f3e1877]
+              - cell [ref=f3e1879]:
+                - button "✎" [ref=f3e1880] [cursor=pointer]
+                - button "↻" [ref=f3e1881] [cursor=pointer]
+                - button "✕" [ref=f3e1882] [cursor=pointer]
+            - row [ref=f3e1883]:
+              - cell [ref=f3e1884]:
+                - strong [ref=f3e1885]: "10176713"
+              - cell "DESSENSIBILIZADOR DE DENTINA (246387)" [ref=f3e1886]
+              - cell "DE SENSIBILIZE KF 2% 2,5%" [ref=f3e1887]
+              - cell "FGM" [ref=f3e1888]
+              - cell "Odontológico" [ref=f3e1889]
+              - cell "150000" [ref=f3e1891]
+              - cell "0" [ref=f3e1893]
+              - cell "un" [ref=f3e1894]
+              - cell "Almox" [ref=f3e1895]
+              - cell "disponivel" [ref=f3e1896]
+              - cell [ref=f3e1898]:
+                - button "✎" [ref=f3e1899] [cursor=pointer]
+                - button "↻" [ref=f3e1900] [cursor=pointer]
+                - button "✕" [ref=f3e1901] [cursor=pointer]
+            - row [ref=f3e1902]:
+              - cell [ref=f3e1903]:
+                - strong [ref=f3e1904]: "7816421"
+              - cell "DETERGENTE LIQUIDO (348376)" [ref=f3e1905]
+              - cell "-" [ref=f3e1906]
+              - cell "TAMINI" [ref=f3e1907]
+              - cell "Limpeza" [ref=f3e1908]
+              - cell "1370000" [ref=f3e1910]
+              - cell "0" [ref=f3e1912]
+              - cell "un" [ref=f3e1913]
+              - cell "Almox" [ref=f3e1914]
+              - cell "disponivel" [ref=f3e1915]
+              - cell [ref=f3e1917]:
+                - button "✎" [ref=f3e1918] [cursor=pointer]
+                - button "↻" [ref=f3e1919] [cursor=pointer]
+                - button "✕" [ref=f3e1920] [cursor=pointer]
+            - row [ref=f3e1921]:
+              - cell [ref=f3e1922]:
+                - strong [ref=f3e1923]: "8659443"
+              - cell "DISCO LIXA" [ref=f3e1924]
+              - cell "DISCO LIXA" [ref=f3e1925]
+              - cell "TDV" [ref=f3e1926]
+              - cell "Odontológico" [ref=f3e1927]
+              - cell "0" [ref=f3e1929]
+              - cell "0" [ref=f3e1931]
+              - cell "un" [ref=f3e1932]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e1933]
+              - cell "disponivel" [ref=f3e1934]
+              - cell [ref=f3e1936]:
+                - button "✎" [ref=f3e1937] [cursor=pointer]
+                - button "↻" [ref=f3e1938] [cursor=pointer]
+                - button "✕" [ref=f3e1939] [cursor=pointer]
+            - row [ref=f3e1940]:
+              - cell [ref=f3e1941]:
+                - strong [ref=f3e1942]: "9694102"
+              - cell "DISCO LIXA" [ref=f3e1943]
+              - cell "DISCO LIXA" [ref=f3e1944]
+              - cell "LABORDENTAL" [ref=f3e1945]
+              - cell "Odontológico" [ref=f3e1946]
+              - cell "0" [ref=f3e1948]
+              - cell "0" [ref=f3e1950]
+              - cell "un" [ref=f3e1951]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e1952]
+              - cell "disponivel" [ref=f3e1953]
+              - cell [ref=f3e1955]:
+                - button "✎" [ref=f3e1956] [cursor=pointer]
+                - button "↻" [ref=f3e1957] [cursor=pointer]
+                - button "✕" [ref=f3e1958] [cursor=pointer]
+            - row [ref=f3e1959]:
+              - cell [ref=f3e1960]:
+                - strong [ref=f3e1961]: "8487456"
+              - cell "DISCO RIGIDO PADRAO SSD, 01 TB" [ref=f3e1962]
+              - cell "-" [ref=f3e1963]
+              - cell "-" [ref=f3e1964]
+              - cell "Informática" [ref=f3e1965]
+              - cell "0" [ref=f3e1967]
+              - cell "0" [ref=f3e1969]
+              - cell "un" [ref=f3e1970]
+              - cell "solicitar para o setor de Informática" [ref=f3e1971]
+              - cell "disponivel" [ref=f3e1972]
+              - cell [ref=f3e1974]:
+                - button "✎" [ref=f3e1975] [cursor=pointer]
+                - button "↻" [ref=f3e1976] [cursor=pointer]
+                - button "✕" [ref=f3e1977] [cursor=pointer]
+            - row [ref=f3e1978]:
+              - cell [ref=f3e1979]:
+                - strong [ref=f3e1980]: "9983481"
+              - cell "DISCO RIGIDO SATA DE 06 GB/S, TECNOLOGIA NAS, 12 TB" [ref=f3e1981]
+              - cell "-" [ref=f3e1982]
+              - cell "-" [ref=f3e1983]
+              - cell "Informática" [ref=f3e1984]
+              - cell "0" [ref=f3e1986]
+              - cell "0" [ref=f3e1988]
+              - cell "un" [ref=f3e1989]
+              - cell "solicitar para o setor de Informática" [ref=f3e1990]
+              - cell "disponivel" [ref=f3e1991]
+              - cell [ref=f3e1993]:
+                - button "✎" [ref=f3e1994] [cursor=pointer]
+                - button "↻" [ref=f3e1995] [cursor=pointer]
+                - button "✕" [ref=f3e1996] [cursor=pointer]
+            - row [ref=f3e1997]:
+              - cell [ref=f3e1998]:
+                - strong [ref=f3e1999]: "7307039"
+              - cell "DISCO RIGIDO, USB 3.0, EXTERNO, 04 TB, 7.200 RPM" [ref=f3e2000]
+              - cell "-" [ref=f3e2001]
+              - cell "-" [ref=f3e2002]
+              - cell "Informática" [ref=f3e2003]
+              - cell "0" [ref=f3e2005]
+              - cell "0" [ref=f3e2007]
+              - cell "un" [ref=f3e2008]
+              - cell "solicitar para o setor de Informática" [ref=f3e2009]
+              - cell "disponivel" [ref=f3e2010]
+              - cell [ref=f3e2012]:
+                - button "✎" [ref=f3e2013] [cursor=pointer]
+                - button "↻" [ref=f3e2014] [cursor=pointer]
+                - button "✕" [ref=f3e2015] [cursor=pointer]
+            - row [ref=f3e2016]:
+              - cell [ref=f3e2017]:
+                - strong [ref=f3e2018]: "9580930"
+              - cell "DISCO SOLIDO, SSD M.2 2280 PARA PCI-E GEN 3.0 X 4 NVME 1.3, 512 GB" [ref=f3e2019]
+              - cell "-" [ref=f3e2020]
+              - cell "-" [ref=f3e2021]
+              - cell "Informática" [ref=f3e2022]
+              - cell "0" [ref=f3e2024]
+              - cell "0" [ref=f3e2026]
+              - cell "un" [ref=f3e2027]
+              - cell "solicitar para o setor de Informática" [ref=f3e2028]
+              - cell "disponivel" [ref=f3e2029]
+              - cell [ref=f3e2031]:
+                - button "✎" [ref=f3e2032] [cursor=pointer]
+                - button "↻" [ref=f3e2033] [cursor=pointer]
+                - button "✕" [ref=f3e2034] [cursor=pointer]
+            - row [ref=f3e2035]:
+              - cell [ref=f3e2036]:
+                - strong [ref=f3e2037]: "9166505"
+              - cell "DISPLAYPORT MACHO/MACHO 2.00 M" [ref=f3e2038]
+              - cell "-" [ref=f3e2039]
+              - cell "-" [ref=f3e2040]
+              - cell "Informática" [ref=f3e2041]
+              - cell "0" [ref=f3e2043]
+              - cell "0" [ref=f3e2045]
+              - cell "un" [ref=f3e2046]
+              - cell "solicitar para o setor de Informática" [ref=f3e2047]
+              - cell "disponivel" [ref=f3e2048]
+              - cell [ref=f3e2050]:
+                - button "✎" [ref=f3e2051] [cursor=pointer]
+                - button "↻" [ref=f3e2052] [cursor=pointer]
+                - button "✕" [ref=f3e2053] [cursor=pointer]
+            - row [ref=f3e2054]:
+              - cell [ref=f3e2055]:
+                - strong [ref=f3e2056]: MAT004
+              - cell "Detergente liquido 5L" [ref=f3e2057]
+              - cell "-" [ref=f3e2058]
+              - cell "-" [ref=f3e2059]
+              - cell "Médico-Hospitalar" [ref=f3e2060]
+              - cell "30" [ref=f3e2062]
+              - cell "0" [ref=f3e2064]
+              - cell "LT" [ref=f3e2065]
+              - cell "Almox" [ref=f3e2066]
+              - cell "disponivel" [ref=f3e2067]
+              - cell [ref=f3e2069]:
+                - button "✎" [ref=f3e2070] [cursor=pointer]
+                - button "↻" [ref=f3e2071] [cursor=pointer]
+                - button "✕" [ref=f3e2072] [cursor=pointer]
+            - row [ref=f3e2073]:
+              - cell [ref=f3e2074]:
+                - strong [ref=f3e2075]: "5904455"
+              - cell "EDTA PARA USO ODONTOLOGICO (263745)" [ref=f3e2076]
+              - cell "EDTA" [ref=f3e2077]
+              - cell "BIODINAMICA" [ref=f3e2078]
+              - cell "Odontológico" [ref=f3e2079]
+              - cell "170000" [ref=f3e2081]
+              - cell "0" [ref=f3e2083]
+              - cell "un" [ref=f3e2084]
+              - cell "Almox" [ref=f3e2085]
+              - cell "disponivel" [ref=f3e2086]
+              - cell [ref=f3e2088]:
+                - button "✎" [ref=f3e2089] [cursor=pointer]
+                - button "↻" [ref=f3e2090] [cursor=pointer]
+                - button "✕" [ref=f3e2091] [cursor=pointer]
+            - row [ref=f3e2092]:
+              - cell [ref=f3e2093]:
+                - strong [ref=f3e2094]: "8898090"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2095]
+              - cell "XANTOPREN VL" [ref=f3e2096]
+              - cell "KULZER" [ref=f3e2097]
+              - cell "Odontológico" [ref=f3e2098]
+              - cell "20000" [ref=f3e2100]
+              - cell "0" [ref=f3e2102]
+              - cell "un" [ref=f3e2103]
+              - cell "Almox" [ref=f3e2104]
+              - cell "disponivel" [ref=f3e2105]
+              - cell [ref=f3e2107]:
+                - button "✎" [ref=f3e2108] [cursor=pointer]
+                - button "↻" [ref=f3e2109] [cursor=pointer]
+                - button "✕" [ref=f3e2110] [cursor=pointer]
+            - row [ref=f3e2111]:
+              - cell [ref=f3e2112]:
+                - strong [ref=f3e2113]: "5893348"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2114]
+              - cell "ZETALABOR PLUS" [ref=f3e2115]
+              - cell "ZHERMACK" [ref=f3e2116]
+              - cell "Odontológico" [ref=f3e2117]
+              - cell "30000" [ref=f3e2119]
+              - cell "0" [ref=f3e2121]
+              - cell "un" [ref=f3e2122]
+              - cell "Almox" [ref=f3e2123]
+              - cell "disponivel" [ref=f3e2124]
+              - cell [ref=f3e2126]:
+                - button "✎" [ref=f3e2127] [cursor=pointer]
+                - button "↻" [ref=f3e2128] [cursor=pointer]
+                - button "✕" [ref=f3e2129] [cursor=pointer]
+            - row [ref=f3e2130]:
+              - cell [ref=f3e2131]:
+                - strong [ref=f3e2132]: "8786801"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2133]
+              - cell "ATIVADOR OPTOSIL" [ref=f3e2134]
+              - cell "KULZER" [ref=f3e2135]
+              - cell "Odontológico" [ref=f3e2136]
+              - cell "100000" [ref=f3e2138]
+              - cell "0" [ref=f3e2140]
+              - cell "un" [ref=f3e2141]
+              - cell "Almox" [ref=f3e2142]
+              - cell "disponivel" [ref=f3e2143]
+              - cell [ref=f3e2145]:
+                - button "✎" [ref=f3e2146] [cursor=pointer]
+                - button "↻" [ref=f3e2147] [cursor=pointer]
+                - button "✕" [ref=f3e2148] [cursor=pointer]
+            - row [ref=f3e2149]:
+              - cell [ref=f3e2150]:
+                - strong [ref=f3e2151]: "10177345"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2152]
+              - cell "OPTOSIL" [ref=f3e2153]
+              - cell "KULZER" [ref=f3e2154]
+              - cell "Odontológico" [ref=f3e2155]
+              - cell "70000" [ref=f3e2157]
+              - cell "0" [ref=f3e2159]
+              - cell "un" [ref=f3e2160]
+              - cell "Almox" [ref=f3e2161]
+              - cell "disponivel" [ref=f3e2162]
+              - cell [ref=f3e2164]:
+                - button "✎" [ref=f3e2165] [cursor=pointer]
+                - button "↻" [ref=f3e2166] [cursor=pointer]
+                - button "✕" [ref=f3e2167] [cursor=pointer]
+            - row [ref=f3e2168]:
+              - cell [ref=f3e2169]:
+                - strong [ref=f3e2170]: "8732922"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2171]
+              - cell "INDURENT GEL CATALIZADOR" [ref=f3e2172]
+              - cell "ZHERMACK" [ref=f3e2173]
+              - cell "Odontológico" [ref=f3e2174]
+              - cell "170000" [ref=f3e2176]
+              - cell "0" [ref=f3e2178]
+              - cell "un" [ref=f3e2179]
+              - cell "Almox" [ref=f3e2180]
+              - cell "disponivel" [ref=f3e2181]
+              - cell [ref=f3e2183]:
+                - button "✎" [ref=f3e2184] [cursor=pointer]
+                - button "↻" [ref=f3e2185] [cursor=pointer]
+                - button "✕" [ref=f3e2186] [cursor=pointer]
+            - row [ref=f3e2187]:
+              - cell [ref=f3e2188]:
+                - strong [ref=f3e2189]: "8777403"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2190]
+              - cell "EXPRESS XT (PASTA FLUIDA)" [ref=f3e2191]
+              - cell "3M SOLVENTRUM" [ref=f3e2192]
+              - cell "Odontológico" [ref=f3e2193]
+              - cell "80000" [ref=f3e2195]
+              - cell "0" [ref=f3e2197]
+              - cell "un" [ref=f3e2198]
+              - cell "Almox" [ref=f3e2199]
+              - cell "disponivel" [ref=f3e2200]
+              - cell [ref=f3e2202]:
+                - button "✎" [ref=f3e2203] [cursor=pointer]
+                - button "↻" [ref=f3e2204] [cursor=pointer]
+                - button "✕" [ref=f3e2205] [cursor=pointer]
+            - row [ref=f3e2206]:
+              - cell [ref=f3e2207]:
+                - strong [ref=f3e2208]: "8542791"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2209]
+              - cell "EXPRESS XT (PASTA DENSA)" [ref=f3e2210]
+              - cell "3M SOLVENTRUM" [ref=f3e2211]
+              - cell "Odontológico" [ref=f3e2212]
+              - cell "80000" [ref=f3e2214]
+              - cell "0" [ref=f3e2216]
+              - cell "un" [ref=f3e2217]
+              - cell "Almox" [ref=f3e2218]
+              - cell "disponivel" [ref=f3e2219]
+              - cell [ref=f3e2221]:
+                - button "✎" [ref=f3e2222] [cursor=pointer]
+                - button "↻" [ref=f3e2223] [cursor=pointer]
+                - button "✕" [ref=f3e2224] [cursor=pointer]
+            - row [ref=f3e2225]:
+              - cell [ref=f3e2226]:
+                - strong [ref=f3e2227]: "5745780"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2228]
+              - cell "-" [ref=f3e2229]
+              - cell "-" [ref=f3e2230]
+              - cell "Odontológico" [ref=f3e2231]
+              - cell "90000" [ref=f3e2233]
+              - cell "0" [ref=f3e2235]
+              - cell "FOB" [ref=f3e2236]
+              - cell "Almox" [ref=f3e2237]
+              - cell "disponivel" [ref=f3e2238]
+              - cell [ref=f3e2240]:
+                - button "✎" [ref=f3e2241] [cursor=pointer]
+                - button "↻" [ref=f3e2242] [cursor=pointer]
+                - button "✕" [ref=f3e2243] [cursor=pointer]
+            - row [ref=f3e2244]:
+              - cell [ref=f3e2245]:
+                - strong [ref=f3e2246]: "5895260"
+              - cell "ELASTOMERO ODONTOLOGICO (236993)" [ref=f3e2247]
+              - cell "-" [ref=f3e2248]
+              - cell "-" [ref=f3e2249]
+              - cell "Odontológico" [ref=f3e2250]
+              - cell "30000" [ref=f3e2252]
+              - cell "0" [ref=f3e2254]
+              - cell "FOB" [ref=f3e2255]
+              - cell "Almox" [ref=f3e2256]
+              - cell "disponivel" [ref=f3e2257]
+              - cell [ref=f3e2259]:
+                - button "✎" [ref=f3e2260] [cursor=pointer]
+                - button "↻" [ref=f3e2261] [cursor=pointer]
+                - button "✕" [ref=f3e2262] [cursor=pointer]
+            - row [ref=f3e2263]:
+              - cell [ref=f3e2264]:
+                - strong [ref=f3e2265]: "9652817"
+              - cell "ELETRODO AG-AGCL INFANTIL, MONITOR NIVEL CONSCIENCIA, DIVERSAS MARCAS" [ref=f3e2266]
+              - cell "-" [ref=f3e2267]
+              - cell "MAXICOR" [ref=f3e2268]
+              - cell "Médico-Hospitalar" [ref=f3e2269]
+              - cell "0" [ref=f3e2271]
+              - cell "0" [ref=f3e2273]
+              - cell "un" [ref=f3e2274]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e2275]
+              - cell "disponivel" [ref=f3e2276]
+              - cell [ref=f3e2278]:
+                - button "✎" [ref=f3e2279] [cursor=pointer]
+                - button "↻" [ref=f3e2280] [cursor=pointer]
+                - button "✕" [ref=f3e2281] [cursor=pointer]
+            - row [ref=f3e2282]:
+              - cell [ref=f3e2283]:
+                - strong [ref=f3e2284]: "9704248"
+              - cell "ELETRODO DESCARTAVEL" [ref=f3e2285]
+              - cell "-" [ref=f3e2286]
+              - cell "MAXICOR" [ref=f3e2287]
+              - cell "Médico-Hospitalar" [ref=f3e2288]
+              - cell "0" [ref=f3e2290]
+              - cell "0" [ref=f3e2292]
+              - cell "un" [ref=f3e2293]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e2294]
+              - cell "disponivel" [ref=f3e2295]
+              - cell [ref=f3e2297]:
+                - button "✎" [ref=f3e2298] [cursor=pointer]
+                - button "↻" [ref=f3e2299] [cursor=pointer]
+                - button "✕" [ref=f3e2300] [cursor=pointer]
+            - row [ref=f3e2301]:
+              - cell [ref=f3e2302]:
+                - strong [ref=f3e2303]: "8511489"
+              - cell "EMBALAGEM DESCARTAVEL PARA ESTERILIZACAO (233358)" [ref=f3e2304]
+              - cell "-" [ref=f3e2305]
+              - cell "SIPACK" [ref=f3e2306]
+              - cell "Médico-Hospitalar" [ref=f3e2307]
+              - cell "10000" [ref=f3e2309]
+              - cell "0" [ref=f3e2311]
+              - cell "un" [ref=f3e2312]
+              - cell "Almox" [ref=f3e2313]
+              - cell "disponivel" [ref=f3e2314]
+              - cell [ref=f3e2316]:
+                - button "✎" [ref=f3e2317] [cursor=pointer]
+                - button "↻" [ref=f3e2318] [cursor=pointer]
+                - button "✕" [ref=f3e2319] [cursor=pointer]
+            - row [ref=f3e2320]:
+              - cell [ref=f3e2321]:
+                - strong [ref=f3e2322]: "8189986"
+              - cell "EMBALAGEM DESCARTAVEL PARA ESTERILIZACAO (233358)" [ref=f3e2323]
+              - cell "-" [ref=f3e2324]
+              - cell "SIPACK" [ref=f3e2325]
+              - cell "Médico-Hospitalar" [ref=f3e2326]
+              - cell "340000" [ref=f3e2328]
+              - cell "0" [ref=f3e2330]
+              - cell "un" [ref=f3e2331]
+              - cell "Almox" [ref=f3e2332]
+              - cell "disponivel" [ref=f3e2333]
+              - cell [ref=f3e2335]:
+                - button "✎" [ref=f3e2336] [cursor=pointer]
+                - button "↻" [ref=f3e2337] [cursor=pointer]
+                - button "✕" [ref=f3e2338] [cursor=pointer]
+            - row [ref=f3e2339]:
+              - cell [ref=f3e2340]:
+                - strong [ref=f3e2341]: "8878404"
+              - cell "EMBALAGEM DESCARTAVEL PARA ESTERILIZACAO (233358)" [ref=f3e2342]
+              - cell "-" [ref=f3e2343]
+              - cell "SIPACK" [ref=f3e2344]
+              - cell "Médico-Hospitalar" [ref=f3e2345]
+              - cell "160000" [ref=f3e2347]
+              - cell "0" [ref=f3e2349]
+              - cell "un" [ref=f3e2350]
+              - cell "Almox" [ref=f3e2351]
+              - cell "disponivel" [ref=f3e2352]
+              - cell [ref=f3e2354]:
+                - button "✎" [ref=f3e2355] [cursor=pointer]
+                - button "↻" [ref=f3e2356] [cursor=pointer]
+                - button "✕" [ref=f3e2357] [cursor=pointer]
+            - row [ref=f3e2358]:
+              - cell [ref=f3e2359]:
+                - strong [ref=f3e2360]: "8009740"
+              - cell "EMBALAGEM DESCARTAVEL PARA ESTERILIZACAO (233358)" [ref=f3e2361]
+              - cell "-" [ref=f3e2362]
+              - cell "SISPACK" [ref=f3e2363]
+              - cell "Médico-Hospitalar" [ref=f3e2364]
+              - cell "160000" [ref=f3e2366]
+              - cell "0" [ref=f3e2368]
+              - cell "un" [ref=f3e2369]
+              - cell "Almox" [ref=f3e2370]
+              - cell "disponivel" [ref=f3e2371]
+              - cell [ref=f3e2373]:
+                - button "✎" [ref=f3e2374] [cursor=pointer]
+                - button "↻" [ref=f3e2375] [cursor=pointer]
+                - button "✕" [ref=f3e2376] [cursor=pointer]
+            - row [ref=f3e2377]:
+              - cell [ref=f3e2378]:
+                - strong [ref=f3e2379]: "8189960"
+              - cell "EMBALAGEM DESCARTAVEL PARA ESTERILIZACAO (233358)" [ref=f3e2380]
+              - cell "-" [ref=f3e2381]
+              - cell "SISPACK" [ref=f3e2382]
+              - cell "Médico-Hospitalar" [ref=f3e2383]
+              - cell "220000" [ref=f3e2385]
+              - cell "0" [ref=f3e2387]
+              - cell "un" [ref=f3e2388]
+              - cell "Almox" [ref=f3e2389]
+              - cell "disponivel" [ref=f3e2390]
+              - cell [ref=f3e2392]:
+                - button "✎" [ref=f3e2393] [cursor=pointer]
+                - button "↻" [ref=f3e2394] [cursor=pointer]
+                - button "✕" [ref=f3e2395] [cursor=pointer]
+            - row [ref=f3e2396]:
+              - cell [ref=f3e2397]:
+                - strong [ref=f3e2398]: "8189978"
+              - cell "EMBALAGEM DESCARTAVEL PARA ESTERILIZACAO (233358)" [ref=f3e2399]
+              - cell "-" [ref=f3e2400]
+              - cell "SISPACK" [ref=f3e2401]
+              - cell "Médico-Hospitalar" [ref=f3e2402]
+              - cell "250000" [ref=f3e2404]
+              - cell "0" [ref=f3e2406]
+              - cell "un" [ref=f3e2407]
+              - cell "Almox" [ref=f3e2408]
+              - cell "disponivel" [ref=f3e2409]
+              - cell [ref=f3e2411]:
+                - button "✎" [ref=f3e2412] [cursor=pointer]
+                - button "↻" [ref=f3e2413] [cursor=pointer]
+                - button "✕" [ref=f3e2414] [cursor=pointer]
+            - row [ref=f3e2415]:
+              - cell [ref=f3e2416]:
+                - strong [ref=f3e2417]: "8442681"
+              - cell "EMBALAGEM POLIPROP (SMS) 100X100 CM G60" [ref=f3e2418]
+              - cell "-" [ref=f3e2419]
+              - cell "BLUE CARE" [ref=f3e2420]
+              - cell "Descartáveis médico-hospitalar" [ref=f3e2421]
+              - cell "0" [ref=f3e2423]
+              - cell "0" [ref=f3e2425]
+              - cell "un" [ref=f3e2426]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e2427]
+              - cell "disponivel" [ref=f3e2428]
+              - cell [ref=f3e2430]:
+                - button "✎" [ref=f3e2431] [cursor=pointer]
+                - button "↻" [ref=f3e2432] [cursor=pointer]
+                - button "✕" [ref=f3e2433] [cursor=pointer]
+            - row [ref=f3e2434]:
+              - cell [ref=f3e2435]:
+                - strong [ref=f3e2436]: "8442665"
+              - cell "EMBALAGEM POLIPROP (SMS) 50X50 CM G40" [ref=f3e2437]
+              - cell "-" [ref=f3e2438]
+              - cell "BLUE CARE" [ref=f3e2439]
+              - cell "Descartáveis médico-hospitalar" [ref=f3e2440]
+              - cell "0" [ref=f3e2442]
+              - cell "0" [ref=f3e2444]
+              - cell "un" [ref=f3e2445]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e2446]
+              - cell "disponivel" [ref=f3e2447]
+              - cell [ref=f3e2449]:
+                - button "✎" [ref=f3e2450] [cursor=pointer]
+                - button "↻" [ref=f3e2451] [cursor=pointer]
+                - button "✕" [ref=f3e2452] [cursor=pointer]
+            - row [ref=f3e2453]:
+              - cell [ref=f3e2454]:
+                - strong [ref=f3e2455]: "5616999"
+              - cell "ENVELOPE DE PAPELARIA SACO,KRAFT,80G/M2,S/IMPR,(260X360)MM,PARDO" [ref=f3e2456]
+              - cell "-" [ref=f3e2457]
+              - cell "FORONI" [ref=f3e2458]
+              - cell "Papelaria" [ref=f3e2459]
+              - cell "0" [ref=f3e2461]
+              - cell "0" [ref=f3e2463]
+              - cell "un" [ref=f3e2464]
+              - cell "Almox" [ref=f3e2465]
+              - cell "disponivel" [ref=f3e2466]
+              - cell [ref=f3e2468]:
+                - button "✎" [ref=f3e2469] [cursor=pointer]
+                - button "↻" [ref=f3e2470] [cursor=pointer]
+                - button "✕" [ref=f3e2471] [cursor=pointer]
+            - row [ref=f3e2472]:
+              - cell [ref=f3e2473]:
+                - strong [ref=f3e2474]: "9223894"
+              - cell "ENVELOPE DE PAPELARIA,RECICLADO,90G/M2,SACO,S/RPC,260X360MM,ABA,NATURA" [ref=f3e2475]
+              - cell "-" [ref=f3e2476]
+              - cell "FORONI" [ref=f3e2477]
+              - cell "Papelaria" [ref=f3e2478]
+              - cell "0" [ref=f3e2480]
+              - cell "0" [ref=f3e2482]
+              - cell "un" [ref=f3e2483]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e2484]
+              - cell "disponivel" [ref=f3e2485]
+              - cell [ref=f3e2487]:
+                - button "✎" [ref=f3e2488] [cursor=pointer]
+                - button "↻" [ref=f3e2489] [cursor=pointer]
+                - button "✕" [ref=f3e2490] [cursor=pointer]
+            - row [ref=f3e2491]:
+              - cell [ref=f3e2492]:
+                - strong [ref=f3e2493]: "5607760"
+              - cell "ENVELOPE PLASTICO (219924)" [ref=f3e2494]
+              - cell "-" [ref=f3e2495]
+              - cell "DAC" [ref=f3e2496]
+              - cell "Papelaria" [ref=f3e2497]
+              - cell "1180000" [ref=f3e2499]
+              - cell "0" [ref=f3e2501]
+              - cell "un" [ref=f3e2502]
+              - cell "Almox" [ref=f3e2503]
+              - cell "disponivel" [ref=f3e2504]
+              - cell [ref=f3e2506]:
+                - button "✎" [ref=f3e2507] [cursor=pointer]
+                - button "↻" [ref=f3e2508] [cursor=pointer]
+                - button "✕" [ref=f3e2509] [cursor=pointer]
+            - row [ref=f3e2510]:
+              - cell [ref=f3e2511]:
+                - strong [ref=f3e2512]: "7128363"
+              - cell "ESPONJA PARA LIMPEZA (348317)" [ref=f3e2513]
+              - cell "-" [ref=f3e2514]
+              - cell "SUPERPRO" [ref=f3e2515]
+              - cell "Limpeza" [ref=f3e2516]
+              - cell "3080000" [ref=f3e2518]
+              - cell "0" [ref=f3e2520]
+              - cell "un" [ref=f3e2521]
+              - cell "Almox" [ref=f3e2522]
+              - cell "disponivel" [ref=f3e2523]
+              - cell [ref=f3e2525]:
+                - button "✎" [ref=f3e2526] [cursor=pointer]
+                - button "↻" [ref=f3e2527] [cursor=pointer]
+                - button "✕" [ref=f3e2528] [cursor=pointer]
+            - row [ref=f3e2529]:
+              - cell [ref=f3e2530]:
+                - strong [ref=f3e2531]: "5629101"
+              - cell "ESTILETE (220000)" [ref=f3e2532]
+              - cell "-" [ref=f3e2533]
+              - cell "YINS" [ref=f3e2534]
+              - cell "Papelaria" [ref=f3e2535]
+              - cell "100000" [ref=f3e2537]
+              - cell "0" [ref=f3e2539]
+              - cell "un" [ref=f3e2540]
+              - cell "Almox" [ref=f3e2541]
+              - cell "disponivel" [ref=f3e2542]
+              - cell [ref=f3e2544]:
+                - button "✎" [ref=f3e2545] [cursor=pointer]
+                - button "↻" [ref=f3e2546] [cursor=pointer]
+                - button "✕" [ref=f3e2547] [cursor=pointer]
+            - row [ref=f3e2548]:
+              - cell [ref=f3e2549]:
+                - strong [ref=f3e2550]: "8321124"
+              - cell "ESTILETE (220000)" [ref=f3e2551]
+              - cell "-" [ref=f3e2552]
+              - cell "YINS" [ref=f3e2553]
+              - cell "Papelaria" [ref=f3e2554]
+              - cell "30000" [ref=f3e2556]
+              - cell "0" [ref=f3e2558]
+              - cell "un" [ref=f3e2559]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e2560]
+              - cell "disponivel" [ref=f3e2561]
+              - cell [ref=f3e2563]:
+                - button "✎" [ref=f3e2564] [cursor=pointer]
+                - button "↻" [ref=f3e2565] [cursor=pointer]
+                - button "✕" [ref=f3e2566] [cursor=pointer]
+            - row [ref=f3e2567]:
+              - cell [ref=f3e2568]:
+                - strong [ref=f3e2569]: "3111687"
+              - cell "ESTILETES (10995)" [ref=f3e2570]
+              - cell "-" [ref=f3e2571]
+              - cell "-" [ref=f3e2572]
+              - cell "Papelaria" [ref=f3e2573]
+              - cell "10000" [ref=f3e2575]
+              - cell "0" [ref=f3e2577]
+              - cell "FOB" [ref=f3e2578]
+              - cell "Almox" [ref=f3e2579]
+              - cell "disponivel" [ref=f3e2580]
+              - cell [ref=f3e2582]:
+                - button "✎" [ref=f3e2583] [cursor=pointer]
+                - button "↻" [ref=f3e2584] [cursor=pointer]
+                - button "✕" [ref=f3e2585] [cursor=pointer]
+            - row [ref=f3e2586]:
+              - cell [ref=f3e2587]:
+                - strong [ref=f3e2588]: "9177353"
+              - cell "ETIQUETA IMPRESSORA TERMO TRANSFERENCIA (221295)" [ref=f3e2589]
+              - cell "-" [ref=f3e2590]
+              - cell "-" [ref=f3e2591]
+              - cell "Papelaria" [ref=f3e2592]
+              - cell "30000" [ref=f3e2594]
+              - cell "0" [ref=f3e2596]
+              - cell "FOB" [ref=f3e2597]
+              - cell "Almox" [ref=f3e2598]
+              - cell "disponivel" [ref=f3e2599]
+              - cell [ref=f3e2601]:
+                - button "✎" [ref=f3e2602] [cursor=pointer]
+                - button "↻" [ref=f3e2603] [cursor=pointer]
+                - button "✕" [ref=f3e2604] [cursor=pointer]
+            - row [ref=f3e2605]:
+              - cell [ref=f3e2606]:
+                - strong [ref=f3e2607]: "9837590"
+              - cell "ETIQUETA IMPRESSORA TERMO TRANSFERENCIA (221295)" [ref=f3e2608]
+              - cell "-" [ref=f3e2609]
+              - cell "-" [ref=f3e2610]
+              - cell "Papelaria" [ref=f3e2611]
+              - cell "330000" [ref=f3e2613]
+              - cell "0" [ref=f3e2615]
+              - cell "FOB" [ref=f3e2616]
+              - cell "Almox" [ref=f3e2617]
+              - cell "disponivel" [ref=f3e2618]
+              - cell [ref=f3e2620]:
+                - button "✎" [ref=f3e2621] [cursor=pointer]
+                - button "↻" [ref=f3e2622] [cursor=pointer]
+                - button "✕" [ref=f3e2623] [cursor=pointer]
+            - row [ref=f3e2624]:
+              - cell [ref=f3e2625]:
+                - strong [ref=f3e2626]: "6064191"
+              - cell "EUCALIPTOL (235083)" [ref=f3e2627]
+              - cell "EUCALIPTOL" [ref=f3e2628]
+              - cell "BIODINAMICA" [ref=f3e2629]
+              - cell "Odontológico" [ref=f3e2630]
+              - cell "90000" [ref=f3e2632]
+              - cell "0" [ref=f3e2634]
+              - cell "un" [ref=f3e2635]
+              - cell "Almox" [ref=f3e2636]
+              - cell "disponivel" [ref=f3e2637]
+              - cell [ref=f3e2639]:
+                - button "✎" [ref=f3e2640] [cursor=pointer]
+                - button "↻" [ref=f3e2641] [cursor=pointer]
+                - button "✕" [ref=f3e2642] [cursor=pointer]
+            - row [ref=f3e2643]:
+              - cell [ref=f3e2644]:
+                - strong [ref=f3e2645]: "5684099"
+              - cell "EUGENOL (237370)" [ref=f3e2646]
+              - cell "-" [ref=f3e2647]
+              - cell "-" [ref=f3e2648]
+              - cell "Odontológico" [ref=f3e2649]
+              - cell "100000" [ref=f3e2651]
+              - cell "0" [ref=f3e2653]
+              - cell "FOB" [ref=f3e2654]
+              - cell "Almox" [ref=f3e2655]
+              - cell "disponivel" [ref=f3e2656]
+              - cell [ref=f3e2658]:
+                - button "✎" [ref=f3e2659] [cursor=pointer]
+                - button "↻" [ref=f3e2660] [cursor=pointer]
+                - button "✕" [ref=f3e2661] [cursor=pointer]
+            - row [ref=f3e2662]:
+              - cell [ref=f3e2663]:
+                - strong [ref=f3e2664]: "5497078"
+              - cell "EUGENOL (30490)" [ref=f3e2665]
+              - cell "EUGENOL" [ref=f3e2666]
+              - cell "BIODINAMICA" [ref=f3e2667]
+              - cell "Odontológico" [ref=f3e2668]
+              - cell "30000" [ref=f3e2670]
+              - cell "0" [ref=f3e2672]
+              - cell "un" [ref=f3e2673]
+              - cell "Almox" [ref=f3e2674]
+              - cell "disponivel" [ref=f3e2675]
+              - cell [ref=f3e2677]:
+                - button "✎" [ref=f3e2678] [cursor=pointer]
+                - button "↻" [ref=f3e2679] [cursor=pointer]
+                - button "✕" [ref=f3e2680] [cursor=pointer]
+            - row [ref=f3e2681]:
+              - cell [ref=f3e2682]:
+                - strong [ref=f3e2683]: "5652936"
+              - cell "EVIDENCIADOR DE PLACA BACTERIANA (223697)" [ref=f3e2684]
+              - cell "EVIPLAC PASTILHA" [ref=f3e2685]
+              - cell "BIODINAMICA" [ref=f3e2686]
+              - cell "Odontológico" [ref=f3e2687]
+              - cell "50000" [ref=f3e2689]
+              - cell "0" [ref=f3e2691]
+              - cell "un" [ref=f3e2692]
+              - cell "Almox" [ref=f3e2693]
+              - cell "disponivel" [ref=f3e2694]
+              - cell [ref=f3e2696]:
+                - button "✎" [ref=f3e2697] [cursor=pointer]
+                - button "↻" [ref=f3e2698] [cursor=pointer]
+                - button "✕" [ref=f3e2699] [cursor=pointer]
+            - row [ref=f3e2700]:
+              - cell [ref=f3e2701]:
+                - strong [ref=f3e2702]: "5660092"
+              - cell "EVIDENCIADOR DE PLACA BACTERIANA (223697)" [ref=f3e2703]
+              - cell "EVIPLAC LIQUIDO" [ref=f3e2704]
+              - cell "BIODINAMICA" [ref=f3e2705]
+              - cell "Odontológico" [ref=f3e2706]
+              - cell "70000" [ref=f3e2708]
+              - cell "0" [ref=f3e2710]
+              - cell "un" [ref=f3e2711]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e2712]
+              - cell "disponivel" [ref=f3e2713]
+              - cell [ref=f3e2715]:
+                - button "✎" [ref=f3e2716] [cursor=pointer]
+                - button "↻" [ref=f3e2717] [cursor=pointer]
+                - button "✕" [ref=f3e2718] [cursor=pointer]
+            - row [ref=f3e2719]:
+              - cell [ref=f3e2720]:
+                - strong [ref=f3e2721]: "5620198"
+              - cell "EXTRATOR DE GRAMPOS (219681)" [ref=f3e2722]
+              - cell "-" [ref=f3e2723]
+              - cell "YINS" [ref=f3e2724]
+              - cell "Papelaria" [ref=f3e2725]
+              - cell "140000" [ref=f3e2727]
+              - cell "0" [ref=f3e2729]
+              - cell "un" [ref=f3e2730]
+              - cell "Almox" [ref=f3e2731]
+              - cell "disponivel" [ref=f3e2732]
+              - cell [ref=f3e2734]:
+                - button "✎" [ref=f3e2735] [cursor=pointer]
+                - button "↻" [ref=f3e2736] [cursor=pointer]
+                - button "✕" [ref=f3e2737] [cursor=pointer]
+            - row [ref=f3e2738]:
+              - cell [ref=f3e2739]:
+                - strong [ref=f3e2740]: "8652767"
+              - cell "FILME PARA ALIMENTOS (350788)" [ref=f3e2741]
+              - cell "-" [ref=f3e2742]
+              - cell "DISPAFILM" [ref=f3e2743]
+              - cell "Gêneros alimentícios e copa" [ref=f3e2744]
+              - cell "50000" [ref=f3e2746]
+              - cell "0" [ref=f3e2748]
+              - cell "un" [ref=f3e2749]
+              - cell "Almox" [ref=f3e2750]
+              - cell "disponivel" [ref=f3e2751]
+              - cell [ref=f3e2753]:
+                - button "✎" [ref=f3e2754] [cursor=pointer]
+                - button "↻" [ref=f3e2755] [cursor=pointer]
+                - button "✕" [ref=f3e2756] [cursor=pointer]
+            - row [ref=f3e2757]:
+              - cell [ref=f3e2758]:
+                - strong [ref=f3e2759]: "8343756"
+              - cell "FILTRO DE LINHA, 06 TOMADAS, 1500VAC, CABO DE 3,00 M" [ref=f3e2760]
+              - cell "-" [ref=f3e2761]
+              - cell "-" [ref=f3e2762]
+              - cell "Informática" [ref=f3e2763]
+              - cell "0" [ref=f3e2765]
+              - cell "0" [ref=f3e2767]
+              - cell "un" [ref=f3e2768]
+              - cell "solicitar para o setor de Informática" [ref=f3e2769]
+              - cell "disponivel" [ref=f3e2770]
+              - cell [ref=f3e2772]:
+                - button "✎" [ref=f3e2773] [cursor=pointer]
+                - button "↻" [ref=f3e2774] [cursor=pointer]
+                - button "✕" [ref=f3e2775] [cursor=pointer]
+            - row [ref=f3e2776]:
+              - cell [ref=f3e2777]:
+                - strong [ref=f3e2778]: "9933891"
+              - cell "FILTRO DE PAPEL (342459)" [ref=f3e2779]
+              - cell "-" [ref=f3e2780]
+              - cell "KAVA NR 103" [ref=f3e2781]
+              - cell "Gêneros alimentícios e copa" [ref=f3e2782]
+              - cell "2090000" [ref=f3e2784]
+              - cell "0" [ref=f3e2786]
+              - cell "un" [ref=f3e2787]
+              - cell "Almox" [ref=f3e2788]
+              - cell "disponivel" [ref=f3e2789]
+              - cell [ref=f3e2791]:
+                - button "✎" [ref=f3e2792] [cursor=pointer]
+                - button "↻" [ref=f3e2793] [cursor=pointer]
+                - button "✕" [ref=f3e2794] [cursor=pointer]
+            - row [ref=f3e2795]:
+              - cell [ref=f3e2796]:
+                - strong [ref=f3e2797]: "5767415"
+              - cell "FIO DE SUTURA DE SEDA (228133)" [ref=f3e2798]
+              - cell "-" [ref=f3e2799]
+              - cell "POLYSUTURE" [ref=f3e2800]
+              - cell "Médico-Hospitalar" [ref=f3e2801]
+              - cell "680000" [ref=f3e2803]
+              - cell "0" [ref=f3e2805]
+              - cell "un" [ref=f3e2806]
+              - cell "Almox" [ref=f3e2807]
+              - cell "disponivel" [ref=f3e2808]
+              - cell [ref=f3e2810]:
+                - button "✎" [ref=f3e2811] [cursor=pointer]
+                - button "↻" [ref=f3e2812] [cursor=pointer]
+                - button "✕" [ref=f3e2813] [cursor=pointer]
+            - row [ref=f3e2814]:
+              - cell [ref=f3e2815]:
+                - strong [ref=f3e2816]: "8359717"
+              - cell "FIO DE SUTURA DE SEDA (228133)" [ref=f3e2817]
+              - cell "-" [ref=f3e2818]
+              - cell "POLYSUTURE" [ref=f3e2819]
+              - cell "Médico-Hospitalar" [ref=f3e2820]
+              - cell "400000" [ref=f3e2822]
+              - cell "0" [ref=f3e2824]
+              - cell "un" [ref=f3e2825]
+              - cell "Almox" [ref=f3e2826]
+              - cell "disponivel" [ref=f3e2827]
+              - cell [ref=f3e2829]:
+                - button "✎" [ref=f3e2830] [cursor=pointer]
+                - button "↻" [ref=f3e2831] [cursor=pointer]
+                - button "✕" [ref=f3e2832] [cursor=pointer]
+            - row [ref=f3e2833]:
+              - cell [ref=f3e2834]:
+                - strong [ref=f3e2835]: "5782899"
+              - cell "FIO DE SUTURA NYLON 4-0 2AG. 1/2 C.C. 1.5CM 75CM" [ref=f3e2836]
+              - cell "-" [ref=f3e2837]
+              - cell "BIOLINE" [ref=f3e2838]
+              - cell "Médico-Hospitalar" [ref=f3e2839]
+              - cell "0" [ref=f3e2841]
+              - cell "0" [ref=f3e2843]
+              - cell "un" [ref=f3e2844]
+              - cell "Almox" [ref=f3e2845]
+              - cell "disponivel" [ref=f3e2846]
+              - cell [ref=f3e2848]:
+                - button "✎" [ref=f3e2849] [cursor=pointer]
+                - button "↻" [ref=f3e2850] [cursor=pointer]
+                - button "✕" [ref=f3e2851] [cursor=pointer]
+            - row [ref=f3e2852]:
+              - cell [ref=f3e2853]:
+                - strong [ref=f3e2854]: "6036627"
+              - cell "FIO DE SUTURA NYLON NAO ABSORVIVEL MEDINDO 45 CM DE COMPRIMENTO" [ref=f3e2855]
+              - cell "-" [ref=f3e2856]
+              - cell "BIOLINE" [ref=f3e2857]
+              - cell "Médico-Hospitalar" [ref=f3e2858]
+              - cell "0" [ref=f3e2860]
+              - cell "0" [ref=f3e2862]
+              - cell "un" [ref=f3e2863]
+              - cell "Almox" [ref=f3e2864]
+              - cell "disponivel" [ref=f3e2865]
+              - cell [ref=f3e2867]:
+                - button "✎" [ref=f3e2868] [cursor=pointer]
+                - button "↻" [ref=f3e2869] [cursor=pointer]
+                - button "✕" [ref=f3e2870] [cursor=pointer]
+            - row [ref=f3e2871]:
+              - cell [ref=f3e2872]:
+                - strong [ref=f3e2873]: "8401152"
+              - cell "FIO DE SUTURA SINTETICA ABSORVIVEL (226840)" [ref=f3e2874]
+              - cell "-" [ref=f3e2875]
+              - cell "POLYSUTURE" [ref=f3e2876]
+              - cell "Médico-Hospitalar" [ref=f3e2877]
+              - cell "160000" [ref=f3e2879]
+              - cell "0" [ref=f3e2881]
+              - cell "un" [ref=f3e2882]
+              - cell "Almox" [ref=f3e2883]
+              - cell "disponivel" [ref=f3e2884]
+              - cell [ref=f3e2886]:
+                - button "✎" [ref=f3e2887] [cursor=pointer]
+                - button "↻" [ref=f3e2888] [cursor=pointer]
+                - button "✕" [ref=f3e2889] [cursor=pointer]
+            - row [ref=f3e2890]:
+              - cell [ref=f3e2891]:
+                - strong [ref=f3e2892]: "8776687"
+              - cell "FIO DE SUTURA SINTETICA ABSORVIVEL (226840)" [ref=f3e2893]
+              - cell "-" [ref=f3e2894]
+              - cell "POLYSUTURE" [ref=f3e2895]
+              - cell "Médico-Hospitalar" [ref=f3e2896]
+              - cell "400000" [ref=f3e2898]
+              - cell "0" [ref=f3e2900]
+              - cell "un" [ref=f3e2901]
+              - cell "Almox" [ref=f3e2902]
+              - cell "disponivel" [ref=f3e2903]
+              - cell [ref=f3e2905]:
+                - button "✎" [ref=f3e2906] [cursor=pointer]
+                - button "↻" [ref=f3e2907] [cursor=pointer]
+                - button "✕" [ref=f3e2908] [cursor=pointer]
+            - row [ref=f3e2909]:
+              - cell [ref=f3e2910]:
+                - strong [ref=f3e2911]: "5670586"
+              - cell "FIO DENTAL (224456)" [ref=f3e2912]
+              - cell "FIO DENTAL ROLO 500 METROS" [ref=f3e2913]
+              - cell "HILLO" [ref=f3e2914]
+              - cell "Odontológico" [ref=f3e2915]
+              - cell "270000" [ref=f3e2917]
+              - cell "0" [ref=f3e2919]
+              - cell "un" [ref=f3e2920]
+              - cell "Almox" [ref=f3e2921]
+              - cell "disponivel" [ref=f3e2922]
+              - cell [ref=f3e2924]:
+                - button "✎" [ref=f3e2925] [cursor=pointer]
+                - button "↻" [ref=f3e2926] [cursor=pointer]
+                - button "✕" [ref=f3e2927] [cursor=pointer]
+            - row [ref=f3e2928]:
+              - cell [ref=f3e2929]:
+                - strong [ref=f3e2930]: "5690439"
+              - cell "FIO P/SUTURA POLIAMIDA,45CM,PRETO,6-0,C/AG.1/2CIRC.TRIANG,1,5CM.ESTER." [ref=f3e2931]
+              - cell "-" [ref=f3e2932]
+              - cell "BIOLINE" [ref=f3e2933]
+              - cell "Médico-Hospitalar" [ref=f3e2934]
+              - cell "0" [ref=f3e2936]
+              - cell "0" [ref=f3e2938]
+              - cell "un" [ref=f3e2939]
+              - cell "Almox" [ref=f3e2940]
+              - cell "disponivel" [ref=f3e2941]
+              - cell [ref=f3e2943]:
+                - button "✎" [ref=f3e2944] [cursor=pointer]
+                - button "↻" [ref=f3e2945] [cursor=pointer]
+                - button "✕" [ref=f3e2946] [cursor=pointer]
+            - row [ref=f3e2947]:
+              - cell [ref=f3e2948]:
+                - strong [ref=f3e2949]: "8041865"
+              - cell "FIO PARA RETRACAO GENGIVAL (224430)" [ref=f3e2950]
+              - cell "FIO RETRATOR 0" [ref=f3e2951]
+              - cell "ULTRADENT" [ref=f3e2952]
+              - cell "Odontológico" [ref=f3e2953]
+              - cell "170000" [ref=f3e2955]
+              - cell "0" [ref=f3e2957]
+              - cell "un" [ref=f3e2958]
+              - cell "Almox" [ref=f3e2959]
+              - cell "disponivel" [ref=f3e2960]
+              - cell [ref=f3e2962]:
+                - button "✎" [ref=f3e2963] [cursor=pointer]
+                - button "↻" [ref=f3e2964] [cursor=pointer]
+                - button "✕" [ref=f3e2965] [cursor=pointer]
+            - row [ref=f3e2966]:
+              - cell [ref=f3e2967]:
+                - strong [ref=f3e2968]: "6046606"
+              - cell "FIO PARA RETRACAO GENGIVAL (224430)" [ref=f3e2969]
+              - cell "FIO RETRATOR 00" [ref=f3e2970]
+              - cell "ULTRADENT" [ref=f3e2971]
+              - cell "Odontológico" [ref=f3e2972]
+              - cell "80000" [ref=f3e2974]
+              - cell "0" [ref=f3e2976]
+              - cell "un" [ref=f3e2977]
+              - cell "Almox" [ref=f3e2978]
+              - cell "disponivel" [ref=f3e2979]
+              - cell [ref=f3e2981]:
+                - button "✎" [ref=f3e2982] [cursor=pointer]
+                - button "↻" [ref=f3e2983] [cursor=pointer]
+                - button "✕" [ref=f3e2984] [cursor=pointer]
+            - row [ref=f3e2985]:
+              - cell [ref=f3e2986]:
+                - strong [ref=f3e2987]: "8870551"
+              - cell "FIO RETRATOR 000" [ref=f3e2988]
+              - cell "FIO RETRATOR 000" [ref=f3e2989]
+              - cell "ULTRADENT" [ref=f3e2990]
+              - cell "Odontológico" [ref=f3e2991]
+              - cell "0" [ref=f3e2993]
+              - cell "0" [ref=f3e2995]
+              - cell "un" [ref=f3e2996]
+              - cell "Almox" [ref=f3e2997]
+              - cell "disponivel" [ref=f3e2998]
+              - cell [ref=f3e3000]:
+                - button "✎" [ref=f3e3001] [cursor=pointer]
+                - button "↻" [ref=f3e3002] [cursor=pointer]
+                - button "✕" [ref=f3e3003] [cursor=pointer]
+            - row [ref=f3e3004]:
+              - cell [ref=f3e3005]:
+                - strong [ref=f3e3006]: "5695627"
+              - cell "FIO RETRATOR Nº 1" [ref=f3e3007]
+              - cell "FIO RETRATOR Nº 1" [ref=f3e3008]
+              - cell "ULTRADENT" [ref=f3e3009]
+              - cell "Odontológico" [ref=f3e3010]
+              - cell "0" [ref=f3e3012]
+              - cell "0" [ref=f3e3014]
+              - cell "un" [ref=f3e3015]
+              - cell "Almox" [ref=f3e3016]
+              - cell "disponivel" [ref=f3e3017]
+              - cell [ref=f3e3019]:
+                - button "✎" [ref=f3e3020] [cursor=pointer]
+                - button "↻" [ref=f3e3021] [cursor=pointer]
+                - button "✕" [ref=f3e3022] [cursor=pointer]
+            - row [ref=f3e3023]:
+              - cell [ref=f3e3024]:
+                - strong [ref=f3e3025]: "5686822"
+              - cell "FIO SUTURA NYLON,INC.,5-0,45 CM,AG.1/2 CIRC.CORT.,1,5 CM, EST." [ref=f3e3026]
+              - cell "-" [ref=f3e3027]
+              - cell "BIOLINE" [ref=f3e3028]
+              - cell "Médico-Hospitalar" [ref=f3e3029]
+              - cell "0" [ref=f3e3031]
+              - cell "0" [ref=f3e3033]
+              - cell "un" [ref=f3e3034]
+              - cell "Almox" [ref=f3e3035]
+              - cell "disponivel" [ref=f3e3036]
+              - cell [ref=f3e3038]:
+                - button "✎" [ref=f3e3039] [cursor=pointer]
+                - button "↻" [ref=f3e3040] [cursor=pointer]
+                - button "✕" [ref=f3e3041] [cursor=pointer]
+            - row [ref=f3e3042]:
+              - cell [ref=f3e3043]:
+                - strong [ref=f3e3044]: "5606853"
+              - cell "FITA ADESIVA DE PAPELARIA (219657)" [ref=f3e3045]
+              - cell "-" [ref=f3e3046]
+              - cell "ALLTAPE" [ref=f3e3047]
+              - cell "Papelaria" [ref=f3e3048]
+              - cell "1010000" [ref=f3e3050]
+              - cell "0" [ref=f3e3052]
+              - cell "un" [ref=f3e3053]
+              - cell "Almox" [ref=f3e3054]
+              - cell "disponivel" [ref=f3e3055]
+              - cell [ref=f3e3057]:
+                - button "✎" [ref=f3e3058] [cursor=pointer]
+                - button "↻" [ref=f3e3059] [cursor=pointer]
+                - button "✕" [ref=f3e3060] [cursor=pointer]
+            - row [ref=f3e3061]:
+              - cell [ref=f3e3062]:
+                - strong [ref=f3e3063]: "8291209"
+              - cell "FITA ADESIVA DE PAPELARIA (219657)" [ref=f3e3064]
+              - cell "-" [ref=f3e3065]
+              - cell "ALLTAPE" [ref=f3e3066]
+              - cell "Papelaria" [ref=f3e3067]
+              - cell "2360000" [ref=f3e3069]
+              - cell "0" [ref=f3e3071]
+              - cell "un" [ref=f3e3072]
+              - cell "Almox" [ref=f3e3073]
+              - cell "disponivel" [ref=f3e3074]
+              - cell [ref=f3e3076]:
+                - button "✎" [ref=f3e3077] [cursor=pointer]
+                - button "↻" [ref=f3e3078] [cursor=pointer]
+                - button "✕" [ref=f3e3079] [cursor=pointer]
+            - row [ref=f3e3080]:
+              - cell [ref=f3e3081]:
+                - strong [ref=f3e3082]: "8085838"
+              - cell "FITA ADESIVA DE PAPELARIA (219657)" [ref=f3e3083]
+              - cell "-" [ref=f3e3084]
+              - cell "ADERE" [ref=f3e3085]
+              - cell "Papelaria" [ref=f3e3086]
+              - cell "1810000" [ref=f3e3088]
+              - cell "0" [ref=f3e3090]
+              - cell "un" [ref=f3e3091]
+              - cell "Almox" [ref=f3e3092]
+              - cell "disponivel" [ref=f3e3093]
+              - cell [ref=f3e3095]:
+                - button "✎" [ref=f3e3096] [cursor=pointer]
+                - button "↻" [ref=f3e3097] [cursor=pointer]
+                - button "✕" [ref=f3e3098] [cursor=pointer]
+            - row [ref=f3e3099]:
+              - cell [ref=f3e3100]:
+                - strong [ref=f3e3101]: "8210675"
+              - cell "FITA ADESIVA DE PAPELARIA (219657)" [ref=f3e3102]
+              - cell "-" [ref=f3e3103]
+              - cell "ALLTAPE" [ref=f3e3104]
+              - cell "Papelaria" [ref=f3e3105]
+              - cell "990000" [ref=f3e3107]
+              - cell "0" [ref=f3e3109]
+              - cell "un" [ref=f3e3110]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e3111]
+              - cell "disponivel" [ref=f3e3112]
+              - cell [ref=f3e3114]:
+                - button "✎" [ref=f3e3115] [cursor=pointer]
+                - button "↻" [ref=f3e3116] [cursor=pointer]
+                - button "✕" [ref=f3e3117] [cursor=pointer]
+            - row [ref=f3e3118]:
+              - cell [ref=f3e3119]:
+                - strong [ref=f3e3120]: "10177892"
+              - cell "FLUOR EM ESPUMA" [ref=f3e3121]
+              - cell "FLUOR EM ESPUMA" [ref=f3e3122]
+              - cell "FGM - FLUORCARE" [ref=f3e3123]
+              - cell "Odontológico" [ref=f3e3124]
+              - cell "0" [ref=f3e3126]
+              - cell "0" [ref=f3e3128]
+              - cell "un" [ref=f3e3129]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e3130]
+              - cell "disponivel" [ref=f3e3131]
+              - cell [ref=f3e3133]:
+                - button "✎" [ref=f3e3134] [cursor=pointer]
+                - button "↻" [ref=f3e3135] [cursor=pointer]
+                - button "✕" [ref=f3e3136] [cursor=pointer]
+            - row [ref=f3e3137]:
+              - cell [ref=f3e3138]:
+                - strong [ref=f3e3139]: "5697808"
+              - cell "FLUORETO DE SODIO (223620)" [ref=f3e3140]
+              - cell "FLUOR GEL" [ref=f3e3141]
+              - cell "ALLPLAN" [ref=f3e3142]
+              - cell "Odontológico" [ref=f3e3143]
+              - cell "20000" [ref=f3e3145]
+              - cell "0" [ref=f3e3147]
+              - cell "un" [ref=f3e3148]
+              - cell "Almox" [ref=f3e3149]
+              - cell "disponivel" [ref=f3e3150]
+              - cell [ref=f3e3152]:
+                - button "✎" [ref=f3e3153] [cursor=pointer]
+                - button "↻" [ref=f3e3154] [cursor=pointer]
+                - button "✕" [ref=f3e3155] [cursor=pointer]
+            - row [ref=f3e3156]:
+              - cell [ref=f3e3157]:
+                - strong [ref=f3e3158]: "9779523"
+              - cell "FONE COM MICROFONE TIPO TIARA HEADSET 25W" [ref=f3e3159]
+              - cell "-" [ref=f3e3160]
+              - cell "-" [ref=f3e3161]
+              - cell "Informática" [ref=f3e3162]
+              - cell "0" [ref=f3e3164]
+              - cell "0" [ref=f3e3166]
+              - cell "un" [ref=f3e3167]
+              - cell "solicitar para o setor de Informática" [ref=f3e3168]
+              - cell "disponivel" [ref=f3e3169]
+              - cell [ref=f3e3171]:
+                - button "✎" [ref=f3e3172] [cursor=pointer]
+                - button "↻" [ref=f3e3173] [cursor=pointer]
+                - button "✕" [ref=f3e3174] [cursor=pointer]
+            - row [ref=f3e3175]:
+              - cell [ref=f3e3176]:
+                - strong [ref=f3e3177]: "9702717"
+              - cell "FONTE ALIMENTACAO P/MICROCOMPUTADOR LENOVO, V530S 180W P/N SP50H29568" [ref=f3e3178]
+              - cell "-" [ref=f3e3179]
+              - cell "-" [ref=f3e3180]
+              - cell "Informática" [ref=f3e3181]
+              - cell "0" [ref=f3e3183]
+              - cell "0" [ref=f3e3185]
+              - cell "un" [ref=f3e3186]
+              - cell "solicitar para o setor de Informática" [ref=f3e3187]
+              - cell "disponivel" [ref=f3e3188]
+              - cell [ref=f3e3190]:
+                - button "✎" [ref=f3e3191] [cursor=pointer]
+                - button "↻" [ref=f3e3192] [cursor=pointer]
+                - button "✕" [ref=f3e3193] [cursor=pointer]
+            - row [ref=f3e3194]:
+              - cell [ref=f3e3195]:
+                - strong [ref=f3e3196]: "8093733"
+              - cell "FONTE DE ALIMENTACAO P/ MICROCOMPUTADOR, 550W, ATX 12V V2.2" [ref=f3e3197]
+              - cell "-" [ref=f3e3198]
+              - cell "-" [ref=f3e3199]
+              - cell "Informática" [ref=f3e3200]
+              - cell "0" [ref=f3e3202]
+              - cell "0" [ref=f3e3204]
+              - cell "un" [ref=f3e3205]
+              - cell "solicitar para o setor de Informática" [ref=f3e3206]
+              - cell "disponivel" [ref=f3e3207]
+              - cell [ref=f3e3209]:
+                - button "✎" [ref=f3e3210] [cursor=pointer]
+                - button "↻" [ref=f3e3211] [cursor=pointer]
+                - button "✕" [ref=f3e3212] [cursor=pointer]
+            - row [ref=f3e3213]:
+              - cell [ref=f3e3214]:
+                - strong [ref=f3e3215]: "5666481"
+              - cell "FORMOCRESOL" [ref=f3e3216]
+              - cell "FORMOCRESOL" [ref=f3e3217]
+              - cell "-" [ref=f3e3218]
+              - cell "Odontológico" [ref=f3e3219]
+              - cell "0" [ref=f3e3221]
+              - cell "0" [ref=f3e3223]
+              - cell "un" [ref=f3e3224]
+              - cell "Almox" [ref=f3e3225]
+              - cell "disponivel" [ref=f3e3226]
+              - cell [ref=f3e3228]:
+                - button "✎" [ref=f3e3229] [cursor=pointer]
+                - button "↻" [ref=f3e3230] [cursor=pointer]
+                - button "✕" [ref=f3e3231] [cursor=pointer]
+            - row [ref=f3e3232]:
+              - cell [ref=f3e3233]:
+                - strong [ref=f3e3234]: "10040609"
+              - cell "GAVETEIRO PORTATIL DE MESA (222291)" [ref=f3e3235]
+              - cell "-" [ref=f3e3236]
+              - cell "PLASTICOS IPIRANGA" [ref=f3e3237]
+              - cell "Papelaria" [ref=f3e3238]
+              - cell "90000" [ref=f3e3240]
+              - cell "0" [ref=f3e3242]
+              - cell "un" [ref=f3e3243]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e3244]
+              - cell "disponivel" [ref=f3e3245]
+              - cell [ref=f3e3247]:
+                - button "✎" [ref=f3e3248] [cursor=pointer]
+                - button "↻" [ref=f3e3249] [cursor=pointer]
+                - button "✕" [ref=f3e3250] [cursor=pointer]
+            - row [ref=f3e3251]:
+              - cell [ref=f3e3252]:
+                - strong [ref=f3e3253]: "5680174"
+              - cell "GESSO (235458)" [ref=f3e3254]
+              - cell "GESSO PEDRA" [ref=f3e3255]
+              - cell "RIO" [ref=f3e3256]
+              - cell "Odontológico" [ref=f3e3257]
+              - cell "850000" [ref=f3e3259]
+              - cell "0" [ref=f3e3261]
+              - cell "un" [ref=f3e3262]
+              - cell "Almox" [ref=f3e3263]
+              - cell "disponivel" [ref=f3e3264]
+              - cell [ref=f3e3266]:
+                - button "✎" [ref=f3e3267] [cursor=pointer]
+                - button "↻" [ref=f3e3268] [cursor=pointer]
+                - button "✕" [ref=f3e3269] [cursor=pointer]
+            - row [ref=f3e3270]:
+              - cell [ref=f3e3271]:
+                - strong [ref=f3e3272]: "8725438"
+              - cell "GESSO (235458)" [ref=f3e3273]
+              - cell "GESSO TIPO IV" [ref=f3e3274]
+              - cell "RIO" [ref=f3e3275]
+              - cell "Odontológico" [ref=f3e3276]
+              - cell "750000" [ref=f3e3278]
+              - cell "0" [ref=f3e3280]
+              - cell "un" [ref=f3e3281]
+              - cell "Almox" [ref=f3e3282]
+              - cell "disponivel" [ref=f3e3283]
+              - cell [ref=f3e3285]:
+                - button "✎" [ref=f3e3286] [cursor=pointer]
+                - button "↻" [ref=f3e3287] [cursor=pointer]
+                - button "✕" [ref=f3e3288] [cursor=pointer]
+            - row [ref=f3e3289]:
+              - cell [ref=f3e3290]:
+                - strong [ref=f3e3291]: "8108986"
+              - cell "GESSO (235458)" [ref=f3e3292]
+              - cell "GESSO COMUM TIPO II" [ref=f3e3293]
+              - cell "RIO" [ref=f3e3294]
+              - cell "Odontológico" [ref=f3e3295]
+              - cell "1250000" [ref=f3e3297]
+              - cell "0" [ref=f3e3299]
+              - cell "un" [ref=f3e3300]
+              - cell "Almox" [ref=f3e3301]
+              - cell "disponivel" [ref=f3e3302]
+              - cell [ref=f3e3304]:
+                - button "✎" [ref=f3e3305] [cursor=pointer]
+                - button "↻" [ref=f3e3306] [cursor=pointer]
+                - button "✕" [ref=f3e3307] [cursor=pointer]
+            - row [ref=f3e3308]:
+              - cell [ref=f3e3309]:
+                - strong [ref=f3e3310]: "9303448"
+              - cell "GLICOSIMETRO (235423)" [ref=f3e3311]
+              - cell "-" [ref=f3e3312]
+              - cell "CEPALAB/MEDISIGN" [ref=f3e3313]
+              - cell "Médico-Hospitalar" [ref=f3e3314]
+              - cell "70000" [ref=f3e3316]
+              - cell "0" [ref=f3e3318]
+              - cell "un" [ref=f3e3319]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e3320]
+              - cell "disponivel" [ref=f3e3321]
+              - cell [ref=f3e3323]:
+                - button "✎" [ref=f3e3324] [cursor=pointer]
+                - button "↻" [ref=f3e3325] [cursor=pointer]
+                - button "✕" [ref=f3e3326] [cursor=pointer]
+            - row [ref=f3e3327]:
+              - cell [ref=f3e3328]:
+                - strong [ref=f3e3329]: "5697646"
+              - cell "GODIVA (229768)" [ref=f3e3330]
+              - cell "GODIVA EM BASTÃO" [ref=f3e3331]
+              - cell "KERR" [ref=f3e3332]
+              - cell "Odontológico" [ref=f3e3333]
+              - cell "70000" [ref=f3e3335]
+              - cell "0" [ref=f3e3337]
+              - cell "un" [ref=f3e3338]
+              - cell "Almox" [ref=f3e3339]
+              - cell "disponivel" [ref=f3e3340]
+              - cell [ref=f3e3342]:
+                - button "✎" [ref=f3e3343] [cursor=pointer]
+                - button "↻" [ref=f3e3344] [cursor=pointer]
+                - button "✕" [ref=f3e3345] [cursor=pointer]
+            - row [ref=f3e3346]:
+              - cell [ref=f3e3347]:
+                - strong [ref=f3e3348]: "8350477"
+              - cell "GODIVA (229768)" [ref=f3e3349]
+              - cell "GODIVA EM PLACA" [ref=f3e3350]
+              - cell "LYSANDRA" [ref=f3e3351]
+              - cell "Odontológico" [ref=f3e3352]
+              - cell "410000" [ref=f3e3354]
+              - cell "0" [ref=f3e3356]
+              - cell "un" [ref=f3e3357]
+              - cell "Almox" [ref=f3e3358]
+              - cell "disponivel" [ref=f3e3359]
+              - cell [ref=f3e3361]:
+                - button "✎" [ref=f3e3362] [cursor=pointer]
+                - button "↻" [ref=f3e3363] [cursor=pointer]
+                - button "✕" [ref=f3e3364] [cursor=pointer]
+            - row [ref=f3e3365]:
+              - cell [ref=f3e3366]:
+                - strong [ref=f3e3367]: "7946775"
+              - cell "GRAMPEADOR (222135)" [ref=f3e3368]
+              - cell "-" [ref=f3e3369]
+              - cell "DOTAD" [ref=f3e3370]
+              - cell "Papelaria" [ref=f3e3371]
+              - cell "80000" [ref=f3e3373]
+              - cell "0" [ref=f3e3375]
+              - cell "un" [ref=f3e3376]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e3377]
+              - cell "disponivel" [ref=f3e3378]
+              - cell [ref=f3e3380]:
+                - button "✎" [ref=f3e3381] [cursor=pointer]
+                - button "↻" [ref=f3e3382] [cursor=pointer]
+                - button "✕" [ref=f3e3383] [cursor=pointer]
+            - row [ref=f3e3384]:
+              - cell [ref=f3e3385]:
+                - strong [ref=f3e3386]: "5640814"
+              - cell "GRAMPO PARA GRAMPEADOR (219665)" [ref=f3e3387]
+              - cell "-" [ref=f3e3388]
+              - cell "MASTER PRINT" [ref=f3e3389]
+              - cell "Papelaria" [ref=f3e3390]
+              - cell "480000" [ref=f3e3392]
+              - cell "0" [ref=f3e3394]
+              - cell "un" [ref=f3e3395]
+              - cell "Almox" [ref=f3e3396]
+              - cell "disponivel" [ref=f3e3397]
+              - cell [ref=f3e3399]:
+                - button "✎" [ref=f3e3400] [cursor=pointer]
+                - button "↻" [ref=f3e3401] [cursor=pointer]
+                - button "✕" [ref=f3e3402] [cursor=pointer]
+            - row [ref=f3e3403]:
+              - cell [ref=f3e3404]:
+                - strong [ref=f3e3405]: "6506445"
+              - cell "GUARDANAPO DE PAPEL (218502)" [ref=f3e3406]
+              - cell "-" [ref=f3e3407]
+              - cell "VITÓRIA" [ref=f3e3408]
+              - cell "Gêneros alimentícios e copa" [ref=f3e3409]
+              - cell "1810000" [ref=f3e3411]
+              - cell "0" [ref=f3e3413]
+              - cell "un" [ref=f3e3414]
+              - cell "Almox" [ref=f3e3415]
+              - cell "disponivel" [ref=f3e3416]
+              - cell [ref=f3e3418]:
+                - button "✎" [ref=f3e3419] [cursor=pointer]
+                - button "↻" [ref=f3e3420] [cursor=pointer]
+                - button "✕" [ref=f3e3421] [cursor=pointer]
+            - row [ref=f3e3422]:
+              - cell [ref=f3e3423]:
+                - strong [ref=f3e3424]: "8367280"
+              - cell "HASTE PARA HIGIENE (218600)" [ref=f3e3425]
+              - cell "-" [ref=f3e3426]
+              - cell "-" [ref=f3e3427]
+              - cell "Descartáveis Higiene e Limpeza" [ref=f3e3428]
+              - cell "150000" [ref=f3e3430]
+              - cell "0" [ref=f3e3432]
+              - cell "FOB" [ref=f3e3433]
+              - cell "Almox" [ref=f3e3434]
+              - cell "disponivel" [ref=f3e3435]
+              - cell [ref=f3e3437]:
+                - button "✎" [ref=f3e3438] [cursor=pointer]
+                - button "↻" [ref=f3e3439] [cursor=pointer]
+                - button "✕" [ref=f3e3440] [cursor=pointer]
+            - row [ref=f3e3441]:
+              - cell [ref=f3e3442]:
+                - strong [ref=f3e3443]: "8474770"
+              - cell "HEMOSTATICO LOCAL (224251)" [ref=f3e3444]
+              - cell "HEMOSTÁTICO ESPONJA" [ref=f3e3445]
+              - cell "MAQUIRA HEMOSPON" [ref=f3e3446]
+              - cell "Odontológico" [ref=f3e3447]
+              - cell "210000" [ref=f3e3449]
+              - cell "0" [ref=f3e3451]
+              - cell "un" [ref=f3e3452]
+              - cell "Almox" [ref=f3e3453]
+              - cell "disponivel" [ref=f3e3454]
+              - cell [ref=f3e3456]:
+                - button "✎" [ref=f3e3457] [cursor=pointer]
+                - button "↻" [ref=f3e3458] [cursor=pointer]
+                - button "✕" [ref=f3e3459] [cursor=pointer]
+            - row [ref=f3e3460]:
+              - cell [ref=f3e3461]:
+                - strong [ref=f3e3462]: "5697816"
+              - cell "HEMOSTATICO LOCAL (224251)" [ref=f3e3463]
+              - cell "HEMOSTÁTICO LÍQUIDO" [ref=f3e3464]
+              - cell "BIODINAMICA HEMOSTANK" [ref=f3e3465]
+              - cell "Odontológico" [ref=f3e3466]
+              - cell "60000" [ref=f3e3468]
+              - cell "0" [ref=f3e3470]
+              - cell "un" [ref=f3e3471]
+              - cell "Almox" [ref=f3e3472]
+              - cell "disponivel" [ref=f3e3473]
+              - cell [ref=f3e3475]:
+                - button "✎" [ref=f3e3476] [cursor=pointer]
+                - button "↻" [ref=f3e3477] [cursor=pointer]
+                - button "✕" [ref=f3e3478] [cursor=pointer]
+            - row [ref=f3e3479]:
+              - cell [ref=f3e3480]:
+                - strong [ref=f3e3481]: "9267930"
+              - cell "HIDRÓXIDO DE CÁLCIO PA" [ref=f3e3482]
+              - cell "HIDRÓXIDO DE CÁLCIO PA" [ref=f3e3483]
+              - cell "BIODINAMICA" [ref=f3e3484]
+              - cell "Odontológico" [ref=f3e3485]
+              - cell "0" [ref=f3e3487]
+              - cell "0" [ref=f3e3489]
+              - cell "un" [ref=f3e3490]
+              - cell "Almox" [ref=f3e3491]
+              - cell "disponivel" [ref=f3e3492]
+              - cell [ref=f3e3494]:
+                - button "✎" [ref=f3e3495] [cursor=pointer]
+                - button "↻" [ref=f3e3496] [cursor=pointer]
+                - button "✕" [ref=f3e3497] [cursor=pointer]
+            - row [ref=f3e3498]:
+              - cell [ref=f3e3499]:
+                - strong [ref=f3e3500]: "9816712"
+              - cell "HIPOCLORITO DE SODIO (231398)" [ref=f3e3501]
+              - cell "-" [ref=f3e3502]
+              - cell "TAMANI" [ref=f3e3503]
+              - cell "Limpeza" [ref=f3e3504]
+              - cell "100000" [ref=f3e3506]
+              - cell "0" [ref=f3e3508]
+              - cell "un" [ref=f3e3509]
+              - cell "Almox" [ref=f3e3510]
+              - cell "disponivel" [ref=f3e3511]
+              - cell [ref=f3e3513]:
+                - button "✎" [ref=f3e3514] [cursor=pointer]
+                - button "↻" [ref=f3e3515] [cursor=pointer]
+                - button "✕" [ref=f3e3516] [cursor=pointer]
+            - row [ref=f3e3517]:
+              - cell [ref=f3e3518]:
+                - strong [ref=f3e3519]: 6215351/5657318
+              - cell "HYDRO C" [ref=f3e3520]
+              - cell "-" [ref=f3e3521]
+              - cell "3M SOLVENTUM" [ref=f3e3522]
+              - cell "Odontológico" [ref=f3e3523]
+              - cell "0" [ref=f3e3525]
+              - cell "0" [ref=f3e3527]
+              - cell "un" [ref=f3e3528]
+              - cell "Almox" [ref=f3e3529]
+              - cell "disponivel" [ref=f3e3530]
+              - cell [ref=f3e3532]:
+                - button "✎" [ref=f3e3533] [cursor=pointer]
+                - button "↻" [ref=f3e3534] [cursor=pointer]
+                - button "✕" [ref=f3e3535] [cursor=pointer]
+            - row [ref=f3e3536]:
+              - cell [ref=f3e3537]:
+                - strong [ref=f3e3538]: "7131712"
+              - cell "INSETICIDA DOMESTICO (348627)" [ref=f3e3539]
+              - cell "-" [ref=f3e3540]
+              - cell "SENDAS DISTRIBUIDORA" [ref=f3e3541]
+              - cell "Limpeza" [ref=f3e3542]
+              - cell "10000" [ref=f3e3544]
+              - cell "0" [ref=f3e3546]
+              - cell "un" [ref=f3e3547]
+              - cell "Almox" [ref=f3e3548]
+              - cell "disponivel" [ref=f3e3549]
+              - cell [ref=f3e3551]:
+                - button "✎" [ref=f3e3552] [cursor=pointer]
+                - button "↻" [ref=f3e3553] [cursor=pointer]
+                - button "✕" [ref=f3e3554] [cursor=pointer]
+            - row [ref=f3e3555]:
+              - cell [ref=f3e3556]:
+                - strong [ref=f3e3557]: "9054014"
+              - cell "INVOLUCRO DESCARTÁVEL P/ESTERILIZAÇÃO FOLHA 60X60" [ref=f3e3558]
+              - cell "-" [ref=f3e3559]
+              - cell "BLUE CARE" [ref=f3e3560]
+              - cell "Descartáveis médico-hospitalar" [ref=f3e3561]
+              - cell "0" [ref=f3e3563]
+              - cell "0" [ref=f3e3565]
+              - cell "un" [ref=f3e3566]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e3567]
+              - cell "disponivel" [ref=f3e3568]
+              - cell [ref=f3e3570]:
+                - button "✎" [ref=f3e3571] [cursor=pointer]
+                - button "↻" [ref=f3e3572] [cursor=pointer]
+                - button "✕" [ref=f3e3573] [cursor=pointer]
+            - row [ref=f3e3574]:
+              - cell [ref=f3e3575]:
+                - strong [ref=f3e3576]: "5682061"
+              - cell "IODOFORMIO (236748)" [ref=f3e3577]
+              - cell "IODOFÓRMIO" [ref=f3e3578]
+              - cell "K - DENT" [ref=f3e3579]
+              - cell "Odontológico" [ref=f3e3580]
+              - cell "90000" [ref=f3e3582]
+              - cell "0" [ref=f3e3584]
+              - cell "un" [ref=f3e3585]
+              - cell "Almox" [ref=f3e3586]
+              - cell "disponivel" [ref=f3e3587]
+              - cell [ref=f3e3589]:
+                - button "✎" [ref=f3e3590] [cursor=pointer]
+                - button "↻" [ref=f3e3591] [cursor=pointer]
+                - button "✕" [ref=f3e3592] [cursor=pointer]
+            - row [ref=f3e3593]:
+              - cell [ref=f3e3594]:
+                - strong [ref=f3e3595]: "10177655"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3596]
+              - cell "MAXXION C KIT" [ref=f3e3597]
+              - cell "FGM" [ref=f3e3598]
+              - cell "Odontológico" [ref=f3e3599]
+              - cell "130000" [ref=f3e3601]
+              - cell "0" [ref=f3e3603]
+              - cell "un" [ref=f3e3604]
+              - cell "Almox" [ref=f3e3605]
+              - cell "disponivel" [ref=f3e3606]
+              - cell [ref=f3e3608]:
+                - button "✎" [ref=f3e3609] [cursor=pointer]
+                - button "↻" [ref=f3e3610] [cursor=pointer]
+                - button "✕" [ref=f3e3611] [cursor=pointer]
+            - row [ref=f3e3612]:
+              - cell [ref=f3e3613]:
+                - strong [ref=f3e3614]: "8969868"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3615]
+              - cell "KETAC MOLAR KIT" [ref=f3e3616]
+              - cell "3M SOLVENTRUM" [ref=f3e3617]
+              - cell "Odontológico" [ref=f3e3618]
+              - cell "240000" [ref=f3e3620]
+              - cell "0" [ref=f3e3622]
+              - cell "un" [ref=f3e3623]
+              - cell "Almox" [ref=f3e3624]
+              - cell "disponivel" [ref=f3e3625]
+              - cell [ref=f3e3627]:
+                - button "✎" [ref=f3e3628] [cursor=pointer]
+                - button "↻" [ref=f3e3629] [cursor=pointer]
+                - button "✕" [ref=f3e3630] [cursor=pointer]
+            - row [ref=f3e3631]:
+              - cell [ref=f3e3632]:
+                - strong [ref=f3e3633]: "8973296"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3634]
+              - cell "MAXIOM R KIT" [ref=f3e3635]
+              - cell "FGM" [ref=f3e3636]
+              - cell "Odontológico" [ref=f3e3637]
+              - cell "70000" [ref=f3e3639]
+              - cell "0" [ref=f3e3641]
+              - cell "un" [ref=f3e3642]
+              - cell "Almox" [ref=f3e3643]
+              - cell "disponivel" [ref=f3e3644]
+              - cell [ref=f3e3646]:
+                - button "✎" [ref=f3e3647] [cursor=pointer]
+                - button "↻" [ref=f3e3648] [cursor=pointer]
+                - button "✕" [ref=f3e3649] [cursor=pointer]
+            - row [ref=f3e3650]:
+              - cell [ref=f3e3651]:
+                - strong [ref=f3e3652]: "8976856"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3653]
+              - cell "GOLD LABEL II LC R" [ref=f3e3654]
+              - cell "GC AMERICA" [ref=f3e3655]
+              - cell "Odontológico" [ref=f3e3656]
+              - cell "30000" [ref=f3e3658]
+              - cell "0" [ref=f3e3660]
+              - cell "un" [ref=f3e3661]
+              - cell "Almox" [ref=f3e3662]
+              - cell "disponivel" [ref=f3e3663]
+              - cell [ref=f3e3665]:
+                - button "✎" [ref=f3e3666] [cursor=pointer]
+                - button "↻" [ref=f3e3667] [cursor=pointer]
+                - button "✕" [ref=f3e3668] [cursor=pointer]
+            - row [ref=f3e3669]:
+              - cell [ref=f3e3670]:
+                - strong [ref=f3e3671]: "6201920"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3672]
+              - cell "VITREMER LIQUIDO" [ref=f3e3673]
+              - cell "3M SOLVENTRUM" [ref=f3e3674]
+              - cell "Odontológico" [ref=f3e3675]
+              - cell "110000" [ref=f3e3677]
+              - cell "0" [ref=f3e3679]
+              - cell "un" [ref=f3e3680]
+              - cell "Almox" [ref=f3e3681]
+              - cell "disponivel" [ref=f3e3682]
+              - cell [ref=f3e3684]:
+                - button "✎" [ref=f3e3685] [cursor=pointer]
+                - button "↻" [ref=f3e3686] [cursor=pointer]
+                - button "✕" [ref=f3e3687] [cursor=pointer]
+            - row [ref=f3e3688]:
+              - cell [ref=f3e3689]:
+                - strong [ref=f3e3690]: "6201962"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3691]
+              - cell "VITREMER PRIMER" [ref=f3e3692]
+              - cell "3M SOLVENTRUM" [ref=f3e3693]
+              - cell "Odontológico" [ref=f3e3694]
+              - cell "50000" [ref=f3e3696]
+              - cell "0" [ref=f3e3698]
+              - cell "un" [ref=f3e3699]
+              - cell "Almox" [ref=f3e3700]
+              - cell "disponivel" [ref=f3e3701]
+              - cell [ref=f3e3703]:
+                - button "✎" [ref=f3e3704] [cursor=pointer]
+                - button "↻" [ref=f3e3705] [cursor=pointer]
+                - button "✕" [ref=f3e3706] [cursor=pointer]
+            - row [ref=f3e3707]:
+              - cell [ref=f3e3708]:
+                - strong [ref=f3e3709]: "9487565"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3710]
+              - cell "VITREMER PÓ A3" [ref=f3e3711]
+              - cell "3M SOLVENTRUM" [ref=f3e3712]
+              - cell "Odontológico" [ref=f3e3713]
+              - cell "100000" [ref=f3e3715]
+              - cell "0" [ref=f3e3717]
+              - cell "un" [ref=f3e3718]
+              - cell "Almox" [ref=f3e3719]
+              - cell "disponivel" [ref=f3e3720]
+              - cell [ref=f3e3722]:
+                - button "✎" [ref=f3e3723] [cursor=pointer]
+                - button "↻" [ref=f3e3724] [cursor=pointer]
+                - button "✕" [ref=f3e3725] [cursor=pointer]
+            - row [ref=f3e3726]:
+              - cell [ref=f3e3727]:
+                - strong [ref=f3e3728]: "8775737"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3729]
+              - cell "RIVA LGHT CURE KIT" [ref=f3e3730]
+              - cell "SDI" [ref=f3e3731]
+              - cell "Odontológico" [ref=f3e3732]
+              - cell "240000" [ref=f3e3734]
+              - cell "0" [ref=f3e3736]
+              - cell "un" [ref=f3e3737]
+              - cell "Almox" [ref=f3e3738]
+              - cell "disponivel" [ref=f3e3739]
+              - cell [ref=f3e3741]:
+                - button "✎" [ref=f3e3742] [cursor=pointer]
+                - button "↻" [ref=f3e3743] [cursor=pointer]
+                - button "✕" [ref=f3e3744] [cursor=pointer]
+            - row [ref=f3e3745]:
+              - cell [ref=f3e3746]:
+                - strong [ref=f3e3747]: "6098673"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3748]
+              - cell "-" [ref=f3e3749]
+              - cell "-" [ref=f3e3750]
+              - cell "Odontológico" [ref=f3e3751]
+              - cell "200000" [ref=f3e3753]
+              - cell "0" [ref=f3e3755]
+              - cell "FOB" [ref=f3e3756]
+              - cell "Almox" [ref=f3e3757]
+              - cell "disponivel" [ref=f3e3758]
+              - cell [ref=f3e3760]:
+                - button "✎" [ref=f3e3761] [cursor=pointer]
+                - button "↻" [ref=f3e3762] [cursor=pointer]
+                - button "✕" [ref=f3e3763] [cursor=pointer]
+            - row [ref=f3e3764]:
+              - cell [ref=f3e3765]:
+                - strong [ref=f3e3766]: "8049742"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3767]
+              - cell "-" [ref=f3e3768]
+              - cell "-" [ref=f3e3769]
+              - cell "Odontológico" [ref=f3e3770]
+              - cell "100000" [ref=f3e3772]
+              - cell "0" [ref=f3e3774]
+              - cell "FOB" [ref=f3e3775]
+              - cell "Almox" [ref=f3e3776]
+              - cell "disponivel" [ref=f3e3777]
+              - cell [ref=f3e3779]:
+                - button "✎" [ref=f3e3780] [cursor=pointer]
+                - button "↻" [ref=f3e3781] [cursor=pointer]
+                - button "✕" [ref=f3e3782] [cursor=pointer]
+            - row [ref=f3e3783]:
+              - cell [ref=f3e3784]:
+                - strong [ref=f3e3785]: "9525076"
+              - cell "IONOMERO DE VIDRO (224049)" [ref=f3e3786]
+              - cell "-" [ref=f3e3787]
+              - cell "-" [ref=f3e3788]
+              - cell "Odontológico" [ref=f3e3789]
+              - cell "60000" [ref=f3e3791]
+              - cell "0" [ref=f3e3793]
+              - cell "FOB" [ref=f3e3794]
+              - cell "Almox" [ref=f3e3795]
+              - cell "disponivel" [ref=f3e3796]
+              - cell [ref=f3e3798]:
+                - button "✎" [ref=f3e3799] [cursor=pointer]
+                - button "↻" [ref=f3e3800] [cursor=pointer]
+                - button "✕" [ref=f3e3801] [cursor=pointer]
+            - row [ref=f3e3802]:
+              - cell [ref=f3e3803]:
+                - strong [ref=f3e3804]: "5503000"
+              - cell "IONÔMERO DE VIDRO (62863)" [ref=f3e3805]
+              - cell "-" [ref=f3e3806]
+              - cell "-" [ref=f3e3807]
+              - cell "Odontológico" [ref=f3e3808]
+              - cell "80000" [ref=f3e3810]
+              - cell "0" [ref=f3e3812]
+              - cell "FOB" [ref=f3e3813]
+              - cell "Almox" [ref=f3e3814]
+              - cell "disponivel" [ref=f3e3815]
+              - cell [ref=f3e3817]:
+                - button "✎" [ref=f3e3818] [cursor=pointer]
+                - button "↻" [ref=f3e3819] [cursor=pointer]
+                - button "✕" [ref=f3e3820] [cursor=pointer]
+            - row [ref=f3e3821]:
+              - cell [ref=f3e3822]:
+                - strong [ref=f3e3823]: "5683947"
+              - cell "ISOLANTE (236985)" [ref=f3e3824]
+              - cell "CEL LAC" [ref=f3e3825]
+              - cell "SS WHITE" [ref=f3e3826]
+              - cell "Odontológico" [ref=f3e3827]
+              - cell "180000" [ref=f3e3829]
+              - cell "0" [ref=f3e3831]
+              - cell "un" [ref=f3e3832]
+              - cell "Almox" [ref=f3e3833]
+              - cell "disponivel" [ref=f3e3834]
+              - cell [ref=f3e3836]:
+                - button "✎" [ref=f3e3837] [cursor=pointer]
+                - button "↻" [ref=f3e3838] [cursor=pointer]
+                - button "✕" [ref=f3e3839] [cursor=pointer]
+            - row [ref=f3e3840]:
+              - cell [ref=f3e3841]:
+                - strong [ref=f3e3842]: "8320830"
+              - cell "KOOLINER" [ref=f3e3843]
+              - cell "KOOLINER" [ref=f3e3844]
+              - cell "GC" [ref=f3e3845]
+              - cell "Odontológico" [ref=f3e3846]
+              - cell "0" [ref=f3e3848]
+              - cell "0" [ref=f3e3850]
+              - cell "un" [ref=f3e3851]
+              - cell "Almox" [ref=f3e3852]
+              - cell "disponivel" [ref=f3e3853]
+              - cell [ref=f3e3855]:
+                - button "✎" [ref=f3e3856] [cursor=pointer]
+                - button "↻" [ref=f3e3857] [cursor=pointer]
+                - button "✕" [ref=f3e3858] [cursor=pointer]
+            - row [ref=f3e3859]:
+              - cell [ref=f3e3860]:
+                - strong [ref=f3e3861]: "9225765"
+              - cell "LAMINA DE BISTURI (231002)" [ref=f3e3862]
+              - cell "-" [ref=f3e3863]
+              - cell "MEDIX" [ref=f3e3864]
+              - cell "Médico-Hospitalar" [ref=f3e3865]
+              - cell "30000" [ref=f3e3867]
+              - cell "0" [ref=f3e3869]
+              - cell "un" [ref=f3e3870]
+              - cell "e-mail padronizados@fob.usp.br" [ref=f3e3871]
+              - cell "disponivel" [ref=f3e3872]
+              - cell [ref=f3e3874]:
+                - button "✎" [ref=f3e3875] [cursor=pointer]
+                - button "↻" [ref=f3e3876] [cursor=pointer]
+                - button "✕" [ref=f3e3877] [cursor=pointer]
+            - row [ref=f3e3878]:
+              - cell [ref=f3e3879]:
+                - strong [ref=f3e3880]: "8732876"
+              - cell "LAMINA DE BISTURI (231002)" [ref=f3e3881]
+              - cell "-" [ref=f3e3882]
+              - cell "MEDIX" [ref=f3e3883]
+              - cell "Médico-Hospitalar" [ref=f3e3884]
+              - cell "260000" [ref=f3e3886]
+              - cell "0" [ref=f3e3888]
+              - cell "un" [ref=f3e3889]
+              - cell "Almox" [ref=f3e3890]
+              - cell "disponivel" [ref=f3e3891]
+              - cell [ref=f3e3893]:
+                - button "✎" [ref=f3e3894] [cursor=pointer]
+                - button "↻" [ref=f3e3895] [cursor=pointer]
+                - button "✕" [ref=f3e3896] [cursor=pointer]

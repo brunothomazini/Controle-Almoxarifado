@@ -1,0 +1,116 @@
+- generic [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e4]:
+      - heading "Sistema de Controle de Almoxarifado" [level=1] [ref=f1e5]
+      - generic [ref=f1e6]: Universidade de Sao Paulo - Consulta Publica
+  - generic [ref=f1e7]:
+    - generic [ref=f1e8]:
+      - generic [ref=f1e9]:
+        - generic [ref=f1e10]: "389"
+        - generic [ref=f1e11]: Itens no Estoque
+      - generic [ref=f1e12]:
+        - generic [ref=f1e13]: "8"
+        - generic [ref=f1e14]: Categorias
+      - generic [ref=f1e15]:
+        - generic [ref=f1e16]: "6"
+        - generic [ref=f1e17]: Disponiveis
+      - generic [ref=f1e18]:
+        - generic [ref=f1e19]: "0"
+        - generic [ref=f1e20]: Indisponiveis / Baixados
+    - generic [ref=f1e21]:
+      - heading "Consultar Itens" [level=2] [ref=f1e22]
+      - generic [ref=f1e23]:
+        - textbox "Codigo do item..." [ref=f1e24]
+        - textbox "Nome do item..." [ref=f1e25]: LUVA CIRURGICA
+        - combobox [ref=f1e26]:
+          - option "Todas as categorias" [selected]
+          - option "Descartáveis Higiene e Limpeza"
+          - option "Descartáveis médico-hospitalar"
+          - option "Gêneros alimentícios e copa"
+          - option "Informática"
+          - option "Limpeza"
+          - option "Médico-Hospitalar"
+          - option "Odontológico"
+          - option "Papelaria"
+        - button "Buscar" [active] [ref=f1e27] [cursor=pointer]
+        - button "Limpar" [ref=f1e28] [cursor=pointer]
+    - generic [ref=f1e29]:
+      - heading "Resultados" [level=2] [ref=f1e30]
+      - generic [ref=f1e31]:
+        - generic [ref=f1e749]: Mostrando 1-6 de 6 item(ns)
+        - table [ref=f1e750]:
+          - rowgroup [ref=f1e751]:
+            - row [ref=f1e752]:
+              - columnheader "Codigo" [ref=f1e753]
+              - columnheader "Nome" [ref=f1e754]
+              - columnheader "Especificacao" [ref=f1e755]
+              - columnheader "Nome Comercial" [ref=f1e756]
+              - columnheader "Marca" [ref=f1e757]
+              - columnheader "Categoria" [ref=f1e758]
+              - columnheader "Pedidos por:" [ref=f1e759]
+              - columnheader "Status" [ref=f1e760]
+          - rowgroup [ref=f1e761]:
+            - row [ref=f1e762]:
+              - cell [ref=f1e763]:
+                - strong [ref=f1e764]: "9707166"
+              - cell "LUVA CIRURGICA (226068)" [ref=f1e765]
+              - cell "CIRURGICA 6,0" [ref=f1e766]
+              - cell "-" [ref=f1e767]
+              - cell "MEDIX" [ref=f1e768]
+              - cell "Médico-Hospitalar" [ref=f1e769]
+              - cell "Almox" [ref=f1e771]
+              - cell "Disponivel" [ref=f1e772]
+            - row [ref=f1e776]:
+              - cell [ref=f1e777]:
+                - strong [ref=f1e778]: "6192890"
+              - cell "LUVA CIRURGICA (226068)" [ref=f1e779]
+              - cell "CIRURGICA 6,5" [ref=f1e780]
+              - cell "-" [ref=f1e781]
+              - cell "MEDIX" [ref=f1e782]
+              - cell "Médico-Hospitalar" [ref=f1e783]
+              - cell "Almox" [ref=f1e785]
+              - cell "Disponivel" [ref=f1e786]
+            - row [ref=f1e790]:
+              - cell [ref=f1e791]:
+                - strong [ref=f1e792]: "6192904"
+              - cell "LUVA CIRURGICA (226068)" [ref=f1e793]
+              - cell "CIRURGICA 7,0" [ref=f1e794]
+              - cell "-" [ref=f1e795]
+              - cell "MEDIX" [ref=f1e796]
+              - cell "Médico-Hospitalar" [ref=f1e797]
+              - cell "Almox" [ref=f1e799]
+              - cell "Disponivel" [ref=f1e800]
+            - row [ref=f1e804]:
+              - cell [ref=f1e805]:
+                - strong [ref=f1e806]: "6192920"
+              - cell "LUVA CIRURGICA (226068)" [ref=f1e807]
+              - cell "CIRURGICA 7,5" [ref=f1e808]
+              - cell "-" [ref=f1e809]
+              - cell "MEDIX" [ref=f1e810]
+              - cell "Médico-Hospitalar" [ref=f1e811]
+              - cell "Almox" [ref=f1e813]
+              - cell "Disponivel" [ref=f1e814]
+            - row [ref=f1e818]:
+              - cell [ref=f1e819]:
+                - strong [ref=f1e820]: "6192939"
+              - cell "LUVA CIRURGICA (226068)" [ref=f1e821]
+              - cell "CIRURGICA 8,0" [ref=f1e822]
+              - cell "-" [ref=f1e823]
+              - cell "MEDIX" [ref=f1e824]
+              - cell "Médico-Hospitalar" [ref=f1e825]
+              - cell "Almox" [ref=f1e827]
+              - cell "Disponivel" [ref=f1e828]
+            - row [ref=f1e832]:
+              - cell [ref=f1e833]:
+                - strong [ref=f1e834]: "6192947"
+              - cell "LUVA CIRURGICA (226068)" [ref=f1e835]
+              - cell "-" [ref=f1e836]
+              - cell "-" [ref=f1e837]
+              - cell "-" [ref=f1e838]
+              - cell "Médico-Hospitalar" [ref=f1e839]
+              - cell "Almox" [ref=f1e841]
+              - cell "Disponivel" [ref=f1e842]
+  - generic [ref=f1e747]:
+    - text: Sistema de Controle de Almoxarifado — USP —
+    - link "Atualizar dados" [ref=f1e748] [cursor=pointer]:
+      - /url: "#"

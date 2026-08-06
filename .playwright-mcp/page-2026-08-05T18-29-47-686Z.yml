@@ -1,0 +1,35 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - generic [ref=f5e4]:
+      - heading "Sistema de Controle de Almoxarifado" [level=1] [ref=f5e5]
+      - generic [ref=f5e6]: Universidade de Sao Paulo - Consulta Publica
+  - generic [ref=f5e7]:
+    - generic [ref=f5e8]:
+      - generic [ref=f5e9]:
+        - generic [ref=f5e10]: "-"
+        - generic [ref=f5e11]: Itens no Estoque
+      - generic [ref=f5e12]:
+        - generic [ref=f5e13]: "-"
+        - generic [ref=f5e14]: Categorias
+      - generic [ref=f5e15]:
+        - generic [ref=f5e16]: "-"
+        - generic [ref=f5e17]: Disponiveis
+      - generic [ref=f5e18]:
+        - generic [ref=f5e19]: "-"
+        - generic [ref=f5e20]: Indisponiveis / Baixados
+    - generic [ref=f5e21]:
+      - heading "Consultar Itens" [level=2] [ref=f5e22]
+      - generic [ref=f5e23]:
+        - textbox "Codigo do item..." [ref=f5e24]
+        - textbox "Nome do item..." [ref=f5e25]
+        - combobox [ref=f5e26]:
+          - option "Todas as categorias" [selected]
+        - button "Buscar" [ref=f5e27] [cursor=pointer]
+        - button "Limpar" [ref=f5e28] [cursor=pointer]
+    - generic [ref=f5e29]:
+      - heading "Resultados" [level=2] [ref=f5e30]
+      - generic [ref=f5e31]: Carregando dados
+  - generic [ref=f5e32]:
+    - text: Sistema de Controle de Almoxarifado — USP —
+    - link "Atualizar dados" [ref=f5e33] [cursor=pointer]:
+      - /url: "#"
