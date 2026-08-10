@@ -237,8 +237,7 @@
         <div class="card">
             <h2>Consultar Itens</h2>
             <div class="search-box">
-                <input type="text" id="searchCodigo" placeholder="Codigo do item..." />
-                <input type="text" id="searchNome" placeholder="Nome do item..." />
+                <input type="text" id="searchGeral" placeholder="Buscar por qualquer campo (nome, marca, modelo, codigo...)..." />
                 <select id="searchCategoria">
                     <option value="">Todas as categorias</option>
                 </select>
@@ -320,8 +319,7 @@
 
         function carregarPagina(pagina) {
             paginaAtual = pagina;
-            var codigo = document.getElementById('searchCodigo').value.trim().toLowerCase();
-            var nome = document.getElementById('searchNome').value.trim().toLowerCase();
+            var termo = document.getElementById('searchGeral').value.trim().toLowerCase();
             var categoria = document.getElementById('searchCategoria').value;
             var div = document.getElementById('resultados');
             div.className = 'loading';
@@ -330,9 +328,11 @@
                 var filtrados = [];
                 for (var i = 0; i < DADOS.itens.length; i++) {
                     var item = DADOS.itens[i];
-                    if (codigo && item.codigo.toLowerCase().indexOf(codigo) < 0) continue;
-                    if (nome && item.nome.toLowerCase().indexOf(nome) < 0) continue;
                     if (categoria && item.categoria !== categoria) continue;
+                    if (termo) {
+                        var campos = [item.codigo, item.nome, item.nome_comercial, item.fabricante, item.especificacao, item.categoria, item.pedidos_info].join(' ').toLowerCase();
+                        if (campos.indexOf(termo) < 0) continue;
+                    }
                     filtrados.push(item);
                 }
 
@@ -369,8 +369,7 @@
         }
 
         function limpar() {
-            document.getElementById('searchCodigo').value = '';
-            document.getElementById('searchNome').value = '';
+            document.getElementById('searchGeral').value = '';
             document.getElementById('searchCategoria').value = '';
             carregarPagina(1);
         }

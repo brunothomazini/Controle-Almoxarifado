@@ -80,7 +80,7 @@ js_funcs = (
     "var a=document.getElementById('_sc').value.trim().toLowerCase();"
     "var b=document.getElementById('_sn').value.trim().toLowerCase();"
     "var c=document.getElementById('_scat').value;"
-    "F=I.filter(function(i){if(a&&i.codigo.toLowerCase().indexOf(a)===-1)return false;if(b&&i.nome.toLowerCase().indexOf(b)===-1)return false;if(c&&i.categoria!==c)return false;return true;});"
+    "F=I.filter(function(i){if(a&&i.codigo.toLowerCase().indexOf(a)===-1)return false;if(b){var _k=[i.codigo,i.nome,i.nome_comercial,i.fabricante,i.especificacao,i.categoria,i.pedidos_info].join(' ').toLowerCase();if(_k.indexOf(b)===-1)return false;}if(c&&i.categoria!==c)return false;return true;});"
     "p=1;_r();}"
     "function _l(){"
     "document.getElementById('_sc').value='';"
@@ -176,7 +176,7 @@ html = f"""<!-- wp:html -->
 <h2>Consultar Itens</h2>
 <div class="sb">
 <input type="text" id="_sc" placeholder="Codigo do item..." oninput="_f()">
-<input type="text" id="_sn" placeholder="Nome do item..." oninput="_f()">
+<input type="text" id="_sn" placeholder="Buscar por qualquer campo (nome, marca, modelo, codigo)..." oninput="_f()">
 <select id="_scat" onchange="_f()"><option value="">Todas as categorias</option>{cat_options}</select>
 <button class="bt" onclick="_f()">Buscar</button>
 <button class="bt bt-o" onclick="_l()">Limpar</button>

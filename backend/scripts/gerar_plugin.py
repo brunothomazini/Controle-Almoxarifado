@@ -2,6 +2,7 @@
 """Generate a WordPress plugin with embedded data."""
 import json, sqlite3
 from pathlib import Path
+from datetime import datetime
 
 DB = Path(__file__).resolve().parent.parent / "data" / "almoxarifado.db"
 OUT = Path(__file__).resolve().parent.parent.parent / "plugins" / "almoxarifado-plugin" / "almoxarifado-consulta.php"
@@ -112,7 +113,7 @@ function almoxarifado_consulta() {
 </div>
 <div class="cd"><h2>Consultar Itens</h2><div class="sb">
 <input type="text" id="alm_sc" placeholder="Codigo..." oninput="alm_f()">
-<input type="text" id="alm_sn" placeholder="Nome do item..." oninput="alm_f()">
+<input type="text" id="alm_sn" placeholder="Buscar por qualquer campo (nome, marca, modelo, codigo)..." oninput="alm_f()">
 <select id="alm_t" onchange="alm_f()"><option value="">Todas as categorias</option>""" + cat_options + """</select>
 <a class="bt" href="javascript:alm_f()">Buscar</a>
 <a class="bt bt-o" href="javascript:alm_l()">Limpar</a>
@@ -128,7 +129,7 @@ var almS=document.getElementById("alm_t");
 almS.innerHTML="<option value=\"\">Todas as categorias</option>";
 for(var i=0;i<almC.length;i++){var o=document.createElement("option");o.value=almC[i];o.textContent=almC[i];almS.appendChild(o);}
 function alm_b(s){var m={disponivel:["Disponivel","#e8f5e9","#2e7d32","#4caf50"],emprestado:["Emprestado","#fff3e0","#e65100","#ff9800"],manutencao:["Manutencao","#fff3e0","#e65100","#ff9800"],baixado:["Baixado","#ffebee","#c62828","#f44336"],reservado:["Reservado","#fff3e0","#e65100","#ff9800"]};var a=m[s]||["Desconhecido","#fff3e0","#e65100","#ff9800"];return "<span style=\"display:inline-flex;align-items:center;gap:6px\"><span style=\"width:8px;height:8px;border-radius:50%;display:inline-block;background:"+a[3]+"\"></span><span style=\"display:inline-block;padding:3px 10px;border-radius:20px;font-size:.8rem;font-weight:500;background:"+a[1]+";color:"+a[2]+"\">"+a[0]+"</span></span>";}
-function alm_f(){var a=document.getElementById("alm_sc").value.trim().toLowerCase();var b=document.getElementById("alm_sn").value.trim().toLowerCase();var c=document.getElementById("alm_t").value;almF=almI.filter(function(i){if(a&&i.c.toLowerCase().indexOf(a)===-1)return false;if(b&&i.n.toLowerCase().indexOf(b)===-1)return false;if(c&&i.cat!==c)return false;return true;});alm_p=1;alm_r();}
+function alm_f(){var a=document.getElementById("alm_sc").value.trim().toLowerCase();var b=document.getElementById("alm_sn").value.trim().toLowerCase();var c=document.getElementById("alm_t").value;almF=almI.filter(function(i){if(a&&i.c.toLowerCase().indexOf(a)===-1)return false;if(b){var _k=[i.c,i.n,i.nc,i.f,i.e,i.cat,i.p].join(" ").toLowerCase();if(_k.indexOf(b)===-1)return false;}if(c&&i.cat!==c)return false;return true;});alm_p=1;alm_r();}
 function alm_l(){document.getElementById("alm_sc").value="";document.getElementById("alm_sn").value="";document.getElementById("alm_t").value="";almF=almI.slice();alm_p=1;alm_r();}
 function alm_r(){var e=document.getElementById("alm_r"),t=almF.length,tp=Math.max(1,Math.ceil(t/almP));if(alm_p>tp)alm_p=tp;if(alm_p<1)alm_p=1;var s=(alm_p-1)*almP,o=Math.min(s+almP,t),pg=almF.slice(s,o);if(t===0){e.innerHTML="<div class=\"emp\">Nenhum item encontrado</div>";return;}var h="<div class=\"inf\">Mostrando "+(s+1)+"-"+o+" de "+t+" item(ns)</div><table><thead><tr><th>Codigo</th><th>Nome</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Pedidos por:</th><th>Status</th></tr></thead><tbody>";for(var i=0;i<pg.length;i++){var x=pg[i];h+="<tr><td><strong>"+(x.c||"-")+"</strong></td><td>"+(x.n||"-")+"</td><td>"+(x.nc||"-")+"</td><td>"+(x.f||"-")+"</td><td><span class=\"tag\">"+(x.cat||"N/A")+"</span></td><td>"+(x.p||"Almox")+"</td><td>"+alm_b(x.s)+"</td></tr>";}h+="</tbody></table>";if(tp>1){h+="<div class=\"pag\">";if(alm_p>1)h+="<a class=\"bt bt-o\" href=\"javascript:alm_g("+(alm_p-1)+')\">&laquo; Anterior</a>";h+="<span>Pagina "+alm_p+" de "+tp+"</span>";if(alm_p<tp)h+="<a class=\"bt bt-o\" href=\"javascript:alm_g("+(alm_p+1)+')\">Proxima &raquo;</a>";h+="</div>";}e.innerHTML=h;}
 function alm_g(x){if(x<1)return;alm_p=x;alm_r();}
