@@ -48,6 +48,9 @@ class SpreadsheetImportService:
     def _importar_csv(self, caminho: str, tipo: str) -> dict:
         import csv
 
+        if tipo == "registro_preco":
+            return self._importar_registro_preco_csv(caminho)
+
         with open(caminho, "r", encoding="utf-8-sig") as f:
             reader = csv.reader(f)
             linhas = list(reader)
@@ -60,6 +63,114 @@ class SpreadsheetImportService:
 
         qtd = self._processar_dados(cabecalho, dados, "CSV", tipo)
         return {"status": "sucesso", "total_itens": qtd, "detalhes": [{"aba": "CSV", "itens": qtd}]}
+
+    def _importar_registro_preco_csv(self, caminho: str) -> dict:
+        import csv
+        from app.models.models import Item, Fornecedor, StatusItem
+
+        # Tentar latin-1 primeiro (arquivo original), depois utf-8
+        for encoding in ("latin-1", "cp1252", "utf-8-sig"):
+            try:
+                with open(caminho, "r", encoding=encoding) as f:
+                    first_line = f.readline()
+                break
+            except (UnicodeDecodeError, UnicodeError):
+                continue
+
+        with open(caminho, "r", encoding=encoding) as f:
+            reader = csv.DictReader(f, delimiter=";")
+            registros = list(reader)
+
+        if not registros:
+            return {"erro": "Arquivo CSV vazio"}
+
+        # Indexar por campo 'Bem'
+        registros_por_bem = {}
+        for row in registros:
+            bem = (row.get("Bem") or "").strip()
+            if not bem:
+                continue
+            registros_por_bem[bem] = row
+
+        # Buscar todos itens do banco
+        todos_itens = self.db.query(Item).all()
+        itens_por_codigo = {item.codigo: item for item in todos_itens}
+
+        atualizados = 0
+        fornecedores_criados = 0
+        itens_baixados = 0
+        erros = 0
+
+        # Atualizar itens que estao no CSV
+        for bem, reg in registros_por_bem.items():
+            try:
+                item = itens_por_codigo.get(bem)
+                if not item:
+                    continue
+
+                # numero_compra
+                compra = (reg.get("Compra") or "").strip()
+                if compra:
+                    item.numero_compra = compra
+
+                # Fornecedor (Participante)
+                participante = (reg.get("Participante") or "").strip()
+                if participante and participante != "nan":
+                    forn = self.db.query(Fornecedor).filter(Fornecedor.nome == participante).first()
+                    if not forn:
+                        forn = Fornecedor(nome=participante)
+                        self.db.add(forn)
+                        self.db.flush()
+                        fornecedores_criados += 1
+                    item.fornecedor_id = forn.id
+
+                # Marca / Modelo
+                marca = (reg.get("Marca") or "").strip()
+                modelo = (reg.get("Modelo") or "").strip()
+                if marca:
+                    item.fabricante = marca
+                if modelo:
+                    item.modelo = modelo
+
+                # Precos
+                pr = self._parse_float(reg.get("Preco Referencial"))
+                pf = self._parse_float(reg.get("Preco Final"))
+                if pr > 0:
+                    item.preco_referencial = pr
+                if pf > 0:
+                    item.preco_final = pf
+                    item.valor_unitario = pf
+
+                # Status
+                situacao = (reg.get("Situacao") or "").strip().upper()
+                if situacao == "VIGENTE":
+                    item.status = StatusItem.DISPONIVEL
+                elif situacao in ("INDISPONIVEL", "CANCELADO", "SUSPENSO"):
+                    item.status = StatusItem.BAIXADO
+
+                atualizados += 1
+            except Exception:
+                erros += 1
+
+        # Marcar itens ausentes do CSV como baixados
+        for codigo, item in itens_por_codigo.items():
+            if codigo not in registros_por_bem and item.status != StatusItem.BAIXADO:
+                item.status = StatusItem.BAIXADO
+                itens_baixados += 1
+
+        self.db.commit()
+
+        return {
+            "status": "sucesso",
+            "total_itens": atualizados,
+            "detalhes": [{
+                "aba": "CSV Registro de Preco",
+                "itens": atualizados,
+                "fornecedores_criados": fornecedores_criados,
+                "itens_baixados": itens_baixados,
+                "erros": erros,
+            }]
+        }
 
     def _processar_dados(self, cabecalho: list, dados: list, sheet_name: str, tipo: str) -> int:
         from app.models.models import Item, Categoria, Fornecedor, Movimentacao, SyncLog

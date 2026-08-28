@@ -35,10 +35,13 @@ class ItemBase(BaseModel):
     tipo_controle: str = "almoxarifado"
     categoria_id: Optional[int] = None
     fornecedor_id: Optional[int] = None
+    numero_compra: Optional[str] = None
     fabricante: Optional[str] = None
     modelo: Optional[str] = None
     numero_serie: Optional[str] = None
     valor_unitario: float = 0
+    preco_referencial: float = 0
+    preco_final: float = 0
     observacoes: Optional[str] = None
 
 class ItemCreate(ItemBase):
@@ -57,10 +60,13 @@ class ItemUpdate(BaseModel):
     status: Optional[str] = None
     tipo_controle: Optional[str] = None
     categoria_id: Optional[int] = None
+    numero_compra: Optional[str] = None
     fabricante: Optional[str] = None
     modelo: Optional[str] = None
     numero_serie: Optional[str] = None
     valor_unitario: Optional[float] = None
+    preco_referencial: Optional[float] = None
+    preco_final: Optional[float] = None
     observacoes: Optional[str] = None
 
 class ItemResponse(ItemBase):

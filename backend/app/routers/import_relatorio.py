@@ -33,6 +33,7 @@ def upload_relatorio(
 @router.post("/upload-csv")
 def upload_csv(
     arquivo: UploadFile = File(...),
+    tipo: str = Form("inventario"),
     db: Session = Depends(get_db),
     usuario: Usuario = Depends(get_current_user),
 ):
@@ -41,7 +42,7 @@ def upload_csv(
 
     servico = SpreadsheetImportService(db)
     caminho = servico.salvar_arquivo(arquivo.file, arquivo.filename)
-    resultado = servico.importar_relatorio(caminho, "inventario")
+    resultado = servico.importar_relatorio(caminho, tipo)
 
     return {
         "mensagem": "CSV importado com sucesso" if resultado.get("status") == "sucesso" else "Erro",
