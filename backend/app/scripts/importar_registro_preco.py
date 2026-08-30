@@ -15,7 +15,7 @@ from pathlib import Path
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from app.database import SessionLocal, init_db
-from app.models.models import Item, Fornecedor, StatusItem
+from app.models.models import Item, StatusItem
 
 DEFAULT_CSV = Path(__file__).parent.parent.parent.parent / "relatorioRegistroPreco.csv"
 
@@ -114,18 +114,10 @@ def importar_registro_preco(caminho_csv: str = None) -> dict:
             if reg["compra"]:
                 item.numero_compra = reg["compra"]
             
-            # Atualizar fornecedor
-            nome_forn = reg["participante"] or reg["gerenciadora"]
-            if nome_forn and nome_forn != "nan":
-                forn = db.query(Fornecedor).filter(Fornecedor.nome == nome_forn).first()
-                if not forn:
-                    forn = Fornecedor(nome=nome_forn)
-                    db.add(forn)
-                    db.flush()
-                    stats["fornecedores_criados"] += 1
-                else:
-                    stats["fornecedores_atualizados"] += 1
-                item.fornecedor_id = forn.id
+            # Unidade participante (nao e fornecedor - FOB e unidade institucional)
+            participante = reg["participante"] or reg["gerenciadora"]
+            if participante and participante != "nan":
+                item.unidade_participante = participante
             
             # Atualizar marca/modelo
             if reg["marca"]:

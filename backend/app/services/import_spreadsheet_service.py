@@ -66,7 +66,7 @@ class SpreadsheetImportService:
 
     def _importar_registro_preco_csv(self, caminho: str) -> dict:
         import csv
-        from app.models.models import Item, Fornecedor, StatusItem
+        from app.models.models import Item, StatusItem
 
         # Tentar latin-1 primeiro (arquivo original), depois utf-8
         for encoding in ("latin-1", "cp1252", "utf-8-sig"):
@@ -113,16 +113,10 @@ class SpreadsheetImportService:
                 if compra:
                     item.numero_compra = compra
 
-                # Fornecedor (Participante)
-                participante = (reg.get("Participante") or "").strip()
+                # Unidade participante (Participante) - nao criar fornecedor, apenas armazenar unidade
+                participante = (reg.get("Participante") or reg.get("Gerenciadora") or "").strip()
                 if participante and participante != "nan":
-                    forn = self.db.query(Fornecedor).filter(Fornecedor.nome == participante).first()
-                    if not forn:
-                        forn = Fornecedor(nome=participante)
-                        self.db.add(forn)
-                        self.db.flush()
-                        fornecedores_criados += 1
-                    item.fornecedor_id = forn.id
+                    item.unidade_participante = participante
 
                 # Marca / Modelo
                 marca = (reg.get("Marca") or "").strip()

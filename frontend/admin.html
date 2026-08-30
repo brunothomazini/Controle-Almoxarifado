@@ -454,11 +454,13 @@ function itensBuscar() {
             const itens = await api('/itens'+params);
             if (!itens||!itens.length) { el.innerHTML='<div class="empty">Nenhum item encontrado</div>'; return; }
             el.innerHTML = `<div style="margin-bottom:8px;color:#888;font-size:0.82rem;">${itens.length} item(ns)</div><div class="table-wrap"><table>
-                <tr><th>Código</th><th>Nome</th><th>Compra</th><th>Modelo</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Qtd</th><th>Min</th><th>Un</th><th>Pedidos por:</th><th>Status</th><th>Ações</th></tr>
+                <tr><th>Código</th><th>Nome</th><th>Compra</th><th>Unidade</th><th>Fornecedor</th><th>Modelo</th><th>Nome Comercial</th><th>Marca</th><th>Categoria</th><th>Qtd</th><th>Min</th><th>Un</th><th>Pedidos por:</th><th>Status</th><th>Ações</th></tr>
                 ${itens.map(i=>`<tr>
                     <td><strong>${i.codigo}</strong></td>
                     <td>${i.nome}</td>
                     <td>${i.numero_compra||'-'}</td>
+                    <td>${i.unidade_participante||'-'}</td>
+                    <td>${i.fornecedor_nome||'-'}</td>
                     <td>${i.modelo||'-'}</td>
                                                             <td>${i.nome_comercial||'-'}</td>
                     <td>${i.fabricante||'-'}</td>
@@ -480,7 +482,7 @@ function itensBuscar() {
 }
 
 async function itensAbrirModal(id) {
-    let item = {codigo:'',nome:'',nome_comercial:'',unidade_medida:'un',quantidade_atual:0,quantidade_minima:0,quantidade_maxima:0,status:'disponivel',tipo_controle:'almoxarifado',localizacao:'',descricao:'',categoria_id:null,fornecedor_id:null,numero_compra:'',fabricante:'',modelo:'',numero_serie:'',valor_unitario:0,observacoes:''};
+    let item = {codigo:'',nome:'',nome_comercial:'',unidade_medida:'un',quantidade_atual:0,quantidade_minima:0,quantidade_maxima:0,status:'disponivel',tipo_controle:'almoxarifado',localizacao:'',descricao:'',categoria_id:null,fornecedor_id:null,numero_compra:'',unidade_participante:'',fabricante:'',modelo:'',numero_serie:'',valor_unitario:0,observacoes:''};
     if (id) { try { item = await api('/itens/'+id); } catch(e) {} }
     let cats = []; try { cats = await api('/categorias'); } catch(e) {}
 
@@ -490,6 +492,10 @@ async function itensAbrirModal(id) {
         <div class="row">
             <div class="field"><label>Código</label><input id="mf_codigo" value="${item.codigo}" ${id?'readonly':''}></div>
             <div class="field"><label>Nº Compra</label><input id="mf_compra" value="${item.numero_compra||''}"></div>
+        </div>
+        <div class="row">
+            <div class="field"><label>Unidade Participante</label><input id="mf_unidade" value="${item.unidade_participante||''}"></div>
+            <div class="field"><label></label></div>
         </div>
         <div class="row">
             <div class="field"><label>Nome *</label><input id="mf_nome" value="${item.nome.replace(/"/g,'&quot;')}"></div>
@@ -547,6 +553,7 @@ async function itensSalvar(id) {
         solicitar_por_email: document.getElementById('mf_email').checked,
         valor_unitario: parseFloat(document.getElementById('mf_valor').value)||0,
         numero_compra: document.getElementById('mf_compra')?.value||'',
+        unidade_participante: document.getElementById('mf_unidade')?.value||'',
         fabricante: document.getElementById('mf_fab').value,
         modelo: document.getElementById('mf_modelo').value,
         numero_serie: document.getElementById('mf_serie').value,

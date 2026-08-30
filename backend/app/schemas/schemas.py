@@ -36,6 +36,7 @@ class ItemBase(BaseModel):
     categoria_id: Optional[int] = None
     fornecedor_id: Optional[int] = None
     numero_compra: Optional[str] = None
+    unidade_participante: Optional[str] = None
     fabricante: Optional[str] = None
     modelo: Optional[str] = None
     numero_serie: Optional[str] = None
@@ -61,6 +62,7 @@ class ItemUpdate(BaseModel):
     tipo_controle: Optional[str] = None
     categoria_id: Optional[int] = None
     numero_compra: Optional[str] = None
+    unidade_participante: Optional[str] = None
     fabricante: Optional[str] = None
     modelo: Optional[str] = None
     numero_serie: Optional[str] = None

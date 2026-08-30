@@ -62,6 +62,7 @@ class Item(Base):
     fornecedor_id = Column(Integer, ForeignKey("fornecedores.id"))
     nome_comercial = Column(String(300))
     numero_compra = Column(String(50), index=True)
+    unidade_participante = Column(String(100), index=True)
     fabricante = Column(String(200))
     modelo = Column(String(200))
     numero_serie = Column(String(200))
